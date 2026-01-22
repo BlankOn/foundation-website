@@ -51,7 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$lang/download': typeof LangDownloadRoute
   '/api/search': typeof ApiSearchRoute
-  '/$lang': typeof LangIndexRoute
+  '/$lang/': typeof LangIndexRoute
   '/$lang/dev/$': typeof LangDevSplatRoute
   '/$lang/docs/$': typeof LangDocsSplatRoute
 }
@@ -78,7 +78,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$lang/download'
     | '/api/search'
-    | '/$lang'
+    | '/$lang/'
     | '/$lang/dev/$'
     | '/$lang/docs/$'
   fileRoutesByTo: FileRoutesByTo
@@ -120,7 +120,7 @@ declare module '@tanstack/react-router' {
     '/$lang/': {
       id: '/$lang/'
       path: '/$lang'
-      fullPath: '/$lang'
+      fullPath: '/$lang/'
       preLoaderRoute: typeof LangIndexRouteImport
       parentRoute: typeof rootRouteImport
     }

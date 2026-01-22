@@ -2,10 +2,13 @@ import { createFileRoute } from '@tanstack/react-router'
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions, getTranslations } from '@/lib/layout.shared'
 
-export const Route = createFileRoute('/$lang/download')({ component: Download })
+export const Route = createFileRoute('/$lang/download')({
+  component: Download,
+  loader: ({ params }) => ({ lang: params.lang }),
+})
 
 function Download() {
-  const { lang } = Route.useParams()
+  const { lang } = Route.useLoaderData()
   const t = getTranslations(lang)
 
   return (

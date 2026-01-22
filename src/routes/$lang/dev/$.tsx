@@ -38,6 +38,7 @@ const serverLoader = createServerFn({
     if (!page) throw notFound()
 
     return {
+      lang,
       path: page.path,
       pageTree: await devSource.serializePageTree(devSource.getPageTree(lang)),
     }
@@ -64,8 +65,8 @@ const clientLoader = browserCollections.dev.createClientLoader({
 })
 
 function Page() {
-  const { lang } = Route.useParams()
   const data = Route.useLoaderData()
+  const { lang } = data
   const { pageTree } = useFumadocsLoader(data)
   const Content = clientLoader.getComponent(data.path)
   const location = useLocation()
