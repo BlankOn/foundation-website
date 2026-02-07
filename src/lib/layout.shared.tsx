@@ -1,18 +1,39 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared'
 import { i18n } from '@/lib/i18n'
+import { useEffect, useState } from 'react'
 
 function Logo() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      setScrolled(scrollPosition > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <>
       <img
         src="/logo-black.png"
         alt="BlankOn"
         className="block h-6 w-auto dark:hidden"
+        style={{
+          clipPath: scrolled ? 'inset(0 50% 0 0)' : 'inset(0 0 0 0)',
+          transition: 'clip-path 300ms ease-in-out',
+        }}
       />
       <img
         src="/logo-white.png"
         alt="BlankOn"
         className="hidden h-4 w-auto dark:block"
+        style={{
+          clipPath: scrolled ? 'inset(0 50% 0 0)' : 'inset(0 0 0 0)',
+          transition: 'clip-path 300ms ease-in-out',
+        }}
       />
     </>
   )
@@ -21,11 +42,9 @@ function Logo() {
 const translations = {
   id: {
     home: 'Beranda',
-    download: 'Unduh',
-    docs: 'Panduan Pengguna',
-    dev: 'Wiki Pengembangan',
+    membership: 'Keanggotaan',
+    donate: 'Donasi',
     welcome: 'Selamat datang di BlankOn',
-    downloadDesc: 'Halaman unduh BlankOn',
     feedback: {
       question: 'Bagaimana panduan ini?',
       good: 'Bagus',
@@ -45,10 +64,7 @@ const translations = {
         cta: 'Pelajari Lebih Lanjut',
       },
       vision: {
-        title: 'Visi & Misi',
-        vision: 'Visi',
-        visionText:
-          'Menjadi organisasi yang menggiatkan, menumbuhkan, dan menaungi komunitas dan teknologi bebas terbuka di Indonesia yang mandiri, berdaya, inklusif, berkelanjutan, dan memberikan dampak nyata bagi masyarakat.',
+        title: 'Misi',
         mission: 'Misi',
         missions: [
           'Menggiatkan dan merawat BlankOn Linux sebagai proyek teknologi bebas terbuka yang dikelola dengan baik, dikembangkan secara terbuka dan berkelanjutan.',
@@ -81,17 +97,29 @@ const translations = {
             cta: 'Kunjungi Warta',
             url: 'https://warta.blankon.id',
           },
+          {
+            name: 'Lokakarya',
+            description:
+              'Program pembelajaran dan pelatihan teknologi bebas terbuka melalui kelas daring dan luring serta lokakarya praktis seputar dunia teknologi.',
+            cta: 'Lihat Jadwal',
+            url: 'https://blankon.id',
+          },
+          {
+            name: 'BlanKonf',
+            description:
+              'Konferensi teknologi bebas terbuka tahunan yang mempertemukan praktisi, pengembang, dan penggiat open source dari seluruh Indonesia.',
+            cta: 'Informasi Lebih Lanjut',
+            url: 'https://blankon.id',
+          },
         ],
       },
     },
   },
   en: {
     home: 'Home',
-    download: 'Download',
-    docs: 'User Guide',
-    dev: 'Developer Wiki',
+    membership: 'Membership',
+    donate: 'Donate',
     welcome: 'Welcome to BlankOn',
-    downloadDesc: 'BlankOn download page',
     feedback: {
       question: 'How is this guide?',
       good: 'Good',
@@ -111,10 +139,7 @@ const translations = {
         cta: 'Learn More',
       },
       vision: {
-        title: 'Vision & Mission',
-        vision: 'Vision',
-        visionText:
-          'To become an organization that activates, nurtures, and supports open source communities and technologies in Indonesia that are independent, empowered, inclusive, sustainable, and create real impact for society.',
+        title: 'Mission',
         mission: 'Mission',
         missions: [
           'Activate and maintain BlankOn Linux as a well-managed open source technology project, developed openly and sustainably.',
@@ -147,6 +172,20 @@ const translations = {
             cta: 'Visit Warta',
             url: 'https://warta.blankon.id',
           },
+          {
+            name: 'Lokakarya',
+            description:
+              'Open source technology learning and training programs through online and offline classes and hands-on workshops.',
+            cta: 'View Schedule',
+            url: 'https://blankon.id',
+          },
+          {
+            name: 'BlanKonf',
+            description:
+              'Annual open source technology conference bringing together practitioners, developers, and open source enthusiasts from across Indonesia.',
+            cta: 'Learn More',
+            url: 'https://blankon.id',
+          },
         ],
       },
     },
@@ -168,6 +207,7 @@ export function baseOptions(locale: string): BaseLayoutProps {
     nav: {
       title: <Logo />,
       url: `/${locale}`,
+      transparentMode: 'none',
     },
     links: [
       {
@@ -176,18 +216,13 @@ export function baseOptions(locale: string): BaseLayoutProps {
         active: 'url',
       },
       {
-        text: t.download,
-        url: `/${locale}/download`,
+        text: t.membership,
+        url: `/${locale}/membership`,
         active: 'nested-url',
       },
       {
-        text: t.docs,
-        url: `/${locale}/docs`,
-        active: 'nested-url',
-      },
-      {
-        text: t.dev,
-        url: `/${locale}/dev`,
+        text: t.donate,
+        url: `/${locale}/donate`,
         active: 'nested-url',
       },
     ],

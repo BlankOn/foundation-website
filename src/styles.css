@@ -137,3 +137,14 @@ code {
     @apply bg-background text-foreground;
   }
 }
+
+/* Center navigation links */
+[data-nav-links] {
+  @apply justify-center flex-1;
+}
+
+/* Hide search button */
+[data-search-toggle],
+[aria-label*="Search"] {
+  @apply hidden;
+}

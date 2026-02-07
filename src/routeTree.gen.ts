@@ -12,7 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
 import { Route as ApiSearchRouteImport } from './routes/api/search'
+import { Route as LangMembershipRouteImport } from './routes/$lang/membership'
 import { Route as LangDownloadRouteImport } from './routes/$lang/download'
+import { Route as LangDonateRouteImport } from './routes/$lang/donate'
 import { Route as LangDocsSplatRouteImport } from './routes/$lang/docs/$'
 import { Route as LangDevSplatRouteImport } from './routes/$lang/dev/$'
 
@@ -31,9 +33,19 @@ const ApiSearchRoute = ApiSearchRouteImport.update({
   path: '/api/search',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangMembershipRoute = LangMembershipRouteImport.update({
+  id: '/$lang/membership',
+  path: '/$lang/membership',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LangDownloadRoute = LangDownloadRouteImport.update({
   id: '/$lang/download',
   path: '/$lang/download',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangDonateRoute = LangDonateRouteImport.update({
+  id: '/$lang/donate',
+  path: '/$lang/donate',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangDocsSplatRoute = LangDocsSplatRouteImport.update({
@@ -49,7 +61,9 @@ const LangDevSplatRoute = LangDevSplatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$lang/donate': typeof LangDonateRoute
   '/$lang/download': typeof LangDownloadRoute
+  '/$lang/membership': typeof LangMembershipRoute
   '/api/search': typeof ApiSearchRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/dev/$': typeof LangDevSplatRoute
@@ -57,7 +71,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$lang/donate': typeof LangDonateRoute
   '/$lang/download': typeof LangDownloadRoute
+  '/$lang/membership': typeof LangMembershipRoute
   '/api/search': typeof ApiSearchRoute
   '/$lang': typeof LangIndexRoute
   '/$lang/dev/$': typeof LangDevSplatRoute
@@ -66,7 +82,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$lang/donate': typeof LangDonateRoute
   '/$lang/download': typeof LangDownloadRoute
+  '/$lang/membership': typeof LangMembershipRoute
   '/api/search': typeof ApiSearchRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/dev/$': typeof LangDevSplatRoute
@@ -76,7 +94,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$lang/donate'
     | '/$lang/download'
+    | '/$lang/membership'
     | '/api/search'
     | '/$lang/'
     | '/$lang/dev/$'
@@ -84,7 +104,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/$lang/donate'
     | '/$lang/download'
+    | '/$lang/membership'
     | '/api/search'
     | '/$lang'
     | '/$lang/dev/$'
@@ -92,7 +114,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/$lang/donate'
     | '/$lang/download'
+    | '/$lang/membership'
     | '/api/search'
     | '/$lang/'
     | '/$lang/dev/$'
@@ -101,7 +125,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LangDonateRoute: typeof LangDonateRoute
   LangDownloadRoute: typeof LangDownloadRoute
+  LangMembershipRoute: typeof LangMembershipRoute
   ApiSearchRoute: typeof ApiSearchRoute
   LangIndexRoute: typeof LangIndexRoute
   LangDevSplatRoute: typeof LangDevSplatRoute
@@ -131,11 +157,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiSearchRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang/membership': {
+      id: '/$lang/membership'
+      path: '/$lang/membership'
+      fullPath: '/$lang/membership'
+      preLoaderRoute: typeof LangMembershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/$lang/download': {
       id: '/$lang/download'
       path: '/$lang/download'
       fullPath: '/$lang/download'
       preLoaderRoute: typeof LangDownloadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$lang/donate': {
+      id: '/$lang/donate'
+      path: '/$lang/donate'
+      fullPath: '/$lang/donate'
+      preLoaderRoute: typeof LangDonateRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/docs/$': {
@@ -157,7 +197,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LangDonateRoute: LangDonateRoute,
   LangDownloadRoute: LangDownloadRoute,
+  LangMembershipRoute: LangMembershipRoute,
   ApiSearchRoute: ApiSearchRoute,
   LangIndexRoute: LangIndexRoute,
   LangDevSplatRoute: LangDevSplatRoute,
