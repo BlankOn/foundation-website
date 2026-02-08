@@ -9,32 +9,28 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Stage 2: Production
-FROM node:22-alpine
+# Stage 2: Serve with nginx
+FROM nginx:alpine
 
-WORKDIR /app
+COPY --from=builder /app/dist /usr/share/nginx/html
 
-RUN npm install -g wrangler
-
-COPY --from=builder /app/dist ./dist
-
-# Create a wrangler config for serving the built output.
-# The build produces dist/server/index.js (Worker entry) and dist/client/ (static assets).
-# Using no_bundle since the worker is already bundled by Vite.
-RUN printf '{\n\
-  "name": "foundation-website",\n\
-  "compatibility_date": "2025-09-02",\n\
-  "compatibility_flags": ["nodejs_compat"],\n\
-  "main": "dist/server/index.js",\n\
-  "no_bundle": true,\n\
-  "assets": {\n\
-    "directory": "dist/client"\n\
-  },\n\
-  "rules": [\n\
-    { "type": "ESModule", "globs": ["**/*.js", "**/*.mjs"] }\n\
-  ]\n\
-}\n' > wrangler.json
+# SPA fallback: route all requests to index.html
+RUN printf 'server {\n\
+    listen 8080;\n\
+    server_name _;\n\
+    root /usr/share/nginx/html;\n\
+    index index.html;\n\
+\n\
+    location / {\n\
+        try_files $uri $uri/ /index.html;\n\
+    }\n\
+\n\
+    location ~* \\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {\n\
+        expires 1y;\n\
+        add_header Cache-Control "public, immutable";\n\
+    }\n\
+}\n' > /etc/nginx/conf.d/default.conf
 
 EXPOSE 8080
 
-CMD ["wrangler", "dev", "--port", "8080", "--ip", "0.0.0.0"]
+CMD ["nginx", "-g", "daemon off;"]
