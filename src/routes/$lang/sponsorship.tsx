@@ -162,10 +162,10 @@ function Sponsorship() {
         </section>
 
         {/* Current Sponsors */}
-        <section className="bg-fd-background py-20">
+        <section className="bg-white py-20">
           <div className="container mx-auto max-w-5xl px-6">
             <div className="mb-12 text-center">
-              <h2 className="mb-4 text-2xl font-bold text-fd-foreground md:text-3xl">
+              <h2 className="mb-4 text-2xl font-bold text-slate-900 md:text-3xl">
                 {content.currentSponsors}
               </h2>
               <div className="mx-auto h-1 w-16 rounded-full bg-gradient-to-r from-blue-600 to-blue-400" />

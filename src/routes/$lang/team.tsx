@@ -36,13 +36,13 @@ const teamContent = {
         },
         {
           name: 'Slamet Santoso',
-          position: 'Direktur Keuangan',
+          position: 'Manajer Keuangan',
           bio: 'Kontributor BlankOn Linux sejak era 2010-an, mantan Humas dan Manajer Rilis proyek BlankOn Linux.',
           photo: '/images/slamet.png',
         },
         {
           name: 'Iwan Setiawan',
-          position: 'Direktur Program',
+          position: 'Koordinator Program',
           bio: 'Pencipta dan pengelola Kuliax, distribusi Linux yang dirancang khusus untuk mahasiswa. Saat ini aktif sebagai dosen di Universitas Jenderal Soedirman.',
           photo: '/images/iwan.png',
         },
@@ -59,7 +59,7 @@ const teamContent = {
       team: [
         {
           name: 'Rusmanto',
-          position: 'Trustee',
+          position: 'Advisor',
           bio: 'Widely recognized as the "Father of Linux Indonesia," founder of the legendary InfoLinux magazine, YPLI (Yayasan Penggerak Linux Indonesia), and ILC (Indonesia Linux Conference).',
           photo: '/images/rusmanto.jpg',
         },
@@ -77,13 +77,13 @@ const teamContent = {
         },
         {
           name: 'Slamet Santoso',
-          position: 'Director of Finance',
+          position: 'Finance Manager',
           bio: 'An active contributor since the 2010s, former Public Relations lead and Release Manager of the BlankOn Linux project.',
           photo: '/images/slamet.png',
         },
         {
           name: 'Iwan Setiawan',
-          position: 'Director of Programs',
+          position: 'Program Manager',
           bio: 'Creator and maintainer of Kuliax, a Linux distribution designed specifically for students. Currently serves as a lecturer at Universitas Jenderal Soedirman.',
           photo: '/images/iwan.png',
         },
