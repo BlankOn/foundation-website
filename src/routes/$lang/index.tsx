@@ -5,7 +5,6 @@ import { Footer } from '@/components/footer'
 
 export const Route = createFileRoute('/$lang/')({
   component: Home,
-  loader: ({ params }) => ({ lang: params.lang }),
 })
 
 function HeroAbout({
@@ -117,10 +116,8 @@ function HeroDonate({
 
 function HeroProducts({
   t,
-  lang,
 }: {
   t: ReturnType<typeof getTranslations>
-  lang: string
 }) {
   return (
     <section className="bg-slate-50 py-20 dark:bg-slate-900/50">
@@ -235,7 +232,7 @@ function HeroProducts({
 }
 
 function Home() {
-  const { lang } = Route.useLoaderData()
+  const { lang } = Route.useParams()
   const t = getTranslations(lang)
 
   return (
@@ -244,7 +241,7 @@ function Home() {
         <HeroAbout t={t} />
         <HeroVision t={t} />
         <HeroDonate t={t} lang={lang} />
-        <HeroProducts t={t} lang={lang} />
+        <HeroProducts t={t} />
       </main>
       <Footer lang={lang} />
     </HomeLayout>

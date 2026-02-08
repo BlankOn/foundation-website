@@ -5,7 +5,6 @@ import { Footer } from '@/components/footer'
 
 export const Route = createFileRoute('/$lang/donate')({
   component: Donate,
-  loader: ({ params }) => ({ lang: params.lang }),
 })
 
 const donateContent = {
@@ -163,7 +162,7 @@ const donateContent = {
 }
 
 function Donate() {
-  const { lang } = Route.useLoaderData()
+  const { lang } = Route.useParams()
   const content = donateContent[lang as keyof typeof donateContent]
 
   const getIcon = (iconName: string) => {

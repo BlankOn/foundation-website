@@ -5,7 +5,6 @@ import { Footer } from '@/components/footer'
 
 export const Route = createFileRoute('/$lang/sponsorship')({
   component: Sponsorship,
-  loader: ({ params }) => ({ lang: params.lang }),
 })
 
 const sponsors = [
@@ -65,7 +64,7 @@ const sponsorshipContent = {
 }
 
 function Sponsorship() {
-  const { lang } = Route.useLoaderData()
+  const { lang } = Route.useParams()
   const content = sponsorshipContent[lang as keyof typeof sponsorshipContent]
 
   return (

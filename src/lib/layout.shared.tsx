@@ -53,16 +53,6 @@ const translations = {
     news: 'Berita',
     donate: 'Donasi',
     welcome: 'Selamat datang di BlankOn',
-    feedback: {
-      question: 'Bagaimana panduan ini?',
-      good: 'Bagus',
-      bad: 'Kurang',
-      placeholder: 'Tulis masukan Anda...',
-      submit: 'Kirim',
-      thanks: 'Terima kasih atas masukan Anda!',
-      viewOnGithub: 'Lihat di GitHub',
-      submitAgain: 'Kirim Lagi',
-    },
     hero: {
       about: {
         title: 'Yayasan BlankOn',
@@ -176,16 +166,6 @@ const translations = {
     news: 'News',
     donate: 'Donate',
     welcome: 'Welcome to BlankOn',
-    feedback: {
-      question: 'How is this guide?',
-      good: 'Good',
-      bad: 'Bad',
-      placeholder: 'Leave your feedback...',
-      submit: 'Submit',
-      thanks: 'Thank you for your feedback!',
-      viewOnGithub: 'View on GitHub',
-      submitAgain: 'Submit Again',
-    },
     hero: {
       about: {
         title: 'BlankOn Foundation',

@@ -11,7 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
-import { Route as ApiSearchRouteImport } from './routes/api/search'
 import { Route as LangTeamRouteImport } from './routes/$lang/team'
 import { Route as LangSponsorshipRouteImport } from './routes/$lang/sponsorship'
 import { Route as LangNewsRouteImport } from './routes/$lang/news'
@@ -21,8 +20,6 @@ import { Route as LangLegalRouteImport } from './routes/$lang/legal'
 import { Route as LangDownloadRouteImport } from './routes/$lang/download'
 import { Route as LangDonateRouteImport } from './routes/$lang/donate'
 import { Route as LangContactUsRouteImport } from './routes/$lang/contact-us'
-import { Route as LangDocsSplatRouteImport } from './routes/$lang/docs/$'
-import { Route as LangDevSplatRouteImport } from './routes/$lang/dev/$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -32,11 +29,6 @@ const IndexRoute = IndexRouteImport.update({
 const LangIndexRoute = LangIndexRouteImport.update({
   id: '/$lang/',
   path: '/$lang/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiSearchRoute = ApiSearchRouteImport.update({
-  id: '/api/search',
-  path: '/api/search',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangTeamRoute = LangTeamRouteImport.update({
@@ -84,16 +76,6 @@ const LangContactUsRoute = LangContactUsRouteImport.update({
   path: '/$lang/contact-us',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LangDocsSplatRoute = LangDocsSplatRouteImport.update({
-  id: '/$lang/docs/$',
-  path: '/$lang/docs/$',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LangDevSplatRoute = LangDevSplatRouteImport.update({
-  id: '/$lang/dev/$',
-  path: '/$lang/dev/$',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -106,10 +88,7 @@ export interface FileRoutesByFullPath {
   '/$lang/news': typeof LangNewsRoute
   '/$lang/sponsorship': typeof LangSponsorshipRoute
   '/$lang/team': typeof LangTeamRoute
-  '/api/search': typeof ApiSearchRoute
-  '/$lang/': typeof LangIndexRoute
-  '/$lang/dev/$': typeof LangDevSplatRoute
-  '/$lang/docs/$': typeof LangDocsSplatRoute
+  '/$lang': typeof LangIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -122,10 +101,7 @@ export interface FileRoutesByTo {
   '/$lang/news': typeof LangNewsRoute
   '/$lang/sponsorship': typeof LangSponsorshipRoute
   '/$lang/team': typeof LangTeamRoute
-  '/api/search': typeof ApiSearchRoute
   '/$lang': typeof LangIndexRoute
-  '/$lang/dev/$': typeof LangDevSplatRoute
-  '/$lang/docs/$': typeof LangDocsSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -139,10 +115,7 @@ export interface FileRoutesById {
   '/$lang/news': typeof LangNewsRoute
   '/$lang/sponsorship': typeof LangSponsorshipRoute
   '/$lang/team': typeof LangTeamRoute
-  '/api/search': typeof ApiSearchRoute
   '/$lang/': typeof LangIndexRoute
-  '/$lang/dev/$': typeof LangDevSplatRoute
-  '/$lang/docs/$': typeof LangDocsSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -157,10 +130,7 @@ export interface FileRouteTypes {
     | '/$lang/news'
     | '/$lang/sponsorship'
     | '/$lang/team'
-    | '/api/search'
-    | '/$lang/'
-    | '/$lang/dev/$'
-    | '/$lang/docs/$'
+    | '/$lang'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -173,10 +143,7 @@ export interface FileRouteTypes {
     | '/$lang/news'
     | '/$lang/sponsorship'
     | '/$lang/team'
-    | '/api/search'
     | '/$lang'
-    | '/$lang/dev/$'
-    | '/$lang/docs/$'
   id:
     | '__root__'
     | '/'
@@ -189,10 +156,7 @@ export interface FileRouteTypes {
     | '/$lang/news'
     | '/$lang/sponsorship'
     | '/$lang/team'
-    | '/api/search'
     | '/$lang/'
-    | '/$lang/dev/$'
-    | '/$lang/docs/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -206,10 +170,7 @@ export interface RootRouteChildren {
   LangNewsRoute: typeof LangNewsRoute
   LangSponsorshipRoute: typeof LangSponsorshipRoute
   LangTeamRoute: typeof LangTeamRoute
-  ApiSearchRoute: typeof ApiSearchRoute
   LangIndexRoute: typeof LangIndexRoute
-  LangDevSplatRoute: typeof LangDevSplatRoute
-  LangDocsSplatRoute: typeof LangDocsSplatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -224,15 +185,8 @@ declare module '@tanstack/react-router' {
     '/$lang/': {
       id: '/$lang/'
       path: '/$lang'
-      fullPath: '/$lang/'
+      fullPath: '/$lang'
       preLoaderRoute: typeof LangIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/search': {
-      id: '/api/search'
-      path: '/api/search'
-      fullPath: '/api/search'
-      preLoaderRoute: typeof ApiSearchRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/team': {
@@ -298,20 +252,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangContactUsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/$lang/docs/$': {
-      id: '/$lang/docs/$'
-      path: '/$lang/docs/$'
-      fullPath: '/$lang/docs/$'
-      preLoaderRoute: typeof LangDocsSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/$lang/dev/$': {
-      id: '/$lang/dev/$'
-      path: '/$lang/dev/$'
-      fullPath: '/$lang/dev/$'
-      preLoaderRoute: typeof LangDevSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -326,20 +266,8 @@ const rootRouteChildren: RootRouteChildren = {
   LangNewsRoute: LangNewsRoute,
   LangSponsorshipRoute: LangSponsorshipRoute,
   LangTeamRoute: LangTeamRoute,
-  ApiSearchRoute: ApiSearchRoute,
   LangIndexRoute: LangIndexRoute,
-  LangDevSplatRoute: LangDevSplatRoute,
-  LangDocsSplatRoute: LangDocsSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}

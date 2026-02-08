@@ -5,7 +5,6 @@ import { Footer } from '@/components/footer'
 
 export const Route = createFileRoute('/$lang/news')({
   component: News,
-  loader: ({ params }) => ({ lang: params.lang }),
 })
 
 const newsContent = {
@@ -22,7 +21,7 @@ const newsContent = {
 }
 
 function News() {
-  const { lang } = Route.useLoaderData()
+  const { lang } = Route.useParams()
   const content = newsContent[lang as keyof typeof newsContent]
 
   return (

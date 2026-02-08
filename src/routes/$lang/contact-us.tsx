@@ -5,11 +5,10 @@ import { Footer } from '@/components/footer'
 
 export const Route = createFileRoute('/$lang/contact-us')({
   component: ContactUs,
-  loader: ({ params }) => ({ lang: params.lang }),
 })
 
 function ContactUs() {
-  const { lang } = Route.useLoaderData()
+  const { lang } = Route.useParams()
 
   return (
     <HomeLayout {...baseOptions(lang)}>

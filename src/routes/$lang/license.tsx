@@ -5,11 +5,10 @@ import { Footer } from '@/components/footer'
 
 export const Route = createFileRoute('/$lang/license')({
   component: License,
-  loader: ({ params }) => ({ lang: params.lang }),
 })
 
 function License() {
-  const { lang } = Route.useLoaderData()
+  const { lang } = Route.useParams()
 
   return (
     <HomeLayout {...baseOptions(lang)}>

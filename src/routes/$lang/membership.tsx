@@ -6,7 +6,6 @@ import { EmeritusWall } from '@/components/emeritus-wall'
 
 export const Route = createFileRoute('/$lang/membership')({
   component: Membership,
-  loader: ({ params }) => ({ lang: params.lang }),
 })
 
 const membershipContent = {
@@ -83,7 +82,7 @@ const membershipContent = {
 }
 
 function Membership() {
-  const { lang } = Route.useLoaderData()
+  const { lang } = Route.useParams()
   const content = membershipContent[lang as keyof typeof membershipContent]
 
   return (

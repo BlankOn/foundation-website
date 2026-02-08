@@ -5,7 +5,6 @@ import { Footer } from '@/components/footer'
 
 export const Route = createFileRoute('/$lang/team')({
   component: Team,
-  loader: ({ params }) => ({ lang: params.lang }),
 })
 
 const teamContent = {
@@ -94,7 +93,7 @@ const teamContent = {
 }
 
 function Team() {
-  const { lang } = Route.useLoaderData()
+  const { lang } = Route.useParams()
   const content = teamContent[lang as keyof typeof teamContent]
   const t = getTranslations(lang)
 

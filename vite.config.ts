@@ -1,24 +1,17 @@
 import { defineConfig } from 'vite'
-import { devtools } from '@tanstack/devtools-vite'
-import { tanstackStart } from '@tanstack/react-start/plugin/vite'
+import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
 import viteReact from '@vitejs/plugin-react'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
-import { cloudflare } from '@cloudflare/vite-plugin'
-import mdx from 'fumadocs-mdx/vite'
-import * as MdxConfig from './source.config'
 
 const config = defineConfig({
   plugins: [
-    mdx(MdxConfig),
-    devtools(),
-    cloudflare({ viteEnvironment: { name: 'ssr' } }),
+    TanStackRouterVite(),
     // this is the plugin that enables path aliases
     viteTsConfigPaths({
       projects: ['./tsconfig.json'],
     }),
     tailwindcss(),
-    tanstackStart(),
     viteReact(),
   ],
 })
