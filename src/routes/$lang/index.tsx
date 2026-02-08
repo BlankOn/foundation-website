@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions, getTranslations } from '@/lib/layout.shared'
+import { Footer } from '@/components/footer'
 
 export const Route = createFileRoute('/$lang/')({
   component: Home,
@@ -9,46 +10,20 @@ export const Route = createFileRoute('/$lang/')({
 
 function HeroAbout({
   t,
-  lang,
 }: {
   t: ReturnType<typeof getTranslations>
-  lang: string
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-24 text-white">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3Cpattern%20id%3D%22batik%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22120%22%20height%3D%22120%22%20patternUnits%3D%22userSpaceOnUse%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.08%22%3E%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2225%22%2F%3E%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2215%22%2F%3E%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%228%22%2F%3E%3Cpath%20d%3D%22M60%2035%20Q%2050%2045%2060%2055%20T%2060%2075%20T%2060%2095%22%2F%3E%3Cpath%20d%3D%22M35%2060%20Q%2045%2050%2055%2060%20T%2075%2060%20T%2095%2060%22%2F%3E%3Cpath%20d%3D%22M45%2045%20Q%2055%2055%2045%2065%22%2F%3E%3Cpath%20d%3D%22M75%2045%20Q%2065%2055%2075%2065%22%2F%3E%3Cpath%20d%3D%22M45%2075%20Q%2055%2065%2045%2055%22%2F%3E%3Cpath%20d%3D%22M75%2075%20Q%2065%2065%2075%2055%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2215%22%20r%3D%224%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%2F%3E%3Ccircle%20cx%3D%22105%22%20cy%3D%2215%22%20r%3D%224%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%22105%22%20r%3D%224%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%2F%3E%3Ccircle%20cx%3D%22105%22%20cy%3D%22105%22%20r%3D%224%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%2F%3E%3C%2Fg%3E%3C%2Fpattern%3E%3C%2Fdefs%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20fill%3D%22url(%23batik)%22%2F%3E%3C%2Fsvg%3E')] opacity-60" />
       <div className="container relative mx-auto max-w-5xl px-6">
         <div className="text-center">
-          <span className="mb-4 inline-block rounded-full bg-blue-500/20 px-4 py-1.5 text-sm font-medium text-blue-300">
-            {t.hero.about.subtitle}
-          </span>
           <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
             {t.hero.about.title}
           </h1>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
             {t.hero.about.description}
           </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href={`/${lang}`}
-              className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/25"
-            >
-              {t.hero.about.cta}
-              <svg
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </a>
-          </div>
         </div>
       </div>
     </section>
@@ -228,7 +203,7 @@ function HeroProducts({
                 {item.name}
               </h3>
               <p className="mb-6 text-fd-muted-foreground">{item.description}</p>
-              {item.url ? (
+              {item.url && item.cta && (
                 <a
                   href={item.url}
                   target="_blank"
@@ -250,27 +225,6 @@ function HeroProducts({
                     />
                   </svg>
                 </a>
-              ) : (
-                <Link
-                  to="/$lang/download"
-                  params={{ lang }}
-                  className="inline-flex items-center gap-2 font-medium text-blue-600 transition-colors hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
-                >
-                  {item.cta}
-                  <svg
-                    className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </Link>
               )}
             </div>
           ))}
@@ -287,11 +241,12 @@ function Home() {
   return (
     <HomeLayout {...baseOptions(lang)}>
       <main className="flex flex-1 flex-col">
-        <HeroAbout t={t} lang={lang} />
+        <HeroAbout t={t} />
         <HeroVision t={t} />
         <HeroDonate t={t} lang={lang} />
         <HeroProducts t={t} lang={lang} />
       </main>
+      <Footer lang={lang} />
     </HomeLayout>
   )
 }

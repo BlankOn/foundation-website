@@ -3,22 +3,17 @@ import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
 
-export const Route = createFileRoute('/$lang/download')({
-  component: Download,
+export const Route = createFileRoute('/$lang/license')({
+  component: License,
   loader: ({ params }) => ({ lang: params.lang }),
 })
 
-function Download() {
+function License() {
   const { lang } = Route.useLoaderData()
 
   return (
     <HomeLayout {...baseOptions(lang)}>
-      <main className="flex flex-1 flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold">Download</h1>
-        <p className="mt-4 text-fd-muted-foreground">
-          BlankOn Linux download page
-        </p>
-      </main>
+      <main className="flex flex-1 flex-col" />
       <Footer lang={lang} />
     </HomeLayout>
   )

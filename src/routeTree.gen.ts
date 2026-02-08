@@ -12,9 +12,15 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
 import { Route as ApiSearchRouteImport } from './routes/api/search'
+import { Route as LangTeamRouteImport } from './routes/$lang/team'
+import { Route as LangSponsorshipRouteImport } from './routes/$lang/sponsorship'
+import { Route as LangNewsRouteImport } from './routes/$lang/news'
 import { Route as LangMembershipRouteImport } from './routes/$lang/membership'
+import { Route as LangLicenseRouteImport } from './routes/$lang/license'
+import { Route as LangLegalRouteImport } from './routes/$lang/legal'
 import { Route as LangDownloadRouteImport } from './routes/$lang/download'
 import { Route as LangDonateRouteImport } from './routes/$lang/donate'
+import { Route as LangContactUsRouteImport } from './routes/$lang/contact-us'
 import { Route as LangDocsSplatRouteImport } from './routes/$lang/docs/$'
 import { Route as LangDevSplatRouteImport } from './routes/$lang/dev/$'
 
@@ -33,9 +39,34 @@ const ApiSearchRoute = ApiSearchRouteImport.update({
   path: '/api/search',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangTeamRoute = LangTeamRouteImport.update({
+  id: '/$lang/team',
+  path: '/$lang/team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangSponsorshipRoute = LangSponsorshipRouteImport.update({
+  id: '/$lang/sponsorship',
+  path: '/$lang/sponsorship',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangNewsRoute = LangNewsRouteImport.update({
+  id: '/$lang/news',
+  path: '/$lang/news',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LangMembershipRoute = LangMembershipRouteImport.update({
   id: '/$lang/membership',
   path: '/$lang/membership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangLicenseRoute = LangLicenseRouteImport.update({
+  id: '/$lang/license',
+  path: '/$lang/license',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangLegalRoute = LangLegalRouteImport.update({
+  id: '/$lang/legal',
+  path: '/$lang/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangDownloadRoute = LangDownloadRouteImport.update({
@@ -46,6 +77,11 @@ const LangDownloadRoute = LangDownloadRouteImport.update({
 const LangDonateRoute = LangDonateRouteImport.update({
   id: '/$lang/donate',
   path: '/$lang/donate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangContactUsRoute = LangContactUsRouteImport.update({
+  id: '/$lang/contact-us',
+  path: '/$lang/contact-us',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangDocsSplatRoute = LangDocsSplatRouteImport.update({
@@ -61,9 +97,15 @@ const LangDevSplatRoute = LangDevSplatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$lang/contact-us': typeof LangContactUsRoute
   '/$lang/donate': typeof LangDonateRoute
   '/$lang/download': typeof LangDownloadRoute
+  '/$lang/legal': typeof LangLegalRoute
+  '/$lang/license': typeof LangLicenseRoute
   '/$lang/membership': typeof LangMembershipRoute
+  '/$lang/news': typeof LangNewsRoute
+  '/$lang/sponsorship': typeof LangSponsorshipRoute
+  '/$lang/team': typeof LangTeamRoute
   '/api/search': typeof ApiSearchRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/dev/$': typeof LangDevSplatRoute
@@ -71,9 +113,15 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$lang/contact-us': typeof LangContactUsRoute
   '/$lang/donate': typeof LangDonateRoute
   '/$lang/download': typeof LangDownloadRoute
+  '/$lang/legal': typeof LangLegalRoute
+  '/$lang/license': typeof LangLicenseRoute
   '/$lang/membership': typeof LangMembershipRoute
+  '/$lang/news': typeof LangNewsRoute
+  '/$lang/sponsorship': typeof LangSponsorshipRoute
+  '/$lang/team': typeof LangTeamRoute
   '/api/search': typeof ApiSearchRoute
   '/$lang': typeof LangIndexRoute
   '/$lang/dev/$': typeof LangDevSplatRoute
@@ -82,9 +130,15 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$lang/contact-us': typeof LangContactUsRoute
   '/$lang/donate': typeof LangDonateRoute
   '/$lang/download': typeof LangDownloadRoute
+  '/$lang/legal': typeof LangLegalRoute
+  '/$lang/license': typeof LangLicenseRoute
   '/$lang/membership': typeof LangMembershipRoute
+  '/$lang/news': typeof LangNewsRoute
+  '/$lang/sponsorship': typeof LangSponsorshipRoute
+  '/$lang/team': typeof LangTeamRoute
   '/api/search': typeof ApiSearchRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/dev/$': typeof LangDevSplatRoute
@@ -94,9 +148,15 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$lang/contact-us'
     | '/$lang/donate'
     | '/$lang/download'
+    | '/$lang/legal'
+    | '/$lang/license'
     | '/$lang/membership'
+    | '/$lang/news'
+    | '/$lang/sponsorship'
+    | '/$lang/team'
     | '/api/search'
     | '/$lang/'
     | '/$lang/dev/$'
@@ -104,9 +164,15 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/$lang/contact-us'
     | '/$lang/donate'
     | '/$lang/download'
+    | '/$lang/legal'
+    | '/$lang/license'
     | '/$lang/membership'
+    | '/$lang/news'
+    | '/$lang/sponsorship'
+    | '/$lang/team'
     | '/api/search'
     | '/$lang'
     | '/$lang/dev/$'
@@ -114,9 +180,15 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/$lang/contact-us'
     | '/$lang/donate'
     | '/$lang/download'
+    | '/$lang/legal'
+    | '/$lang/license'
     | '/$lang/membership'
+    | '/$lang/news'
+    | '/$lang/sponsorship'
+    | '/$lang/team'
     | '/api/search'
     | '/$lang/'
     | '/$lang/dev/$'
@@ -125,9 +197,15 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LangContactUsRoute: typeof LangContactUsRoute
   LangDonateRoute: typeof LangDonateRoute
   LangDownloadRoute: typeof LangDownloadRoute
+  LangLegalRoute: typeof LangLegalRoute
+  LangLicenseRoute: typeof LangLicenseRoute
   LangMembershipRoute: typeof LangMembershipRoute
+  LangNewsRoute: typeof LangNewsRoute
+  LangSponsorshipRoute: typeof LangSponsorshipRoute
+  LangTeamRoute: typeof LangTeamRoute
   ApiSearchRoute: typeof ApiSearchRoute
   LangIndexRoute: typeof LangIndexRoute
   LangDevSplatRoute: typeof LangDevSplatRoute
@@ -157,11 +235,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiSearchRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang/team': {
+      id: '/$lang/team'
+      path: '/$lang/team'
+      fullPath: '/$lang/team'
+      preLoaderRoute: typeof LangTeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$lang/sponsorship': {
+      id: '/$lang/sponsorship'
+      path: '/$lang/sponsorship'
+      fullPath: '/$lang/sponsorship'
+      preLoaderRoute: typeof LangSponsorshipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$lang/news': {
+      id: '/$lang/news'
+      path: '/$lang/news'
+      fullPath: '/$lang/news'
+      preLoaderRoute: typeof LangNewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/$lang/membership': {
       id: '/$lang/membership'
       path: '/$lang/membership'
       fullPath: '/$lang/membership'
       preLoaderRoute: typeof LangMembershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$lang/license': {
+      id: '/$lang/license'
+      path: '/$lang/license'
+      fullPath: '/$lang/license'
+      preLoaderRoute: typeof LangLicenseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$lang/legal': {
+      id: '/$lang/legal'
+      path: '/$lang/legal'
+      fullPath: '/$lang/legal'
+      preLoaderRoute: typeof LangLegalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/download': {
@@ -176,6 +289,13 @@ declare module '@tanstack/react-router' {
       path: '/$lang/donate'
       fullPath: '/$lang/donate'
       preLoaderRoute: typeof LangDonateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$lang/contact-us': {
+      id: '/$lang/contact-us'
+      path: '/$lang/contact-us'
+      fullPath: '/$lang/contact-us'
+      preLoaderRoute: typeof LangContactUsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/docs/$': {
@@ -197,9 +317,15 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LangContactUsRoute: LangContactUsRoute,
   LangDonateRoute: LangDonateRoute,
   LangDownloadRoute: LangDownloadRoute,
+  LangLegalRoute: LangLegalRoute,
+  LangLicenseRoute: LangLicenseRoute,
   LangMembershipRoute: LangMembershipRoute,
+  LangNewsRoute: LangNewsRoute,
+  LangSponsorshipRoute: LangSponsorshipRoute,
+  LangTeamRoute: LangTeamRoute,
   ApiSearchRoute: ApiSearchRoute,
   LangIndexRoute: LangIndexRoute,
   LangDevSplatRoute: LangDevSplatRoute,

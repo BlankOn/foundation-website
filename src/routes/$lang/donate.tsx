@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions } from '@/lib/layout.shared'
+import { Footer } from '@/components/footer'
 
 export const Route = createFileRoute('/$lang/donate')({
   component: Donate,
@@ -19,7 +20,7 @@ const donateContent = {
         {
           title: 'Pengembangan Perangkat Lunak',
           description:
-            'Mendukung pengembangan dan pemeliharaan proyek-proyek open source seperti BlankOn Linux dan platform Warta BlankOn.',
+            'Mendukung pengembangan dan pemeliharaan proyek-proyek open source seperti BlankOn Linux dan proyek-proyek open source lainnya.',
           icon: 'code',
         },
         {
@@ -51,27 +52,9 @@ const donateContent = {
           name: 'Transfer Bank',
           description: 'Donasi melalui transfer bank lokal',
           details: [
-            'Bank: [Nama Bank]',
-            'No. Rekening: [Nomor Rekening]',
-            'Atas Nama: Yayasan Penggiat Sumber Terbuka',
-          ],
-        },
-        {
-          name: 'E-Wallet',
-          description: 'Donasi menggunakan dompet digital',
-          details: [
-            'GoPay: [Nomor GoPay]',
-            'OVO: [Nomor OVO]',
-            'Dana: [Nomor Dana]',
-          ],
-        },
-        {
-          name: 'Cryptocurrency',
-          description: 'Donasi menggunakan cryptocurrency',
-          details: [
-            'Bitcoin: [BTC Address]',
-            'Ethereum: [ETH Address]',
-            'USDT: [USDT Address]',
+            'Bank: Bank Jago',
+            'No. Rekening: 107556495313',
+            'Atas Nama: Slamet Santoso',
           ],
         },
       ],
@@ -86,6 +69,7 @@ const donateContent = {
         'Berbagi pengetahuan melalui artikel atau tutorial',
         'Membantu moderasi dan dukungan komunitas',
         'Mempromosikan yayasan dan proyek-proyek kami',
+        'Menyumbangkan perangkat keras (hardware) dalam berbagai bentuk, seperti mesin server, SSD, HDD, RAM, dan sebagainya',
       ],
     },
     transparency: {
@@ -112,7 +96,7 @@ const donateContent = {
         {
           title: 'Software Development',
           description:
-            'Supporting the development and maintenance of open source projects like BlankOn Linux and Warta BlankOn platform.',
+            'Supporting the development and maintenance of open source projects like BlankOn Linux and other open source projects.',
           icon: 'code',
         },
         {
@@ -143,27 +127,9 @@ const donateContent = {
           name: 'Bank Transfer',
           description: 'Donate via local bank transfer',
           details: [
-            'Bank: [Bank Name]',
-            'Account Number: [Account Number]',
-            'Account Name: Yayasan Penggiat Sumber Terbuka',
-          ],
-        },
-        {
-          name: 'E-Wallet',
-          description: 'Donate using digital wallet',
-          details: [
-            'GoPay: [GoPay Number]',
-            'OVO: [OVO Number]',
-            'Dana: [Dana Number]',
-          ],
-        },
-        {
-          name: 'Cryptocurrency',
-          description: 'Donate using cryptocurrency',
-          details: [
-            'Bitcoin: [BTC Address]',
-            'Ethereum: [ETH Address]',
-            'USDT: [USDT Address]',
+            'Bank: Bank Jago',
+            'Account Number: 107556495313',
+            'Account Name: Slamet Santoso',
           ],
         },
       ],
@@ -178,6 +144,7 @@ const donateContent = {
         'Share knowledge through articles or tutorials',
         'Help with community moderation and support',
         'Promote the foundation and our projects',
+        'Donate hardware in various forms, such as servers, SSDs, HDDs, RAM, and more',
       ],
     },
     transparency: {
@@ -323,7 +290,7 @@ function Donate() {
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="mx-auto max-w-md">
               {content.howToDonate.methods.map((method, index) => (
                 <div
                   key={index}
@@ -422,7 +389,9 @@ function Donate() {
               {content.transparency.description}
             </p>
             <a
-              href="#"
+              href="https://docs.google.com/spreadsheets/d/1oQKe2ehnWqNHIseqbp3yJTvbCSzGctdV0JWAERF1IUg/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border-2 border-blue-600 px-8 py-4 font-semibold text-blue-600 transition-all hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-white"
             >
               {content.transparency.cta}
@@ -474,6 +443,7 @@ function Donate() {
           </div>
         </section>
       </main>
+      <Footer lang={lang} />
     </HomeLayout>
   )
 }
