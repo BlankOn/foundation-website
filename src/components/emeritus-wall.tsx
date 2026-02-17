@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import emeritusRaw from '@/emeritus-members.csv?raw'
+import emeritusRaw from '@/members.csv?raw'
 
 const emeritusNames = emeritusRaw
   .split('\n')

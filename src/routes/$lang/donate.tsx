@@ -81,7 +81,7 @@ const donateContent = {
       title: 'Pertanyaan?',
       description:
         'Jika Anda memiliki pertanyaan tentang donasi atau ingin mendiskusikan bentuk dukungan lainnya, silakan hubungi kami.',
-      email: 'donasi@blankon.id',
+      email: 'donate@blankon.id',
     },
   },
   en: {
@@ -156,7 +156,7 @@ const donateContent = {
       title: 'Questions?',
       description:
         'If you have questions about donations or want to discuss other forms of support, please contact us.',
-      email: 'donasi@blankon.id',
+      email: 'donate@blankon.id',
     },
   },
 }

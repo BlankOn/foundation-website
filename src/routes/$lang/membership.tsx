@@ -3,6 +3,7 @@ import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
 import { EmeritusWall } from '@/components/emeritus-wall'
+import { ActiveMembers } from '@/components/active-members'
 
 export const Route = createFileRoute('/$lang/membership')({
   component: Membership,
@@ -101,8 +102,11 @@ function Membership() {
           </div>
         </section>
 
-        {/* Emeritus Contributor Wall */}
+        {/* Contributor Wall */}
         <EmeritusWall lang={lang} />
+
+        {/* Active Members */}
+        <ActiveMembers lang={lang} />
 
         {/* How to Become a Member */}
         <section className="bg-fd-background py-20">
