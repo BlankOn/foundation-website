@@ -140,10 +140,10 @@ function Sponsorship() {
               {content.howTo.cta}
             </p>
             <a
-              href="mailto:sponsorship@blankon.id"
+              href="mailto:humas@blankon.id"
               className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 font-semibold text-white transition-all hover:bg-blue-700 hover:shadow-lg"
             >
-              sponsorship@blankon.id
+              humas@blankon.id
               <svg
                 className="h-5 w-5"
                 fill="none"
