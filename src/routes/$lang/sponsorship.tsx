@@ -2,12 +2,70 @@ import { createFileRoute } from '@tanstack/react-router'
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
+import { useState } from 'react'
+
+const avatarColors = [
+  '#3b82f6',
+  '#8b5cf6',
+  '#ec4899',
+  '#f59e0b',
+  '#10b981',
+  '#06b6d4',
+  '#6366f1',
+  '#e11d48',
+]
+
+function getInitials(name: string) {
+  return name
+    .split(' ')
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join('')
+    .toUpperCase()
+}
+
+function getColor(name: string) {
+  let hash = 0
+  for (let i = 0; i < name.length; i++) {
+    hash = name.charCodeAt(i) + ((hash << 5) - hash)
+  }
+  return avatarColors[Math.abs(hash) % avatarColors.length]
+}
+
+function AvatarFallback({ name }: { name: string }) {
+  return (
+    <div
+      className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-lg font-bold text-white"
+      style={{ backgroundColor: getColor(name) }}
+    >
+      {getInitials(name)}
+    </div>
+  )
+}
+
+function Avatar({ name, github }: { name: string; github: string }) {
+  const [failed, setFailed] = useState(false)
+
+  if (!github || failed) {
+    return <AvatarFallback name={name} />
+  }
+
+  return (
+    <img
+      src={`https://github.com/${github}.png?size=80`}
+      alt={name}
+      className="h-14 w-14 shrink-0 rounded-full bg-fd-border object-cover"
+      loading="lazy"
+      onError={() => setFailed(true)}
+    />
+  )
+}
 
 export const Route = createFileRoute('/$lang/sponsorship')({
   component: Sponsorship,
 })
 
-const sponsors = [
+const corporateSponsors = [
   {
     name: 'STT Terpadu Nurul Fikri',
     logo: '/images/sponsorship-logo-sttnf-brand.png',
@@ -17,6 +75,25 @@ const sponsors = [
     name: 'HostBadak',
     logo: '/images/sponsorship-logo-hostbadak.png',
     url: 'https://hostbadak.com',
+  },
+]
+
+const individualSponsors = [
+  {
+    name: 'Adekabang',
+    github: 'Adekabang',
+    contribution: {
+      id: 'AMD64 Server (56 cores, 500GB RAM, 4.3TB storage)',
+      en: 'AMD64 Server (56 cores, 500GB RAM, 4.3TB storage)',
+    },
+  },
+  {
+    name: 'Aryulianto',
+    github: 'aryulianto',
+    contribution: {
+      id: 'ARM64 Server (80 cores, 251GB RAM, 1TB storage)',
+      en: 'ARM64 Server (80 cores, 251GB RAM, 1TB storage)',
+    },
   },
 ]
 
@@ -40,6 +117,8 @@ const sponsorshipContent = {
       cta: 'Hubungi kami untuk menjadi sponsor.',
     },
     currentSponsors: 'Sponsor Kami',
+    corporateSponsors: 'Sponsor Korporat',
+    individualSponsors: 'Sponsor Individu',
   },
   en: {
     title: 'Sponsorship',
@@ -60,6 +139,8 @@ const sponsorshipContent = {
       cta: 'Contact us to become a sponsor.',
     },
     currentSponsors: 'Our Sponsors',
+    corporateSponsors: 'Corporate Sponsors',
+    individualSponsors: 'Individual Sponsors',
   },
 }
 
@@ -162,32 +243,67 @@ function Sponsorship() {
         </section>
 
         {/* Current Sponsors */}
-        <section className="bg-white py-20">
+        <section className="bg-white py-20 dark:bg-slate-950">
           <div className="container mx-auto max-w-5xl px-6">
-            <div className="mb-12 text-center">
-              <h2 className="mb-4 text-2xl font-bold text-slate-900 md:text-3xl">
+            {/* Main heading */}
+            <div className="mb-16 text-center">
+              <h2 className="mb-4 text-3xl font-bold text-fd-foreground md:text-4xl">
                 {content.currentSponsors}
               </h2>
               <div className="mx-auto h-1 w-16 rounded-full bg-gradient-to-r from-blue-600 to-blue-400" />
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-12">
-              {sponsors.map((sponsor) => (
-                <a
-                  key={sponsor.name}
-                  href={sponsor.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-opacity hover:opacity-80"
-                  title={sponsor.name}
-                >
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    className="h-16 w-auto object-contain md:h-20"
-                  />
-                </a>
-              ))}
+            {/* Corporate Sponsors */}
+            <div className="mb-16">
+              <h3 className="mb-8 text-center text-xl font-semibold text-fd-foreground md:text-2xl">
+                {content.corporateSponsors}
+              </h3>
+              <div className="flex flex-wrap items-center justify-center gap-12">
+                {corporateSponsors.map((sponsor) => (
+                  <a
+                    key={sponsor.name}
+                    href={sponsor.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-opacity hover:opacity-80"
+                    title={sponsor.name}
+                  >
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className="h-16 w-auto object-contain md:h-20"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Individual Sponsors */}
+            <div>
+              <h3 className="mb-8 text-center text-xl font-semibold text-fd-foreground md:text-2xl">
+                {content.individualSponsors}
+              </h3>
+              <div className="grid gap-6 sm:grid-cols-2">
+                {individualSponsors.map((sponsor) => (
+                  <a
+                    key={sponsor.github}
+                    href={`https://github.com/${sponsor.github}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 rounded-2xl border border-fd-border bg-fd-card p-5 transition-all hover:border-blue-300 hover:shadow-lg dark:hover:border-blue-700"
+                  >
+                    <Avatar name={sponsor.name} github={sponsor.github} />
+                    <div className="min-w-0">
+                      <p className="truncate font-semibold text-fd-foreground">
+                        {sponsor.name}
+                      </p>
+                      <p className="text-sm text-fd-muted-foreground">
+                        {sponsor.contribution[lang as keyof typeof sponsor.contribution]}
+                      </p>
+                    </div>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </section>
