@@ -3,41 +3,49 @@
     {
       "name": "Harry Suryapambagya",
       "github": "harsxv",
+      "project": "blankonlinux",
       "contribution": { "id": "Infrastruktur", "en": "Infrastructure" }
     },
     {
       "name": "Bagus Kusuma Loka",
       "github": "kusuma-loka",
+      "project": "blankonlinux",
       "contribution": { "id": "Infrastruktur", "en": "Infrastructure" }
     },
     {
       "name": "Firmansyah Dzakwan Arifien",
       "github": "FirmansyahDzakwanArifien",
+      "project": "blankonlinux",
       "contribution": { "id": "Infrastruktur", "en": "Infrastructure" }
     },
     {
       "name": "Herpiko Dwi Aguno",
       "github": "herpiko",
+      "project": "blankonlinux",
       "contribution": { "id": "Pemelihara Paket", "en": "Package Maintainer" }
     },
     {
       "name": "Lucky Mahendra Purba",
       "github": "luckynee",
+      "project": "blankonlinux",
       "contribution": { "id": "Pemelihara Paket", "en": "Package Maintainer" }
     },
     {
       "name": "Raffi Febriandika Utama",
       "github": "raffifu",
+      "project": "blankonlinux",
       "contribution": { "id": "Pemelihara Paket", "en": "Package Maintainer" }
     },
     {
       "name": "Mohammad Raska",
       "github": "Adekabang",
+      "project": "blankonlinux",
       "contribution": { "id": "Pemelihara Paket", "en": "Package Maintainer" }
     },
     {
       "name": "Atqa Munzir Zakaria",
       "github": "atqamz",
+      "project": "blankonlinux",
       "contribution": { "id": "Riset dan Pengembangan", "en": "Research and Development" }
     },
     {
@@ -53,6 +61,7 @@
     {
       "name": "Hanhan Husna",
       "github": "hahn",
+      "project": "blankonlinux",
       "contribution": { "id": "Pemelihara Paket", "en": "Package Maintainer" }
     }
   ],
