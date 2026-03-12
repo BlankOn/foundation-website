@@ -2,27 +2,162 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions, getTranslations } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
+import { useEffect, useState } from 'react'
 
 export const Route = createFileRoute('/$lang/')({
   component: Home,
 })
 
+function BinaryMatrix() {
+  const asciiArt = [
+    "           `.:/++++/:.`            :oys+.",
+    "        `./ohdNMMMMNmho+.`         .+oo:`",
+    "      -smMMMMMMMMMMMMMMMMmy-`     `yyyyy+",
+    "   `:dMMMMMMMMMMMMMMMMMMMMMMd/`   `yyyyys",
+    "  .hMMMMMMMNmhso/++symNMMMMMMMh-  `yyyyys",
+    " -mMMMMMMms-`         -omMMMMMMN- .yyyyys",
+    ".mMMMMMMy.              .yMMMMMMm: yyyyys",
+    "sMMMMMMy                 `sMMMMMMh yyyyys",
+    "NMMMMMN:                  .NMMMMMN yyyyys",
+    "MMMMMMm.                   NMMMMMN yyyyys",
+    "hMMMMMM+                  /MMMMMMN yyyyys",
+    ":NMMMMMN:                :mMMMMMM+ yyyyys",
+    " oMMMMMMNs-            .sNMMMMMMs. yyyyys",
+    "  +MMMMMMMNho:.`  `.:ohNMMMMMMNo  `yyyyys",
+    "   -hMMMMMMMMNNNmmNNNMMMMMMMMh-   `yyyyys",
+    "     :yNMMMMMMMMMMMMMMMMMMNy:`    `yyyyys",
+    "       .:sdNMMMMMMMMMMNds/.       `yyyyyo",
+    "           `.:/++++/:.`            :oys+.",
+  ]
+
+  const [binaryMask, setBinaryMask] = useState<boolean[][]>([])
+
+  useEffect(() => {
+    // Create initial binary mask based on ASCII art
+    // Non-space characters will be randomly 0 or 1
+    const initialMask = asciiArt.map(line =>
+      line.split('').map(char => Math.random() > 0.5)
+    )
+    setBinaryMask(initialMask)
+
+    // Animate by flipping random bits where there are non-space characters
+    const interval = setInterval(() => {
+      setBinaryMask(prevMask => {
+        const newMask = prevMask.map(row => [...row])
+        // Flip 5-10 random bits each frame
+        const flips = Math.floor(Math.random() * 6) + 5
+        for (let i = 0; i < flips; i++) {
+          const row = Math.floor(Math.random() * asciiArt.length)
+          const col = Math.floor(Math.random() * asciiArt[row].length)
+          // Only flip if it's not a space
+          if (asciiArt[row][col] !== ' ') {
+            newMask[row][col] = !newMask[row][col]
+          }
+        }
+        return newMask
+      })
+    }, 100)
+
+    return () => clearInterval(interval)
+  }, [])
+
+  return (
+    <div className="relative w-full flex items-center justify-center py-8">
+      <div className="font-mono text-sm leading-relaxed text-blue-300/60 scale-x-125">
+        {asciiArt.map((line, i) => (
+          <div key={i} className="whitespace-pre">
+            {line.split('').map((char, j) => {
+              if (char === ' ') {
+                return <span key={j}> </span>
+              }
+              const isBinary = binaryMask[i]?.[j]
+              const displayChar = isBinary ? '1' : '0'
+              return (
+                <span
+                  key={j}
+                  className={`transition-all duration-100 ${
+                    isBinary ? 'text-blue-400' : 'text-blue-600/40'
+                  }`}
+                >
+                  {displayChar}
+                </span>
+              )
+            })}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function HeroAbout({
   t,
+  lang,
 }: {
   t: ReturnType<typeof getTranslations>
+  lang: string
 }) {
+  const stats = {
+    id: {
+      contributors: 'Kontributor',
+      yearsContributing: 'Tahun Berkontribusi',
+      linuxReleases: 'Rilis Distribusi Linux',
+      blankonfs: 'BlanKonf Terselenggara',
+    },
+    en: {
+      contributors: 'Contributors',
+      yearsContributing: 'Years Contributing',
+      linuxReleases: 'Linux Distribution Releases',
+      blankonfs: 'BlanKonfs Held',
+    },
+  }
+
+  const statsText = stats[lang as keyof typeof stats] || stats.en
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-24 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-32 text-white">
+      {/* Background pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3Cpattern%20id%3D%22batik%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22120%22%20height%3D%22120%22%20patternUnits%3D%22userSpaceOnUse%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.08%22%3E%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2225%22%2F%3E%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2215%22%2F%3E%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%228%22%2F%3E%3Cpath%20d%3D%22M60%2035%20Q%2050%2045%2060%2055%20T%2060%2075%20T%2060%2095%22%2F%3E%3Cpath%20d%3D%22M35%2060%20Q%2045%2050%2055%2060%20T%2075%2060%20T%2095%2060%22%2F%3E%3Cpath%20d%3D%22M45%2045%20Q%2055%2055%2045%2065%22%2F%3E%3Cpath%20d%3D%22M75%2045%20Q%2065%2055%2075%2065%22%2F%3E%3Cpath%20d%3D%22M45%2075%20Q%2055%2065%2045%2055%22%2F%3E%3Cpath%20d%3D%22M75%2075%20Q%2065%2065%2075%2055%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2215%22%20r%3D%224%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%2F%3E%3Ccircle%20cx%3D%22105%22%20cy%3D%2215%22%20r%3D%224%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%22105%22%20r%3D%224%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%2F%3E%3Ccircle%20cx%3D%22105%22%20cy%3D%22105%22%20r%3D%224%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%2F%3E%3C%2Fg%3E%3C%2Fpattern%3E%3C%2Fdefs%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20fill%3D%22url(%23batik)%22%2F%3E%3C%2Fsvg%3E')] opacity-60" />
-      <div className="container relative mx-auto max-w-5xl px-6">
-        <div className="text-center">
-          <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-            {t.hero.about.title}
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-            {t.hero.about.description}
-          </p>
+
+      <div className="container relative mx-auto max-w-6xl px-6">
+        {/* Asymmetric layout */}
+        <div className="grid md:grid-cols-5 gap-12 items-center">
+          {/* Left content - takes 3 columns */}
+          <div className="md:col-span-3 space-y-8">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
+              {t.hero.about.title}
+            </h1>
+
+            <p className="text-lg md:text-xl leading-relaxed text-slate-300 max-w-2xl">
+              {t.hero.about.description}
+            </p>
+
+            {/* Stats or highlights */}
+            <div className="flex flex-wrap gap-8 pt-4">
+              <div className="space-y-1">
+                <div className="text-3xl font-bold text-blue-400">381+</div>
+                <div className="text-sm text-slate-400">{statsText.contributors}</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-3xl font-bold text-blue-400">22+</div>
+                <div className="text-sm text-slate-400">{statsText.yearsContributing}</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-3xl font-bold text-blue-400">12</div>
+                <div className="text-sm text-slate-400">{statsText.linuxReleases}</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-3xl font-bold text-blue-400">4</div>
+                <div className="text-sm text-slate-400">{statsText.blankonfs}</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right visual element - takes 2 columns */}
+          <div className="md:col-span-2 relative hidden md:block">
+            {/* Binary matrix animation */}
+            <BinaryMatrix />
+          </div>
         </div>
       </div>
     </section>
@@ -238,7 +373,7 @@ function Home() {
   return (
     <HomeLayout {...baseOptions(lang)}>
       <main className="flex flex-1 flex-col">
-        <HeroAbout t={t} />
+        <HeroAbout t={t} lang={lang} />
         <HeroVision t={t} />
         <HeroDonate t={t} lang={lang} />
         <HeroProducts t={t} />

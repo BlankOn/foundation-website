@@ -111,7 +111,7 @@ const translations = {
         title: 'Misi',
         mission: 'Misi',
         missions: [
-          'Menggiatkan dan merawat BlankOn Linux sebagai proyek teknologi bebas terbuka yang dikelola dengan baik, dikembangkan secara terbuka dan berkelanjutan.',
+          'Merawat BlankOn Linux sebagai proyek teknologi bebas terbuka yang dikelola dengan baik, dikembangkan secara terbuka dan berkelanjutan.',
           'Mendorong edukasi dan literasi teknologi bebas terbuka dan kemandirian teknologi melalui penguatan kapasitas di bidang sistem, infrastruktur, dan keamanan.',
           'Menumbuhkan dan menaungi proyek serta kegiatan teknologi bebas terbuka melalui dukungan dan penguatan komunitas.',
           'Menguatkan tata kelola organisasi melalui pengelolaan yang transparan, partisipatif, dan bertanggung jawab.',
@@ -133,7 +133,7 @@ const translations = {
             description:
               'Distribusi Linux berbasis Debian yang dikembangkan khusus untuk pengguna Indonesia dengan dukungan bahasa dan kebutuhan lokal.',
             cta: 'Unduh Sekarang',
-            url: 'http://jahitan.blankonlinux.id/',
+            url: 'https://blankonlinux.id/en/download',
           },
           {
             name: 'Warta BlankOn',
@@ -224,7 +224,7 @@ const translations = {
         title: 'Mission',
         mission: 'Mission',
         missions: [
-          'Activate and maintain BlankOn Linux as a well-managed open source technology project, developed openly and sustainably.',
+          'Maintain BlankOn Linux as a well-managed open source technology project, developed openly and sustainably.',
           'Promote education and literacy in open source technology and technological independence through capacity building in systems, infrastructure, and security.',
           'Nurture and support open source projects and activities through community strengthening and support.',
           'Strengthen organizational governance through transparent, participatory, and accountable management.',
@@ -246,7 +246,7 @@ const translations = {
             description:
               'A Debian-based Linux distribution developed specifically for Indonesian users with local language support and needs.',
             cta: 'Download Now',
-            url: 'http://jahitan.blankonlinux.id/',
+            url: 'https://blankonlinux.id/en/download',
           },
           {
             name: 'Warta BlankOn',
