@@ -52,8 +52,8 @@ const donateContent = {
           description: 'Donasi melalui transfer bank lokal',
           details: [
             'Bank: Bank Jago',
-            'No. Rekening: 107556495313',
-            'Atas Nama: Slamet Santoso',
+            'No. Rekening: 102223737703',
+            'Atas Nama: Herpiko Dwi Aguno',
           ],
         },
       ],
@@ -127,8 +127,8 @@ const donateContent = {
           description: 'Donate via local bank transfer',
           details: [
             'Bank: Bank Jago',
-            'Account Number: 107556495313',
-            'Account Name: Slamet Santoso',
+            'Account Number: 102223737703',
+            'Account Name: Herpiko Dwi Aguno',
           ],
         },
       ],
