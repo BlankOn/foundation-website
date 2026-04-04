@@ -35,12 +35,6 @@ const teamContent = {
           photo: '/images/herpiko.png',
         },
         {
-          name: 'Slamet Santoso',
-          position: 'Manajer Keuangan',
-          bio: 'Mantan kontributor sejak era 2010-an, terlibat dalam Humas dan Manajer Rilis proyek BlankOn Linux.',
-          photo: '/images/slamet.png',
-        },
-        {
           name: 'Iwan stwn',
           position: 'Koordinator Program',
           bio: 'Pencetus proyek dan pengelola Kuliax, distribusi GNU/Linux yang menyasar pendidikan tinggi. Ia terlibat dalam proyek dan komunitas free/open-source di Indonesia sejak tahun 2000. Saat ini aktif sebagai dosen/peneliti Teknik Elektro di Universitas Jenderal Soedirman.',
@@ -74,12 +68,6 @@ const teamContent = {
           position: 'Director',
           bio: 'An active BlankOn Linux contributor since 2009 who currently leads the entire derivative Linux distribution development team. Former hacktivist for a few Linux User Groups (KPLI NTB and GLiBogor).',
           photo: '/images/herpiko.png',
-        },
-        {
-          name: 'Slamet Santoso',
-          position: 'Finance Manager',
-          bio: 'A former contributor since the 2010s, involved in Public Relations lead and Release Manager of the BlankOn Linux project.',
-          photo: '/images/slamet.png',
         },
         {
           name: 'Iwan stwn',
