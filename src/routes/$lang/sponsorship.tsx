@@ -97,6 +97,29 @@ const individualSponsors = [
   },
 ]
 
+const emeritusSponsors = [
+  {
+    name: 'Sepatu Fans',
+    url: 'https://www.instagram.com/sepatufans/',
+  },
+  {
+    name: 'Btech',
+    url: 'https://btech.id',
+  },
+  {
+    name: 'Data Utama Net',
+    url: 'https://datautama.net.id',
+  },
+  {
+    name: 'RadNext',
+    url: 'https://lokakarya.radnext.id/index.php/tentang-kami/',
+  },
+  {
+    name: 'Netzen Media Akses',
+    url: 'https://netzen.net.id/',
+  },
+]
+
 const sponsorshipContent = {
   id: {
     title: 'Sponsorship',
@@ -119,6 +142,7 @@ const sponsorshipContent = {
     currentSponsors: 'Sponsor Kami',
     corporateSponsors: 'Sponsor Korporat',
     individualSponsors: 'Sponsor Individu',
+    emeritusSponsors: 'Sponsor Emeritus',
   },
   en: {
     title: 'Sponsorship',
@@ -141,6 +165,7 @@ const sponsorshipContent = {
     currentSponsors: 'Our Sponsors',
     corporateSponsors: 'Corporate Sponsors',
     individualSponsors: 'Individual Sponsors',
+    emeritusSponsors: 'Emeritus Sponsors',
   },
 }
 
@@ -279,7 +304,7 @@ function Sponsorship() {
             </div>
 
             {/* Individual Sponsors */}
-            <div>
+            <div className="mb-16">
               <h3 className="mb-8 text-center text-xl font-semibold text-fd-foreground md:text-2xl">
                 {content.individualSponsors}
               </h3>
@@ -301,6 +326,28 @@ function Sponsorship() {
                         {sponsor.contribution[lang as keyof typeof sponsor.contribution]}
                       </p>
                     </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Emeritus Sponsors */}
+            <div>
+              <h3 className="mb-8 text-center text-xl font-semibold text-fd-foreground md:text-2xl">
+                {content.emeritusSponsors}
+              </h3>
+              <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+                {emeritusSponsors.map((sponsor) => (
+                  <a
+                    key={sponsor.name}
+                    href={sponsor.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center rounded-2xl border border-fd-border bg-fd-card p-6 text-center transition-all hover:border-blue-300 hover:shadow-lg dark:hover:border-blue-700"
+                  >
+                    <p className="font-semibold text-fd-foreground">
+                      {sponsor.name}
+                    </p>
                   </a>
                 ))}
               </div>
