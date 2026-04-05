@@ -37,7 +37,23 @@ const teamContent = {
         {
           name: 'Iwan stwn',
           position: 'Koordinator Program',
-          bio: 'Pencetus proyek dan pengelola Kuliax, distribusi GNU/Linux yang menyasar pendidikan tinggi. Ia terlibat dalam proyek dan komunitas free/open-source di Indonesia sejak tahun 2000. Saat ini aktif sebagai dosen/peneliti Teknik Elektro di Universitas Jenderal Soedirman.',
+          bio: (
+            <>
+              Pencetus proyek dan pengelola{' '}
+              <a
+                href="https://speakerdeck.com/stwn/linux-distribution-for-higher-education-still-relevant"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline dark:text-blue-400"
+              >
+                Kuliax
+              </a>
+              , distribusi GNU/Linux yang menyasar pendidikan tinggi. Ia terlibat
+              dalam beberapa proyek dan komunitas perangkat lunak free/open-source di
+              Indonesia sejak tahun 2001. Saat ini aktif sebagai dosen/peneliti Teknik
+              Elektro di Universitas Jenderal Soedirman.
+            </>
+          ),
           photo: '/images/iwan.png',
         },
       ],
@@ -72,7 +88,23 @@ const teamContent = {
         {
           name: 'Iwan stwn',
           position: 'Program Manager',
-          bio: 'The project initiator and maintainer of Kuliax, a GNU/Linux distribution targeting higher education. He has been involved in free/open-source projects and communities in Indonesia since 2000. He is currently an EE lecturer/researcher at Universitas Jenderal Soedirman.',
+          bio: (
+            <>
+              The project initiator and maintainer of{' '}
+              <a
+                href="https://speakerdeck.com/stwn/linux-distribution-for-higher-education-still-relevant"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline dark:text-blue-400"
+              >
+                Kuliax
+              </a>
+              , a GNU/Linux distribution targeting higher education. He has been
+              involved in several free/open-source software projects and communities in
+              Indonesia since 2001. He is currently an EE lecturer/researcher at
+              Universitas Jenderal Soedirman.
+            </>
+          ),
           photo: '/images/iwan.png',
         },
       ],
