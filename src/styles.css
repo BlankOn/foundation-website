@@ -149,3 +149,13 @@ code {
   @apply hidden;
 }
 
+/* Add frame to dark sponsor logo on dark mode */
+@layer components {
+  .framed-image {
+    /* Standard state (optional: no border or a different one) */
+    @apply border-0;
+
+    /* Dark mode state using Tailwind's modifier */
+    @apply dark:border-white p-1.25 dark:bg-white;
+  }
+}

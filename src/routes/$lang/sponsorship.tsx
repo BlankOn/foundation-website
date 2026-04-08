@@ -75,6 +75,7 @@ const corporateSponsors = [
     name: 'HostBadak',
     logo: '/images/sponsorship-logo-hostbadak.png',
     url: 'https://hostbadak.com',
+    className: 'framed-image'
   },
 ]
 
@@ -296,7 +297,7 @@ function Sponsorship() {
                     <img
                       src={sponsor.logo}
                       alt={sponsor.name}
-                      className="h-16 w-auto object-contain md:h-20"
+                      className={`h-16 w-auto object-contain md:h-20 ${sponsor.className || ''}`}
                     />
                   </a>
                 ))}
