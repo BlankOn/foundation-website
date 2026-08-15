@@ -114,7 +114,7 @@ const translations = {
           'Merawat BlankOn Linux sebagai proyek teknologi bebas terbuka yang dikelola dengan baik, dikembangkan secara terbuka dan berkelanjutan.',
           'Mendorong edukasi dan literasi teknologi bebas terbuka dan kemandirian teknologi melalui penguatan kapasitas di bidang sistem, infrastruktur, dan keamanan.',
           'Menumbuhkan dan menaungi proyek serta kegiatan teknologi bebas terbuka melalui dukungan dan penguatan komunitas.',
-          'Menguatkan tata kelola organisasi melalui pengelolaan yang transparan, partisipatif, dan bertanggung jawab.',
+          'Mendorong akses yang setara terhadap teknologi, internet, dan pengetahuan digital, sehingga setiap orang dapat berpartisipasi, berkarya, dan memperoleh manfaat dari dunia digital..',
         ],
       },
       donate: {
@@ -227,7 +227,7 @@ const translations = {
           'Maintain BlankOn Linux as a well-managed open source technology project, developed openly and sustainably.',
           'Promote education and literacy in open source technology and technological independence through capacity building in systems, infrastructure, and security.',
           'Nurture and support open source projects and activities through community strengthening and support.',
-          'Strengthen organizational governance through transparent, participatory, and accountable management.',
+          'Promote equitable access to technology, the internet and digital knowledge, enabling everyone to participate, create and benifit from the digital world..',
         ],
       },
       donate: {
