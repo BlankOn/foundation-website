@@ -21,14 +21,37 @@ const rawFiles = import.meta.glob<string>('/content/news/*.md', {
   eager: true,
 })
 
+const assetUrls = import.meta.glob<string>('/content/assets/*', {
+  query: '?url',
+  import: 'default',
+  eager: true,
+})
+
+function resolveAssetPaths(raw: string): string {
+  return raw.replace(
+    /(["'(])(?:\.?\/)?content\/assets\/([^"')\s]+)/g,
+    (match, prefix, filename) => {
+      const url = assetUrls[`/content/assets/${filename}`]
+      return url ? `${prefix}${url}` : match
+    },
+  )
+}
+
 function extractTitle(raw: string): string {
   const match = raw.match(/^#\s+(.+)$/m)
   return match ? match[1].trim() : ''
 }
 
+function stripImages(text: string): string {
+  return text
+    .replace(/<img[^>]*>/gi, '')
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+    .trim()
+}
+
 function extractExcerpt(raw: string): string {
   for (const line of raw.split('\n')) {
-    const trimmed = line.trim()
+    const trimmed = stripImages(line.trim())
     if (!trimmed || trimmed.startsWith('#') || /^-{3,}$/.test(trimmed)) {
       continue
     }
@@ -50,7 +73,7 @@ const articles: Array<NewsArticle> = Object.entries(rawFiles)
       lang: lang as NewsLang,
       title: extractTitle(raw),
       excerpt: extractExcerpt(raw),
-      html: marked.parse(raw, { async: false }),
+      html: marked.parse(resolveAssetPaths(raw), { async: false }),
     }
   })
   .filter((article): article is NewsArticle => article !== null)

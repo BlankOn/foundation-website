@@ -61,7 +61,7 @@ function News() {
                 {content.empty}
               </p>
             ) : (
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="flex flex-col gap-6">
                 {articles.map((article) => (
                   <Link
                     key={article.slug}
