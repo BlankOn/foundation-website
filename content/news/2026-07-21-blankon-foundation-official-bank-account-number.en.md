@@ -12,4 +12,6 @@ Going forward, all donations to BlankOn Foundation should be directed to the fol
 - Account Number: 6111622231
 - Account Name: BlankOn Penggiat Sumber Terbuka Yayasan
 
+As part of our commitment to sound governance, BlankOn Foundation is also currently processing a Public Fundraising Permit (Pengumpulan Uang atau Barang / PUB) in accordance with applicable regulations. We hope this process can be completed as soon as possible, allowing our fundraising activities to operate in a fully legal and transparent manner.
+
 BlankOn Foundation extends its gratitude for the continued trust and support from the community and donors in advancing the open source ecosystem in Indonesia.
