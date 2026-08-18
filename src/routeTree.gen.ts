@@ -20,6 +20,7 @@ import { Route as LangLegalRouteImport } from './routes/$lang/legal'
 import { Route as LangDownloadRouteImport } from './routes/$lang/download'
 import { Route as LangDonateRouteImport } from './routes/$lang/donate'
 import { Route as LangContactUsRouteImport } from './routes/$lang/contact-us'
+import { Route as LangNewsSlugRouteImport } from './routes/$lang/news_.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -76,6 +77,11 @@ const LangContactUsRoute = LangContactUsRouteImport.update({
   path: '/$lang/contact-us',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangNewsSlugRoute = LangNewsSlugRouteImport.update({
+  id: '/$lang/news_/$slug',
+  path: '/$lang/news/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -88,7 +94,8 @@ export interface FileRoutesByFullPath {
   '/$lang/news': typeof LangNewsRoute
   '/$lang/sponsorship': typeof LangSponsorshipRoute
   '/$lang/team': typeof LangTeamRoute
-  '/$lang/': typeof LangIndexRoute
+  '/$lang': typeof LangIndexRoute
+  '/$lang/news/$slug': typeof LangNewsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -102,6 +109,7 @@ export interface FileRoutesByTo {
   '/$lang/sponsorship': typeof LangSponsorshipRoute
   '/$lang/team': typeof LangTeamRoute
   '/$lang': typeof LangIndexRoute
+  '/$lang/news/$slug': typeof LangNewsSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -116,6 +124,7 @@ export interface FileRoutesById {
   '/$lang/sponsorship': typeof LangSponsorshipRoute
   '/$lang/team': typeof LangTeamRoute
   '/$lang/': typeof LangIndexRoute
+  '/$lang/news_/$slug': typeof LangNewsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -130,7 +139,8 @@ export interface FileRouteTypes {
     | '/$lang/news'
     | '/$lang/sponsorship'
     | '/$lang/team'
-    | '/$lang/'
+    | '/$lang'
+    | '/$lang/news/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -144,6 +154,7 @@ export interface FileRouteTypes {
     | '/$lang/sponsorship'
     | '/$lang/team'
     | '/$lang'
+    | '/$lang/news/$slug'
   id:
     | '__root__'
     | '/'
@@ -157,6 +168,7 @@ export interface FileRouteTypes {
     | '/$lang/sponsorship'
     | '/$lang/team'
     | '/$lang/'
+    | '/$lang/news_/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -171,6 +183,7 @@ export interface RootRouteChildren {
   LangSponsorshipRoute: typeof LangSponsorshipRoute
   LangTeamRoute: typeof LangTeamRoute
   LangIndexRoute: typeof LangIndexRoute
+  LangNewsSlugRoute: typeof LangNewsSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -185,7 +198,7 @@ declare module '@tanstack/react-router' {
     '/$lang/': {
       id: '/$lang/'
       path: '/$lang'
-      fullPath: '/$lang/'
+      fullPath: '/$lang'
       preLoaderRoute: typeof LangIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
@@ -252,6 +265,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangContactUsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang/news_/$slug': {
+      id: '/$lang/news_/$slug'
+      path: '/$lang/news/$slug'
+      fullPath: '/$lang/news/$slug'
+      preLoaderRoute: typeof LangNewsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -267,6 +287,7 @@ const rootRouteChildren: RootRouteChildren = {
   LangSponsorshipRoute: LangSponsorshipRoute,
   LangTeamRoute: LangTeamRoute,
   LangIndexRoute: LangIndexRoute,
+  LangNewsSlugRoute: LangNewsSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
