@@ -2,7 +2,7 @@
 
 ---
 
-BlankOn Foundation dengan bangga mengumumkan dukungan infrastruktur bagi LangitKetujuh, sebuah proyek distribusi Linux yang dirancang khusus untuk kebutuhan desainer dan pengguna desktop profesional. Dukungan ini merupakan wujud nyata komitmen BlankOn Foundation dalam memperkuat ekosistem sumber terbuka di Indonesia, tidak hanya melalui pengembangan BlankOn Linux, tetapi juga dengan merangkul dan membantu proyek-proyek sumber terbuka lain yang sejalan dengan visi kemandirian teknologi.
+BlankOn Foundation dengan bangga mengumumkan dukungan infrastruktur bagi LangitKetujuh, sebuah proyek distribusi Linux yang dibangun khusus untuk kebutuhan desainer dan pengguna desktop profesional. Dukungan ini merupakan wujud nyata komitmen BlankOn Foundation dalam memperkuat ekosistem sumber terbuka di Indonesia, tidak hanya melalui pengembangan BlankOn Linux, tetapi juga dengan merangkul dan membantu proyek-proyek sumber terbuka lain yang sejalan dengan visi kemandirian teknologi.
 
 ## Kolaborasi Antar Proyek Sumber Terbuka
 
