@@ -32,7 +32,7 @@ const teamContent = {
           name: 'Herpiko Dwi Aguno',
           position: 'Direktur',
           bio: 'Kontributor aktif BlankOn Linux sejak 2009 yang saat ini memimpin seluruh tim pengembangan distribusi Linux derivatif. Mantan hacktivist di beberapa Linux User Group (KPLI NTB dan GLiBogor).',
-          photo: '/images/herpiko.png',
+          photo: '/images/herpiko-v2.png',
         },
         {
           name: 'Iwan stwn',
@@ -83,7 +83,7 @@ const teamContent = {
           name: 'Herpiko Dwi Aguno',
           position: 'Director',
           bio: 'An active BlankOn Linux contributor since 2009 who currently leads the entire derivative Linux distribution development team. Former hacktivist for a few Linux User Groups (KPLI NTB and GLiBogor).',
-          photo: '/images/herpiko.png',
+          photo: '/images/herpiko-v2.png',
         },
         {
           name: 'Iwan stwn',

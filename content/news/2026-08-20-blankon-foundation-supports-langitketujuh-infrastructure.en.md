@@ -3,7 +3,7 @@
 ---
 
 
-BlankOn Foundation is proud to announce its infrastructure support for LangitKetujuh, a Linux distribution project designed specifically for designers and professional desktop users. This support reflects BlankOn Foundation's ongoing commitment to strengthening Indonesia's open source ecosystem, not only through the development of BlankOn Linux, but also by embracing and assisting other open source projects that share the same vision of technological independence.
+BlankOn Foundation is proud to announce its infrastructure support for LangitKetujuh, a Linux distribution project built specifically for designers and professional desktop users. This support reflects BlankOn Foundation's ongoing commitment to strengthening Indonesia's open source ecosystem, not only through the development of BlankOn Linux, but also by embracing and assisting other open source projects that share the same vision of technological independence.
 
 ## Collaboration Across Open Source Projects
 
