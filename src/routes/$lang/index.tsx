@@ -3,6 +3,7 @@ import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions, getTranslations } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
 import { useEffect, useState } from 'react'
+import langitKetujuhLogo from '../../../content/assets/langitketujuh_logo_horizontal.webp'
 
 export const Route = createFileRoute('/$lang/')({
   component: Home,
@@ -164,6 +165,17 @@ function HeroAbout({
   )
 }
 
+const missionIcons = [
+  // Maintain BlankOn Linux
+  'M17.25 6.75L22.5 12l-5.25 5.25M6.75 6.75L1.5 12l5.25 5.25M14.25 4.5l-4.5 15',
+  // Education & literacy
+  'M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25a8.987 8.987 0 00-3-.512c-2.305 0-4.408.867-6 2.292m0-14.25v14.25',
+  // Nurture community & projects
+  'M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z',
+  // Equitable access
+  'M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582m-15.686 0A8.997 8.997 0 0112 3m7.843 4.582A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A8.959 8.959 0 013 12c0-1.605.42-3.113 1.157-4.418',
+]
+
 function HeroVision({ t }: { t: ReturnType<typeof getTranslations> }) {
   return (
     <section className="bg-fd-background py-20">
@@ -175,16 +187,30 @@ function HeroVision({ t }: { t: ReturnType<typeof getTranslations> }) {
           <div className="mx-auto h-1 w-16 rounded-full bg-gradient-to-r from-blue-600 to-blue-400" />
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {t.hero.vision.missions.map((mission, index) => (
             <div
               key={index}
-              className="flex gap-4 rounded-xl border border-fd-border bg-fd-card p-5 transition-shadow hover:shadow-md"
+              className="group rounded-2xl border border-fd-border bg-fd-card p-6 transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg dark:hover:border-blue-700"
             >
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
-                {index + 1}
-              </span>
-              <p className="text-fd-muted-foreground">{mission}</p>
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 text-white transition-transform group-hover:scale-105">
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d={missionIcons[index]}
+                  />
+                </svg>
+              </div>
+              <p className="text-sm leading-relaxed text-fd-muted-foreground">
+                {mission}
+              </p>
             </div>
           ))}
         </div>
@@ -366,6 +392,91 @@ function HeroProducts({
   )
 }
 
+const supportedProjectLogos: Record<string, string> = {
+  LangitKetujuh: langitKetujuhLogo,
+}
+
+function HeroSupportedProjects({
+  t,
+}: {
+  t: ReturnType<typeof getTranslations>
+}) {
+  return (
+    <section className="bg-slate-50 py-20 dark:bg-slate-900/50">
+      <div className="container mx-auto max-w-5xl px-6">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold text-fd-foreground md:text-4xl">
+            {t.hero.supportedProjects.title}
+          </h2>
+          <p className="mx-auto max-w-2xl text-fd-muted-foreground">
+            {t.hero.supportedProjects.description}
+          </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-6">
+          {t.hero.supportedProjects.items.map((item, index) => (
+            <a
+              key={index}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex w-full max-w-sm flex-col rounded-2xl border border-fd-border bg-fd-card p-8 transition-all hover:border-blue-300 hover:shadow-xl dark:hover:border-blue-700"
+            >
+              <div className="mb-6 flex h-10 items-center">
+                {supportedProjectLogos[item.name] ? (
+                  <img
+                    src={supportedProjectLogos[item.name]}
+                    alt={item.name}
+                    className="h-full w-auto object-contain"
+                  />
+                ) : (
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 text-white">
+                    <svg
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.549 1.549a3 3 0 01-.621 4.72"
+                      />
+                    </svg>
+                  </div>
+                )}
+              </div>
+              <h3 className="mb-2 text-lg font-bold text-fd-foreground">
+                {item.name}
+              </h3>
+              <p className="mb-6 flex-1 text-sm text-fd-muted-foreground">
+                {item.description}
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-colors group-hover:text-blue-500 dark:text-blue-400 dark:group-hover:text-blue-300">
+                {item.cta}
+                <svg
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function Home() {
   const { lang } = Route.useParams()
   const t = getTranslations(lang)
@@ -377,6 +488,7 @@ function Home() {
         <HeroVision t={t} />
         <HeroDonate t={t} lang={lang} />
         <HeroProducts t={t} />
+        <HeroSupportedProjects t={t} />
       </main>
       <Footer lang={lang} />
     </HomeLayout>

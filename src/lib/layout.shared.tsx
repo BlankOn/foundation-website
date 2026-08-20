@@ -156,6 +156,20 @@ const translations = {
           },
         ],
       },
+      supportedProjects: {
+        title: 'Proyek yang Kami Dukung',
+        description:
+          'Selain mengembangkan proyek sendiri, kami juga turut mendukung proyek sumber terbuka lain yang sejalan dengan visi kemandirian teknologi Indonesia.',
+        items: [
+          {
+            name: 'LangitKetujuh',
+            description:
+              'Distribusi Linux berbasis Void Linux dengan lingkungan desktop KDE Plasma, dirancang khusus untuk desainer dan pekerja kreatif.',
+            cta: 'Kunjungi LangitKetujuh',
+            url: 'https://langitketujuh.id/',
+          },
+        ],
+      },
     },
   },
   en: {
@@ -266,6 +280,20 @@ const translations = {
             name: 'BlanKonf',
             description:
               'Open source technology conference bringing together practitioners, developers, and open source enthusiasts from across Indonesia.',
+          },
+        ],
+      },
+      supportedProjects: {
+        title: 'Supported Projects',
+        description:
+          'Beyond our own projects, we also support other open source initiatives that share Indonesia\'s vision of technological independence.',
+        items: [
+          {
+            name: 'LangitKetujuh',
+            description:
+              'A Void Linux-based distribution featuring the KDE Plasma desktop environment, built specifically for designers and creative professionals.',
+            cta: 'Visit LangitKetujuh',
+            url: 'https://langitketujuh.id/',
           },
         ],
       },
