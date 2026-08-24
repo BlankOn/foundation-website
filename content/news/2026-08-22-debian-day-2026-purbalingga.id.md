@@ -2,7 +2,7 @@
 
 ---
 
-![Poster Debian Day 2026 Purbalingga](content/assets/debian-day-2026-purbalingga-poster.jpg)
+![Poster Debian Day 2026 Purbalingga](/content/assets/debian-day-2026-purbalingga-poster.jpg)
 
 Debian Day 2026 Purbalingga digelar pada Sabtu, 22 Agustus 2026, pukul 08.00–12.00 WIB, bertempat di Ruang C101, Gedung C Lantai 1, Fakultas Teknik Universitas Jenderal Soedirman (Unsoed), dengan format hibrid sehingga peserta dapat mengikuti secara luring maupun daring. Kegiatan ini merupakan bagian dari rangkaian CIErS Days 2026 "Connecting Researchers, Empowering Engineers" yang diselenggarakan oleh Teknik Elektro dan KBK TKI Jurusan Teknik Elektro Unsoed.
 
@@ -18,13 +18,13 @@ Sesi ini menjadi salah satu momen penting untuk memperkenalkan lebih jauh peran 
 
 ## Dokumentasi kegiatan
 
-![Herpiko Dwi Aguno dari BlankOn Foundation membawakan sesi "What Does It Mean to Be a Derivative Project" pada Debian Day 2026 Purbalingga](content/assets/debian-day-2026-purbalingga-sesi.jpg)
+![Herpiko Dwi Aguno dari BlankOn Foundation membawakan sesi "What Does It Mean to Be a Derivative Project" pada Debian Day 2026 Purbalingga](/content/assets/debian-day-2026-purbalingga-sesi.jpg)
 Herpiko Dwi Aguno dari BlankOn Foundation membawakan sesi "What Does It Mean to Be a Derivative Project?" pada Debian Day 2026 Purbalingga.
 
-![Penyerahan sertifikat kepada pembicara Debian Day 2026 Purbalingga](content/assets/debian-day-2026-purbalingga-sertifikat.jpg)
+![Penyerahan sertifikat kepada pembicara Debian Day 2026 Purbalingga](/content/assets/debian-day-2026-purbalingga-sertifikat.jpg)
 Penyerahan sertifikat apresiasi kepada Herpiko Dwi Aguno sebagai pembicara pada rangkaian CIErS Days 2026.
 
-![Foto bersama peserta dan panitia Debian Day 2026 Purbalingga](content/assets/debian-day-2026-purbalingga-bersama.jpg)
+![Foto bersama peserta dan panitia Debian Day 2026 Purbalingga](/content/assets/debian-day-2026-purbalingga-bersama.jpg)
 Foto bersama peserta dan panitia usai kegiatan Debian Day 2026 Purbalingga.
 
 BlankOn Foundation mengucapkan terima kasih kepada panitia CIErS Days 2026 dan Jurusan Teknik Elektro Unsoed atas kesempatan yang diberikan, serta kepada seluruh peserta yang telah berpartisipasi aktif dalam diskusi seputar Debian dan ekosistem sumber terbuka.
