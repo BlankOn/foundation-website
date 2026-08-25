@@ -12,17 +12,14 @@ Acara ini mengangkat tiga topik utama seputar dunia sumber terbuka, yaitu Debian
 
 ## BlankOn Foundation: apa artinya menjadi proyek turunan?
 
-Dalam sesinya, Herpiko Dwi Aguno memaparkan makna menjadi sebuah *derivative project* atau proyek turunan dalam ekosistem sumber terbuka, dengan mengambil pengalaman BlankOn sebagai distro Linux yang dibangun di atas basis Debian. Materi ini membahas tanggung jawab, tantangan, sekaligus peluang bagi proyek turunan dalam menjaga hubungan yang sehat dengan proyek induknya, sambil tetap membangun identitas dan nilai tambah tersendiri.
+Dalam sesinya, Herpiko memaparkan makna menjadi sebuah *derivative project* atau proyek turunan dalam ekosistem sumber terbuka, dengan mengambil pengalaman BlankOn sebagai distro Linux yang dibangun di atas basis Debian. Materi ini membahas tanggung jawab, tantangan, sekaligus peluang bagi proyek turunan dalam menjaga hubungan yang sehat dengan proyek induknya, sambil tetap membangun identitas dan nilai tambah tersendiri.
 
 Sesi ini menjadi salah satu momen penting untuk memperkenalkan lebih jauh peran BlankOn Foundation dalam ekosistem sumber terbuka Indonesia kepada peserta Debian Day 2026 Purbalingga, khususnya kalangan akademisi dan mahasiswa Teknik Elektro Unsoed.
 
 ## Dokumentasi kegiatan
 
-![Herpiko Dwi Aguno dari BlankOn Foundation membawakan sesi "What Does It Mean to Be a Derivative Project" pada Debian Day 2026 Purbalingga](/content/assets/debian-day-2026-purbalingga-sesi.jpg)
-Herpiko Dwi Aguno dari BlankOn Foundation membawakan sesi "What Does It Mean to Be a Derivative Project?" pada Debian Day 2026 Purbalingga.
-
-![Penyerahan sertifikat kepada pembicara Debian Day 2026 Purbalingga](/content/assets/debian-day-2026-purbalingga-sertifikat.jpg)
-Penyerahan sertifikat apresiasi kepada Herpiko Dwi Aguno sebagai pembicara pada rangkaian CIErS Days 2026.
+![Herpiko dari BlankOn Foundation membawakan sesi "What Does It Mean to Be a Derivative Project" pada Debian Day 2026 Purbalingga](/content/assets/debian-day-2026-purbalingga-sesi.jpg)
+Herpiko dari BlankOn Foundation membawakan sesi "What Does It Mean to Be a Derivative Project?" pada Debian Day 2026 Purbalingga.
 
 ![Foto bersama peserta dan panitia Debian Day 2026 Purbalingga](/content/assets/debian-day-2026-purbalingga-bersama.jpg)
 Foto bersama peserta dan panitia usai kegiatan Debian Day 2026 Purbalingga.
