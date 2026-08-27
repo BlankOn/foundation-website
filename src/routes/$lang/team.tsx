@@ -18,24 +18,58 @@ const teamContent = {
       team: [
         {
           name: 'Rusmanto',
+          email: 'rusmanto@blankon.id',
           position: 'Pembina',
-          bio: 'Dikenal luas sebagai "Bapak Linux Indonesia," pendiri majalah legendaris InfoLinux, YPLI (Yayasan Penggerak Linux Indonesia), dan ILC (Indonesia Linux Conference).',
+          bio: 'Dikenal luas sebagai "Bapak Linux Indonesia," pendiri majalah legendaris InfoLINUX, YPLI (Yayasan Penggerak Linux Indonesia), dan ILC (Indonesia Linux Conference).',
           photo: '/images/rusmanto.jpg',
         },
         {
           name: 'Akhmat Safrudin',
+          email: 'somat@blankon.id',
           position: 'Pengawas',
-          bio: 'Mantan kontributor BlankOn Linux sejak era 2000-an dengan keterlibatan mendalam di sisi teknis maupun strategis. Berpengalaman lebih dari satu dekade dalam pengelolaan organisasi nirlaba seperti AirPutih.',
+          bio: (
+            <>
+              Mantan kontributor{' '}
+              <a
+                href="https://blankonlinux.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline dark:text-blue-400"
+              >
+                BlankOn Linux
+              </a>{' '}
+              sejak era 2000-an dengan keterlibatan mendalam di sisi teknis
+              maupun strategis. Berpengalaman lebih dari satu dekade dalam
+              pengelolaan organisasi nirlaba seperti AirPutih.
+            </>
+          ),
           photo: '/images/akhmat-safrudin.png',
         },
         {
           name: 'Herpiko Dwi Aguno',
+          email: 'herpiko@blankon.id',
           position: 'Direktur',
-          bio: 'Kontributor aktif BlankOn Linux sejak 2009 yang saat ini memimpin seluruh tim pengembangan distribusi Linux derivatif. Mantan hacktivist di beberapa Linux User Group (KPLI NTB dan GLiBogor).',
+          bio: (
+            <>
+              Kontributor aktif{' '}
+              <a
+                href="https://blankonlinux.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline dark:text-blue-400"
+              >
+                BlankOn Linux
+              </a>{' '}
+              sejak 2009 yang saat ini memimpin seluruh tim pengembangan
+              distribusi Linux derivatif. Mantan hacktivist di beberapa Linux
+              User Group (KPLI NTB dan GLiBogor).
+            </>
+          ),
           photo: '/images/herpiko-v2.png',
         },
         {
           name: 'Iwan stwn',
+          email: 'stwn@blankon.id',
           position: 'Koordinator Program',
           bio: (
             <>
@@ -48,10 +82,11 @@ const teamContent = {
               >
                 Kuliax
               </a>
-              , distribusi GNU/Linux yang menyasar pendidikan tinggi. Ia terlibat
-              dalam beberapa proyek dan komunitas perangkat lunak free/open-source di
-              Indonesia sejak tahun 2001. Saat ini aktif sebagai dosen/peneliti Teknik
-              Elektro di Universitas Jenderal Soedirman.
+              , distribusi GNU/Linux yang menyasar pendidikan tinggi. Ia
+              terlibat dalam beberapa proyek dan komunitas perangkat lunak
+              free/open-source di Indonesia sejak tahun 2001. Saat ini aktif
+              sebagai dosen/peneliti Teknik Elektro di Universitas Jenderal
+              Soedirman.
             </>
           ),
           photo: '/images/iwan.png',
@@ -69,24 +104,59 @@ const teamContent = {
       team: [
         {
           name: 'Rusmanto',
+          email: 'rusmanto@blankon.id',
           position: 'Advisor',
-          bio: 'Widely recognized as the "Father of Linux Indonesia," founder of the legendary InfoLinux magazine, YPLI (Yayasan Penggerak Linux Indonesia), and ILC (Indonesia Linux Conference).',
+          bio: 'Widely recognized as the "Father of Linux Indonesia," founder of the legendary InfoLINUX magazine, YPLI (Yayasan Penggerak Linux Indonesia), and ILC (Indonesia Linux Conference).',
           photo: '/images/rusmanto.jpg',
         },
         {
           name: 'Akhmat Safrudin',
+          email: 'somat@blankon.id',
           position: 'Supervisor',
-          bio: 'A former BlankOn Linux contributor since the 2000s, deeply involved in both technical development and strategic direction. Brings over a decade of experience in non-profit management through his work with AirPutih.',
+          bio: (
+            <>
+              A former{' '}
+              <a
+                href="https://blankonlinux.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline dark:text-blue-400"
+              >
+                BlankOn Linux
+              </a>{' '}
+              contributor since the 2000s, deeply involved in both technical
+              development and strategic direction. Brings over a decade of
+              experience in non-profit management through his work with
+              AirPutih.
+            </>
+          ),
           photo: '/images/akhmat-safrudin.png',
         },
         {
           name: 'Herpiko Dwi Aguno',
+          email: 'herpiko@blankon.id',
           position: 'Director',
-          bio: 'An active BlankOn Linux contributor since 2009 who currently leads the entire derivative Linux distribution development team. Former hacktivist for a few Linux User Groups (KPLI NTB and GLiBogor).',
+          bio: (
+            <>
+              An active{' '}
+              <a
+                href="https://blankonlinux.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline dark:text-blue-400"
+              >
+                BlankOn Linux
+              </a>{' '}
+              contributor since 2009 who currently leads the entire derivative
+              Linux distribution development team. Former hacktivist for a few
+              Linux User Groups (KPLI NTB and GLiBogor).
+            </>
+          ),
           photo: '/images/herpiko-v2.png',
         },
         {
           name: 'Iwan stwn',
+          email: 'stwn@blankon.id',
           position: 'Program Manager',
           bio: (
             <>
@@ -100,9 +170,9 @@ const teamContent = {
                 Kuliax
               </a>
               , a GNU/Linux distribution targeting higher education. He has been
-              involved in several free/open-source software projects and communities in
-              Indonesia since 2001. He is currently an EE lecturer/researcher at
-              Universitas Jenderal Soedirman.
+              involved in several free/open-source software projects and
+              communities in Indonesia since 2001. He is currently an EE
+              lecturer/researcher at Universitas Jenderal Soedirman.
             </>
           ),
           photo: '/images/iwan.png',
@@ -160,9 +230,15 @@ function Team() {
                     <h3 className="mb-1 text-xl font-bold text-fd-foreground">
                       {member.name}
                     </h3>
-                    <p className="mb-3 text-base font-medium text-blue-600 dark:text-blue-400">
+                    <p className="text-base font-medium text-blue-600 dark:text-blue-400">
                       {member.position}
                     </p>
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="mb-3 inline-block text-sm text-fd-muted-foreground transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+                    >
+                      {member.email}
+                    </a>
                     <p className="leading-relaxed text-fd-muted-foreground">
                       {member.bio}
                     </p>
@@ -192,9 +268,7 @@ function Team() {
                   <div
                     key={index}
                     className={`relative flex items-start gap-6 md:gap-10 ${
-                      index % 2 === 0
-                        ? 'md:flex-row'
-                        : 'md:flex-row-reverse'
+                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                     }`}
                   >
                     {/* Content card */}
