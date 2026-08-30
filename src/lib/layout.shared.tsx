@@ -156,8 +156,8 @@ const translations = {
           },
         ],
       },
-      supportedProjects: {
-        title: 'Proyek yang Kami Dukung',
+      supportedInitiatives: {
+        title: 'Inisiatif yang Kami Dukung',
         description:
           'Selain mengembangkan proyek sendiri, kami juga turut mendukung proyek sumber terbuka lain yang sejalan dengan visi kemandirian teknologi Indonesia.',
         items: [
@@ -168,7 +168,25 @@ const translations = {
             cta: 'Kunjungi LangitKetujuh',
             url: 'https://langitketujuh.id/',
           },
+          {
+            name: 'Jakarta Linux Users Group',
+            description:
+              'Komunitas pengguna Linux di Jakarta yang bercita-cita menjadi rumah bagi para kontributor proyek bebas dan sumber terbuka, baik lokal maupun global.',
+            cta: 'Kunjungi JKTLUG',
+            url: 'https://jktlug.id/',
+          },
+          {
+            name: 'openSUSE.Asia Summit 2026',
+            description:
+              'Pertemuan komunitas openSUSE terbesar di Asia yang tahun ini digelar di Yogyakarta pada 3-4 Oktober 2026, dengan BlankOn Foundation sebagai Custom Sponsor.',
+            cta: 'Kunjungi Laman Kegiatan',
+            url: 'https://events.opensuse.org/conferences/oSAS26',
+          },
         ],
+        contact: {
+          text: 'Jika proyek, inisiatif, atau komunitas sumber terbuka Anda membutuhkan dukungan, baik berupa pendanaan maupun bentuk lainnya, silakan hubungi kami di',
+          email: 'humas@blankon.id',
+        },
       },
     },
   },
@@ -283,8 +301,8 @@ const translations = {
           },
         ],
       },
-      supportedProjects: {
-        title: 'Supported Projects',
+      supportedInitiatives: {
+        title: 'Supported Initiatives',
         description:
           'Beyond our own projects, we also support other open source initiatives that share Indonesia\'s vision of technological independence.',
         items: [
@@ -295,7 +313,25 @@ const translations = {
             cta: 'Visit LangitKetujuh',
             url: 'https://langitketujuh.id/',
           },
+          {
+            name: 'Jakarta Linux Users Group',
+            description:
+              "A Linux user community in Jakarta, aiming to be a home for local and global free and open source projects' contributors.",
+            cta: 'Visit JKTLUG',
+            url: 'https://jktlug.id/',
+          },
+          {
+            name: 'openSUSE.Asia Summit 2026',
+            description:
+              'One of Asia\'s largest gatherings of the openSUSE community, hosted in Yogyakarta on October 3-4, 2026, with BlankOn Foundation as a Custom Sponsor.',
+            cta: 'Visit the Event Page',
+            url: 'https://events.opensuse.org/conferences/oSAS26',
+          },
         ],
+        contact: {
+          text: 'If your open source project, initiative, or community needs support, whether in the form of funding or anything else, please get in touch with us at',
+          email: 'humas@blankon.id',
+        },
       },
     },
   },
