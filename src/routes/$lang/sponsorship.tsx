@@ -3,6 +3,7 @@ import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
 import { useState } from 'react'
+import clarusLogo from '../../../content/assets/clarus.svg'
 
 const avatarColors = [
   '#3b82f6',
@@ -76,6 +77,11 @@ const corporateSponsors = [
     logo: '/images/sponsorship-logo-hostbadak.png',
     url: 'https://hostbadak.com',
     className: 'framed-image'
+  },
+  {
+    name: 'PT Clarus Innovace Teknologi',
+    logo: clarusLogo,
+    url: 'https://clarus-it.co.id/',
   },
 ]
 

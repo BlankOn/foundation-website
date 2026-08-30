@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
 import { Route as LangTeamRouteImport } from './routes/$lang/team'
+import { Route as LangSupportedInitiativesRouteImport } from './routes/$lang/supported-initiatives'
 import { Route as LangSponsorshipRouteImport } from './routes/$lang/sponsorship'
 import { Route as LangNewsRouteImport } from './routes/$lang/news'
 import { Route as LangMembershipRouteImport } from './routes/$lang/membership'
@@ -38,6 +39,12 @@ const LangTeamRoute = LangTeamRouteImport.update({
   path: '/$lang/team',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangSupportedInitiativesRoute =
+  LangSupportedInitiativesRouteImport.update({
+    id: '/$lang/supported-initiatives',
+    path: '/$lang/supported-initiatives',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const LangSponsorshipRoute = LangSponsorshipRouteImport.update({
   id: '/$lang/sponsorship',
   path: '/$lang/sponsorship',
@@ -100,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/$lang/membership': typeof LangMembershipRoute
   '/$lang/news': typeof LangNewsRoute
   '/$lang/sponsorship': typeof LangSponsorshipRoute
+  '/$lang/supported-initiatives': typeof LangSupportedInitiativesRoute
   '/$lang/team': typeof LangTeamRoute
   '/$lang': typeof LangIndexRoute
   '/$lang/news/$slug': typeof LangNewsSlugRoute
@@ -115,6 +123,7 @@ export interface FileRoutesByTo {
   '/$lang/membership': typeof LangMembershipRoute
   '/$lang/news': typeof LangNewsRoute
   '/$lang/sponsorship': typeof LangSponsorshipRoute
+  '/$lang/supported-initiatives': typeof LangSupportedInitiativesRoute
   '/$lang/team': typeof LangTeamRoute
   '/$lang': typeof LangIndexRoute
   '/$lang/news/$slug': typeof LangNewsSlugRoute
@@ -131,6 +140,7 @@ export interface FileRoutesById {
   '/$lang/membership': typeof LangMembershipRoute
   '/$lang/news': typeof LangNewsRoute
   '/$lang/sponsorship': typeof LangSponsorshipRoute
+  '/$lang/supported-initiatives': typeof LangSupportedInitiativesRoute
   '/$lang/team': typeof LangTeamRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/news_/$slug': typeof LangNewsSlugRoute
@@ -148,6 +158,7 @@ export interface FileRouteTypes {
     | '/$lang/membership'
     | '/$lang/news'
     | '/$lang/sponsorship'
+    | '/$lang/supported-initiatives'
     | '/$lang/team'
     | '/$lang'
     | '/$lang/news/$slug'
@@ -163,6 +174,7 @@ export interface FileRouteTypes {
     | '/$lang/membership'
     | '/$lang/news'
     | '/$lang/sponsorship'
+    | '/$lang/supported-initiatives'
     | '/$lang/team'
     | '/$lang'
     | '/$lang/news/$slug'
@@ -178,6 +190,7 @@ export interface FileRouteTypes {
     | '/$lang/membership'
     | '/$lang/news'
     | '/$lang/sponsorship'
+    | '/$lang/supported-initiatives'
     | '/$lang/team'
     | '/$lang/'
     | '/$lang/news_/$slug'
@@ -194,6 +207,7 @@ export interface RootRouteChildren {
   LangMembershipRoute: typeof LangMembershipRoute
   LangNewsRoute: typeof LangNewsRoute
   LangSponsorshipRoute: typeof LangSponsorshipRoute
+  LangSupportedInitiativesRoute: typeof LangSupportedInitiativesRoute
   LangTeamRoute: typeof LangTeamRoute
   LangIndexRoute: typeof LangIndexRoute
   LangNewsSlugRoute: typeof LangNewsSlugRoute
@@ -220,6 +234,13 @@ declare module '@tanstack/react-router' {
       path: '/$lang/team'
       fullPath: '/$lang/team'
       preLoaderRoute: typeof LangTeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$lang/supported-initiatives': {
+      id: '/$lang/supported-initiatives'
+      path: '/$lang/supported-initiatives'
+      fullPath: '/$lang/supported-initiatives'
+      preLoaderRoute: typeof LangSupportedInitiativesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/sponsorship': {
@@ -306,6 +327,7 @@ const rootRouteChildren: RootRouteChildren = {
   LangMembershipRoute: LangMembershipRoute,
   LangNewsRoute: LangNewsRoute,
   LangSponsorshipRoute: LangSponsorshipRoute,
+  LangSupportedInitiativesRoute: LangSupportedInitiativesRoute,
   LangTeamRoute: LangTeamRoute,
   LangIndexRoute: LangIndexRoute,
   LangNewsSlugRoute: LangNewsSlugRoute,
