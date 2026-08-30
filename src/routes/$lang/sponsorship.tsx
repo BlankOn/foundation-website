@@ -125,6 +125,10 @@ const emeritusSponsors = [
     name: 'Netzen Media Akses',
     url: 'https://netzen.net.id/',
   },
+  {
+    name: 'RockyBars Cokelatia',
+    url: 'https://www.instagram.com/cokelatia/',
+  },
 ]
 
 const sponsorshipContent = {
@@ -150,6 +154,8 @@ const sponsorshipContent = {
     corporateSponsors: 'Sponsor Korporat',
     individualSponsors: 'Sponsor Individu',
     emeritusSponsors: 'Sponsor Emeritus',
+    emeritusSponsorsNote:
+      'Kami berterima kasih atas kontribusi mereka di masa lalu.',
   },
   en: {
     title: 'Sponsorship',
@@ -173,6 +179,7 @@ const sponsorshipContent = {
     corporateSponsors: 'Corporate Sponsors',
     individualSponsors: 'Individual Sponsors',
     emeritusSponsors: 'Emeritus Sponsors',
+    emeritusSponsorsNote: 'We are grateful for their past contributions.',
   },
 }
 
@@ -340,24 +347,27 @@ function Sponsorship() {
 
             {/* Emeritus Sponsors */}
             <div>
-              <h3 className="mb-8 text-center text-xl font-semibold text-fd-foreground md:text-2xl">
+              <h3 className="mb-4 text-center text-xl font-semibold text-fd-foreground md:text-2xl">
                 {content.emeritusSponsors}
               </h3>
-              <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-                {emeritusSponsors.map((sponsor) => (
-                  <a
-                    key={sponsor.name}
-                    href={sponsor.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center rounded-2xl border border-fd-border bg-fd-card p-6 text-center transition-all hover:border-blue-300 hover:shadow-lg dark:hover:border-blue-700"
-                  >
-                    <p className="font-semibold text-fd-foreground">
+              <p className="mb-8 text-center text-fd-muted-foreground">
+                {content.emeritusSponsorsNote}
+              </p>
+              <p className="text-center leading-relaxed text-fd-muted-foreground">
+                {emeritusSponsors.map((sponsor, index) => (
+                  <span key={sponsor.name}>
+                    <a
+                      href={sponsor.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-fd-foreground hover:text-blue-600 hover:underline"
+                    >
                       {sponsor.name}
-                    </p>
-                  </a>
+                    </a>
+                    {index < emeritusSponsors.length - 1 && ', '}
+                  </span>
                 ))}
-              </div>
+              </p>
             </div>
           </div>
         </section>
