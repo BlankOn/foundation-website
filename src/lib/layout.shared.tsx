@@ -195,7 +195,7 @@ const translations = {
           },
         ],
         contact: {
-          text: 'Jika proyek, inisiatif, atau komunitas sumber terbuka Anda membutuhkan dukungan, baik berupa infrastruktur, pendanaan, maupun bentuk lainnya, silakan hubungi kami di',
+          text: 'Jika proyek, inisiatif, atau komunitasmu membutuhkan dukungan, baik berupa infrastruktur, pendanaan, maupun bentuk lainnya, silakan menghubungi kami. Kami tidak selalu dapat menjamin ketersediaan sumber daya, tetapi kami dengan senang hati berdiskusi dan mencari solusi terbaik bersama. Hubungi kami di',
           email: 'humas@blankon.id',
         },
       },
@@ -351,7 +351,7 @@ const translations = {
           },
         ],
         contact: {
-          text: 'If your open source project, initiative, or community needs support, whether in the form of infrastructure, funding or anything else, please get in touch with us at',
+          text: "If your open source project, initiative, or community needs support, whether in the form of infrastructure, funding, or something else, please get in touch. We can't always guarantee that resources will be available, but we're happy to talk and see what we can work out together. Reach us at",
           email: 'humas@blankon.id',
         },
       },
