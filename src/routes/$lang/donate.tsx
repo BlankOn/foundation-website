@@ -57,6 +57,13 @@ const donateContent = {
           ],
         },
       ],
+      note: {
+        beforeEmail:
+          'Setelah berdonasi, mohon kirimkan konfirmasi melalui surel ke',
+        email: 'humas@blankon.id',
+        afterEmail:
+          'agar donasi Anda dapat kami catat dengan jelas. Jika Anda ingin donasi tersebut disalurkan ke proyek atau inisiatif tertentu yang didukung yayasan, silakan sebutkan dalam pesan surel Anda.',
+      },
     },
     otherWays: {
       title: 'Cara Lain untuk Mendukung',
@@ -132,6 +139,12 @@ const donateContent = {
           ],
         },
       ],
+      note: {
+        beforeEmail: 'After donating, please send a confirmation email to',
+        email: 'humas@blankon.id',
+        afterEmail:
+          'so that we can record your donation clearly. If you would like your donation to go to a specific project or initiative supported by the foundation, please mention it in your message.',
+      },
     },
     otherWays: {
       title: 'Other Ways to Support',
@@ -319,6 +332,17 @@ function Donate() {
                 </div>
               ))}
             </div>
+
+            <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-fd-muted-foreground">
+              {content.howToDonate.note.beforeEmail}{' '}
+              <a
+                href={`mailto:${content.howToDonate.note.email}`}
+                className="font-medium text-blue-600 hover:underline dark:text-blue-400"
+              >
+                {content.howToDonate.note.email}
+              </a>{' '}
+              {content.howToDonate.note.afterEmail}
+            </p>
           </div>
         </section>
 

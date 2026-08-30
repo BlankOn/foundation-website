@@ -4,6 +4,8 @@ import { baseOptions, getTranslations } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
 import { useEffect, useState } from 'react'
 import langitKetujuhLogo from '../../../content/assets/langitketujuh_logo_horizontal.webp'
+import jktlugLogo from '../../../content/assets/jktlug.png'
+import osas2026Logo from '../../../content/assets/osas2026.png'
 
 export const Route = createFileRoute('/$lang/')({
   component: Home,
@@ -392,11 +394,13 @@ function HeroProducts({
   )
 }
 
-const supportedProjectLogos: Record<string, string> = {
+const supportedInitiativeLogos: Record<string, string> = {
   LangitKetujuh: langitKetujuhLogo,
+  'Jakarta Linux Users Group': jktlugLogo,
+  'openSUSE.Asia Summit 2026': osas2026Logo,
 }
 
-function HeroSupportedProjects({
+function HeroSupportedInitiatives({
   t,
 }: {
   t: ReturnType<typeof getTranslations>
@@ -406,15 +410,15 @@ function HeroSupportedProjects({
       <div className="container mx-auto max-w-5xl px-6">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-fd-foreground md:text-4xl">
-            {t.hero.supportedProjects.title}
+            {t.hero.supportedInitiatives.title}
           </h2>
           <p className="mx-auto max-w-2xl text-fd-muted-foreground">
-            {t.hero.supportedProjects.description}
+            {t.hero.supportedInitiatives.description}
           </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-6">
-          {t.hero.supportedProjects.items.map((item, index) => (
+          {t.hero.supportedInitiatives.items.map((item, index) => (
             <a
               key={index}
               href={item.url}
@@ -422,12 +426,12 @@ function HeroSupportedProjects({
               rel="noopener noreferrer"
               className="group flex w-full max-w-sm flex-col rounded-2xl border border-fd-border bg-fd-card p-8 transition-all hover:border-blue-300 hover:shadow-xl dark:hover:border-blue-700"
             >
-              <div className="mb-6 flex h-10 items-center">
-                {supportedProjectLogos[item.name] ? (
+              <div className="mb-6 flex h-20 items-center">
+                {supportedInitiativeLogos[item.name] ? (
                   <img
-                    src={supportedProjectLogos[item.name]}
+                    src={supportedInitiativeLogos[item.name]}
                     alt={item.name}
-                    className="h-full w-auto object-contain"
+                    className="max-h-full max-w-full object-contain"
                   />
                 ) : (
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 text-white">
@@ -472,6 +476,16 @@ function HeroSupportedProjects({
             </a>
           ))}
         </div>
+
+        <p className="mx-auto mt-12 max-w-2xl text-center text-sm text-fd-muted-foreground">
+          {t.hero.supportedInitiatives.contact.text}{' '}
+          <a
+            href={`mailto:${t.hero.supportedInitiatives.contact.email}`}
+            className="font-medium text-blue-600 hover:underline dark:text-blue-400"
+          >
+            {t.hero.supportedInitiatives.contact.email}
+          </a>
+        </p>
       </div>
     </section>
   )
@@ -488,7 +502,7 @@ function Home() {
         <HeroVision t={t} />
         <HeroDonate t={t} lang={lang} />
         <HeroProducts t={t} />
-        <HeroSupportedProjects t={t} />
+        <HeroSupportedInitiatives t={t} />
       </main>
       <Footer lang={lang} />
     </HomeLayout>
