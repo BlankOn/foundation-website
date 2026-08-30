@@ -10,7 +10,7 @@ There were two sharing sessions. The first was a chat about Debian derivative wo
 
 ![First session of Debian Day 2026 Jakarta on Debian derivative works](/content/assets/debian-day-jakarta-2026-first-session.jpg)
 
-The second session, led by Adi Ginting, was the declaration of the Jakarta Linux Users Group ([jktlug.id](https://jktlug.id)), a home for local and global open source contribution. The group also carries on the legacy of the Jakarta Linux community that came before it, KPLI Jakarta or LinuxJak. The session laid out where the community wants to go: a space that is easy for newcomers to walk into, while still sending real contributions upstream.
+The second session, led by Adi Ginting, was the declaration of the Jakarta Linux Users Group ([jktlug.id](https://jktlug.id)), aiming to be a home for local and global free and open source projects' contributors in Jakarta. The group also carries on the legacy of the Jakarta Linux community that came before it, KPLI Jakarta or LinuxJak. The session mapped out the community's goals, creating a space that's approachable for newcomers, while building a culture that actively encourages members to contribute to upstream and distribution projects and to engage with regional Linux user groups.
 
 ![Adi Ginting presenting the declaration of the Jakarta Linux Users Group (jktlug.id)](/content/assets/debian-day-jakarta-2026-second-session.jpg)
 
