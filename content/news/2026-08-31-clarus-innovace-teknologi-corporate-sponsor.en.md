@@ -22,7 +22,7 @@ PT Clarus Innovace Teknologi is a Jakarta-based system integrator and IT service
 
 PT Clarus Innovace Teknologi website: [https://clarus-it.co.id/](https://clarus-it.co.id/)
 
-BlankOn Foundation extends its gratitude to PT Clarus Innovace Teknologi for its trust and its support of the open source movement in Indonesia.
+BlankOn Foundation extends its gratitude to PT Clarus Innovace Teknologi for its trust and its support of the open source movement in Indonesia. We would also like to thank Farhan Perdana for helping secure this sponsorship.
 
 ## How to Support Us
 

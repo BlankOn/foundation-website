@@ -22,7 +22,7 @@ PT Clarus Innovace Teknologi adalah perusahaan integrator sistem dan penyedia la
 
 Situs web PT Clarus Innovace Teknologi: [https://clarus-it.co.id/](https://clarus-it.co.id/)
 
-BlankOn Foundation mengucapkan terima kasih kepada PT Clarus Innovace Teknologi atas kepercayaan dan dukungannya terhadap gerakan sumber terbuka di Indonesia.
+BlankOn Foundation mengucapkan terima kasih kepada PT Clarus Innovace Teknologi atas kepercayaan dan dukungannya terhadap gerakan sumber terbuka di Indonesia. Terima kasih juga kami sampaikan kepada Farhan Perdana yang telah membantu mewujudkan kerja sama sponsorship ini.
 
 ## Cara Mendukung Kami
 

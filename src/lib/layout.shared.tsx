@@ -136,11 +136,9 @@ const translations = {
             url: 'https://blankonlinux.id/en/download',
           },
           {
-            name: 'Warta BlankOn',
+            name: 'BlanKonf',
             description:
-              'Platform berita dan diskusi teknologi ala Hacker News untuk komunitas teknologi Indonesia.',
-            cta: 'Kunjungi Warta',
-            url: 'https://warta.blankon.id',
+              'Konferensi teknologi bebas terbuka yang mempertemukan praktisi, pengembang, dan penggiat open source dari seluruh Indonesia.',
           },
           {
             name: 'Lokakarya',
@@ -150,9 +148,11 @@ const translations = {
             url: 'https://www.youtube.com/@blankonlinux_official',
           },
           {
-            name: 'BlanKonf',
+            name: 'Warta BlankOn',
             description:
-              'Konferensi teknologi bebas terbuka yang mempertemukan praktisi, pengembang, dan penggiat open source dari seluruh Indonesia.',
+              'Platform berita dan diskusi teknologi ala Hacker News untuk komunitas teknologi Indonesia.',
+            cta: 'Kunjungi Warta',
+            url: 'https://warta.blankon.id',
           },
         ],
       },
@@ -292,11 +292,9 @@ const translations = {
             url: 'https://blankonlinux.id/en/download',
           },
           {
-            name: 'Warta BlankOn',
+            name: 'BlanKonf',
             description:
-              'A Hacker News-style news and discussion platform for the Indonesian technology community.',
-            cta: 'Visit Warta',
-            url: 'https://warta.blankon.id',
+              'Open source technology conference bringing together practitioners, developers, and open source enthusiasts from across Indonesia.',
           },
           {
             name: 'Lokakarya',
@@ -306,9 +304,11 @@ const translations = {
             url: 'https://www.youtube.com/@blankonlinux_official',
           },
           {
-            name: 'BlanKonf',
+            name: 'Warta BlankOn',
             description:
-              'Open source technology conference bringing together practitioners, developers, and open source enthusiasts from across Indonesia.',
+              'A Hacker News-style news and discussion platform for the Indonesian technology community.',
+            cta: 'Visit Warta',
+            url: 'https://warta.blankon.id',
           },
         ],
       },
