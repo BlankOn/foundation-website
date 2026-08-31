@@ -2,7 +2,8 @@
 
 ---
 
-<img src="content/assets/8labs.png" alt="8Labs" width="320" style="background:#ffffff;padding:12px;border-radius:8px" />
+<img src="content/assets/8labs-black.png" alt="8Labs" width="320" class="block dark:hidden" />
+<img src="content/assets/8labs-white.png" alt="8Labs" width="320" class="hidden dark:block" />
 
 BlankOn Foundation dengan senang hati mengumumkan 8Labs sebagai sponsor korporat terbaru yayasan. Dukungan ini diberikan dalam bentuk penyediaan sebuah peladen AMD64 yang akan digunakan untuk menopang kebutuhan infrastruktur yayasan beserta proyek-proyek yang dinaunginya.
 

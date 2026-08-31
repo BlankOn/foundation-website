@@ -1,11 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
-import { baseOptions } from '@/lib/layout.shared'
-import { Footer } from '@/components/footer'
 import { useState } from 'react'
 // Sponsorship postponed — see draft article in content/news/
 // import clarusLogo from '../../../content/assets/clarus.svg'
-import eightLabsLogo from '../../../content/assets/8labs.png'
+import eightLabsLogoLight from '../../../content/assets/8labs-black.png'
+import eightLabsLogoDark from '../../../content/assets/8labs-white.png'
+import { Footer } from '@/components/footer'
+import { baseOptions } from '@/lib/layout.shared'
 
 const avatarColors = [
   '#3b82f6',
@@ -88,9 +89,10 @@ const corporateSponsors = [
   // },
   {
     name: '8Labs',
-    logo: eightLabsLogo,
+    logo: eightLabsLogoLight,
+    // Dedicated light-on-dark variant, swapped in via the `dark:` class below
+    logoDark: eightLabsLogoDark,
     url: 'https://8labs.id/',
-    className: 'framed-image',
   },
 ]
 
@@ -312,8 +314,15 @@ function Sponsorship() {
                     <img
                       src={sponsor.logo}
                       alt={sponsor.name}
-                      className={`h-16 w-auto object-contain md:h-20 ${sponsor.className || ''}`}
+                      className={`h-16 w-auto object-contain md:h-20 ${sponsor.className || ''} ${sponsor.logoDark ? 'block dark:hidden' : ''}`}
                     />
+                    {sponsor.logoDark && (
+                      <img
+                        src={sponsor.logoDark}
+                        alt={sponsor.name}
+                        className="hidden h-16 w-auto object-contain md:h-20 dark:block"
+                      />
+                    )}
                   </a>
                 ))}
               </div>

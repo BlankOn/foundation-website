@@ -2,7 +2,8 @@
 
 ---
 
-<img src="content/assets/8labs.png" alt="8Labs" width="320" style="background:#ffffff;padding:12px;border-radius:8px" />
+<img src="content/assets/8labs-black.png" alt="8Labs" width="320" class="block dark:hidden" />
+<img src="content/assets/8labs-white.png" alt="8Labs" width="320" class="hidden dark:block" />
 
 BlankOn Foundation is pleased to announce 8Labs as its newest corporate sponsor. The support comes in the form of an AMD64 server that will help sustain the foundation's infrastructure needs and the projects it hosts.
 
