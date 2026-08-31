@@ -328,6 +328,15 @@ Edit `src/lib/layout.shared.tsx`:
 2. Include: `name`, `description`, `cta`, `url` (optional)
 3. Update icon logic in `src/routes/$lang/index.tsx` if needed
 
+### Modifying Supported Initiatives
+Supported initiatives appear in two places: the section on the home page (`src/routes/$lang/index.tsx`) and the dedicated page at `/$lang/supported-initiatives`. Both render the shared `SupportedInitiativesList` component in `src/components/supported-initiatives.tsx`.
+
+**Whenever you modify the supported initiatives component, update its counterpart so the two surfaces stay in sync.** In practice:
+1. Item data lives in `hero.supportedInitiatives.items` in `src/lib/layout.shared.tsx` — update both `id` and `en`
+2. Each item needs: `name`, `description`, `cta`, `url`, `tags`
+3. Logos are mapped by item `name` in `supportedInitiativeLogos` inside the shared component
+4. Never add initiative markup directly to one page — put it in the shared component so both surfaces pick it up
+
 ### Modifying Hero Background Pattern
 Edit the SVG data URL in hero section's background div:
 - Adjust stroke opacity for visibility

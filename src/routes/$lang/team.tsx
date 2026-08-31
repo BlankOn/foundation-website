@@ -48,7 +48,7 @@ const teamContent = {
         {
           name: 'Herpiko Dwi Aguno',
           email: 'herpiko@blankon.id',
-          position: 'Direktur',
+          position: 'Direktur Eksekutif',
           bio: (
             <>
               Kontributor aktif{' '}
@@ -135,7 +135,7 @@ const teamContent = {
         {
           name: 'Herpiko Dwi Aguno',
           email: 'herpiko@blankon.id',
-          position: 'Director',
+          position: 'Executive Director',
           bio: (
             <>
               An active{' '}

@@ -124,7 +124,7 @@ const translations = {
         cta: 'Donasi Sekarang',
       },
       products: {
-        title: 'Proyek & Kegiatan',
+        title: 'Proyek dan Inisiatif',
         description:
           'Jelajahi berbagai proyek dan platform yang kami kembangkan dan dukung untuk komunitas.',
         items: [
@@ -136,11 +136,9 @@ const translations = {
             url: 'https://blankonlinux.id/en/download',
           },
           {
-            name: 'Warta BlankOn',
+            name: 'BlanKonf',
             description:
-              'Platform berita dan diskusi teknologi ala Hacker News untuk komunitas teknologi Indonesia.',
-            cta: 'Kunjungi Warta',
-            url: 'https://warta.blankon.id',
+              'Konferensi teknologi bebas terbuka yang mempertemukan praktisi, pengembang, dan penggiat open source dari seluruh Indonesia.',
           },
           {
             name: 'Lokakarya',
@@ -150,9 +148,11 @@ const translations = {
             url: 'https://www.youtube.com/@blankonlinux_official',
           },
           {
-            name: 'BlanKonf',
+            name: 'Warta BlankOn',
             description:
-              'Konferensi teknologi bebas terbuka yang mempertemukan praktisi, pengembang, dan penggiat open source dari seluruh Indonesia.',
+              'Platform berita dan diskusi teknologi ala Hacker News untuk komunitas teknologi Indonesia.',
+            cta: 'Kunjungi Warta',
+            url: 'https://warta.blankon.id',
           },
         ],
       },
@@ -167,6 +167,7 @@ const translations = {
               'Distribusi Linux berbasis Void Linux dengan lingkungan desktop KDE Plasma, dirancang khusus untuk desainer dan pekerja kreatif.',
             cta: 'Kunjungi LangitKetujuh',
             url: 'https://langitketujuh.id/',
+            tags: ['Infrastruktur', 'Server'],
           },
           {
             name: 'Jakarta Linux Users Group',
@@ -174,6 +175,7 @@ const translations = {
               'Komunitas pengguna Linux di Jakarta yang bercita-cita menjadi rumah bagi para kontributor proyek bebas dan sumber terbuka, baik lokal maupun global.',
             cta: 'Kunjungi JKTLUG',
             url: 'https://jktlug.id/',
+            tags: ['Pendanaan', 'Legal'],
           },
           {
             name: 'openSUSE.Asia Summit 2026',
@@ -181,10 +183,19 @@ const translations = {
               'Pertemuan komunitas openSUSE terbesar di Asia yang tahun ini digelar di Yogyakarta pada 3-4 Oktober 2026, dengan BlankOn Foundation sebagai Custom Sponsor.',
             cta: 'Kunjungi Laman Kegiatan',
             url: 'https://events.opensuse.org/conferences/oSAS26',
+            tags: ['Sponsorship'],
+          },
+          {
+            name: 'Belajar FreeBSD Indonesia',
+            description:
+              'Komunitas yang mewadahi kegiatan belajar dan berbagi pengetahuan seputar FreeBSD di Indonesia.',
+            cta: 'Kunjungi Belajar FreeBSD Indonesia',
+            url: 'https://www.belajarfreebsd.or.id',
+            tags: ['Infrastruktur', 'Server'],
           },
         ],
         contact: {
-          text: 'Jika proyek, inisiatif, atau komunitas sumber terbuka Anda membutuhkan dukungan, baik berupa pendanaan maupun bentuk lainnya, silakan hubungi kami di',
+          text: 'Jika proyek, inisiatif, atau komunitasmu membutuhkan dukungan, baik berupa infrastruktur, pendanaan, maupun bentuk lainnya, silakan menghubungi kami. Kami tidak selalu dapat menjamin ketersediaan sumber daya, tetapi kami dengan senang hati berdiskusi dan mencari solusi terbaik bersama. Hubungi kami di',
           email: 'humas@blankon.id',
         },
       },
@@ -200,7 +211,7 @@ const translations = {
     welcome: 'Welcome to BlankOn',
     hero: {
       about: {
-        title: 'BlankOn Foundation',
+        title: 'The BlankOn Foundation',
         description:
           'We are a non-profit organization dedicated to advancing the open source technology ecosystem and technological independence in Indonesia. Through community collaboration and sustainable innovation, we build a more inclusive and sovereign digital future.',
         cta: 'Learn More',
@@ -246,7 +257,7 @@ const translations = {
           },
           {
             year: '2026',
-            title: 'BlankOn Foundation Established',
+            title: 'The BlankOn Foundation Established',
             description:
               'The BlankOn Foundation was officially established, continuing the legacy of YPLI to advance the open source technology ecosystem and technological independence in Indonesia.',
           },
@@ -269,7 +280,7 @@ const translations = {
         cta: 'Donate Now',
       },
       products: {
-        title: 'Projects & Activities',
+        title: 'Projects and Initiatives',
         description:
           'Explore various projects and platforms we develop for the community.',
         items: [
@@ -281,11 +292,9 @@ const translations = {
             url: 'https://blankonlinux.id/en/download',
           },
           {
-            name: 'Warta BlankOn',
+            name: 'BlanKonf',
             description:
-              'A Hacker News-style news and discussion platform for the Indonesian technology community.',
-            cta: 'Visit Warta',
-            url: 'https://warta.blankon.id',
+              'Open source technology conference bringing together practitioners, developers, and open source enthusiasts from across Indonesia.',
           },
           {
             name: 'Lokakarya',
@@ -295,9 +304,11 @@ const translations = {
             url: 'https://www.youtube.com/@blankonlinux_official',
           },
           {
-            name: 'BlanKonf',
+            name: 'Warta BlankOn',
             description:
-              'Open source technology conference bringing together practitioners, developers, and open source enthusiasts from across Indonesia.',
+              'A Hacker News-style news and discussion platform for the Indonesian technology community.',
+            cta: 'Visit Warta',
+            url: 'https://warta.blankon.id',
           },
         ],
       },
@@ -312,6 +323,7 @@ const translations = {
               'A Void Linux-based distribution featuring the KDE Plasma desktop environment, built specifically for designers and creative professionals.',
             cta: 'Visit LangitKetujuh',
             url: 'https://langitketujuh.id/',
+            tags: ['Infrastructure', 'Server'],
           },
           {
             name: 'Jakarta Linux Users Group',
@@ -319,17 +331,27 @@ const translations = {
               "A Linux user community in Jakarta, aiming to be a home for local and global free and open source projects' contributors.",
             cta: 'Visit JKTLUG',
             url: 'https://jktlug.id/',
+            tags: ['Funding', 'Legal'],
           },
           {
             name: 'openSUSE.Asia Summit 2026',
             description:
-              'One of Asia\'s largest gatherings of the openSUSE community, hosted in Yogyakarta on October 3-4, 2026, with BlankOn Foundation as a Custom Sponsor.',
+              'One of Asia\'s largest gatherings of the openSUSE community, hosted in Yogyakarta on October 3-4, 2026, with The BlankOn Foundation as a Custom Sponsor.',
             cta: 'Visit the Event Page',
             url: 'https://events.opensuse.org/conferences/oSAS26',
+            tags: ['Sponsorship'],
+          },
+          {
+            name: 'Belajar FreeBSD Indonesia',
+            description:
+              'A community dedicated to learning and sharing knowledge about FreeBSD in Indonesia.',
+            cta: 'Visit Belajar FreeBSD Indonesia',
+            url: 'https://www.belajarfreebsd.or.id',
+            tags: ['Infrastructure', 'Server'],
           },
         ],
         contact: {
-          text: 'If your open source project, initiative, or community needs support, whether in the form of funding or anything else, please get in touch with us at',
+          text: "If your open source project, initiative, or community needs support, whether in the form of infrastructure, funding, or something else, please get in touch. We can't always guarantee that resources will be available, but we're happy to talk and see what we can work out together. Reach us at",
           email: 'humas@blankon.id',
         },
       },

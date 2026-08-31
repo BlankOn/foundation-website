@@ -1,8 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
-import { baseOptions } from '@/lib/layout.shared'
-import { Footer } from '@/components/footer'
 import { useState } from 'react'
+// Sponsorship postponed — see draft article in content/news/
+// import clarusLogo from '../../../content/assets/clarus.svg'
+import eightLabsLogoLight from '../../../content/assets/8labs-black.png'
+import eightLabsLogoDark from '../../../content/assets/8labs-white.png'
+import { Footer } from '@/components/footer'
+import { baseOptions } from '@/lib/layout.shared'
 
 const avatarColors = [
   '#3b82f6',
@@ -77,17 +81,23 @@ const corporateSponsors = [
     url: 'https://hostbadak.com',
     className: 'framed-image'
   },
+  // Sponsorship postponed
+  // {
+  //   name: 'PT Clarus Innovace Teknologi',
+  //   logo: clarusLogo,
+  //   url: 'https://clarus-it.co.id/',
+  // },
+  {
+    name: '8Labs',
+    logo: eightLabsLogoLight,
+    // Dedicated light-on-dark variant, swapped in via the `dark:` class below
+    logoDark: eightLabsLogoDark,
+    url: 'https://8labs.id/',
+  },
 ]
 
 const individualSponsors = [
-  {
-    name: 'Adekabang',
-    github: 'Adekabang',
-    contribution: {
-      id: 'AMD64 Server (56 cores, 500GB RAM, 4.3TB storage)',
-      en: 'AMD64 Server (56 cores, 500GB RAM, 4.3TB storage)',
-    },
-  },
+  // Adekabang's AMD64 server sponsorship is now continued corporately through 8Labs
   {
     name: 'Aryulianto',
     github: 'aryulianto',
@@ -119,6 +129,10 @@ const emeritusSponsors = [
     name: 'Netzen Media Akses',
     url: 'https://netzen.net.id/',
   },
+  {
+    name: 'RockyBars Cokelatia',
+    url: 'https://www.instagram.com/cokelatia/',
+  },
 ]
 
 const sponsorshipContent = {
@@ -144,6 +158,8 @@ const sponsorshipContent = {
     corporateSponsors: 'Sponsor Korporat',
     individualSponsors: 'Sponsor Individu',
     emeritusSponsors: 'Sponsor Emeritus',
+    emeritusSponsorsNote:
+      'Kami berterima kasih atas kontribusi mereka di masa lalu.',
   },
   en: {
     title: 'Sponsorship',
@@ -167,6 +183,7 @@ const sponsorshipContent = {
     corporateSponsors: 'Corporate Sponsors',
     individualSponsors: 'Individual Sponsors',
     emeritusSponsors: 'Emeritus Sponsors',
+    emeritusSponsorsNote: 'We are grateful for their past contributions.',
   },
 }
 
@@ -297,8 +314,15 @@ function Sponsorship() {
                     <img
                       src={sponsor.logo}
                       alt={sponsor.name}
-                      className={`h-16 w-auto object-contain md:h-20 ${sponsor.className || ''}`}
+                      className={`h-16 w-auto object-contain md:h-20 ${sponsor.className || ''} ${sponsor.logoDark ? 'block dark:hidden' : ''}`}
                     />
+                    {sponsor.logoDark && (
+                      <img
+                        src={sponsor.logoDark}
+                        alt={sponsor.name}
+                        className="hidden h-16 w-auto object-contain md:h-20 dark:block"
+                      />
+                    )}
                   </a>
                 ))}
               </div>
@@ -309,14 +333,14 @@ function Sponsorship() {
               <h3 className="mb-8 text-center text-xl font-semibold text-fd-foreground md:text-2xl">
                 {content.individualSponsors}
               </h3>
-              <div className="grid gap-6 sm:grid-cols-2">
+              <div className="flex flex-wrap justify-center gap-6">
                 {individualSponsors.map((sponsor) => (
                   <a
                     key={sponsor.github}
                     href={`https://github.com/${sponsor.github}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 rounded-2xl border border-fd-border bg-fd-card p-5 transition-all hover:border-blue-300 hover:shadow-lg dark:hover:border-blue-700"
+                    className="flex w-full items-center gap-4 rounded-2xl border border-fd-border bg-fd-card p-5 transition-all hover:border-blue-300 hover:shadow-lg sm:w-[calc(50%-0.75rem)] dark:hover:border-blue-700"
                   >
                     <Avatar name={sponsor.name} github={sponsor.github} />
                     <div className="min-w-0">
@@ -334,24 +358,27 @@ function Sponsorship() {
 
             {/* Emeritus Sponsors */}
             <div>
-              <h3 className="mb-8 text-center text-xl font-semibold text-fd-foreground md:text-2xl">
+              <h3 className="mb-4 text-center text-xl font-semibold text-fd-foreground md:text-2xl">
                 {content.emeritusSponsors}
               </h3>
-              <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-                {emeritusSponsors.map((sponsor) => (
-                  <a
-                    key={sponsor.name}
-                    href={sponsor.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center rounded-2xl border border-fd-border bg-fd-card p-6 text-center transition-all hover:border-blue-300 hover:shadow-lg dark:hover:border-blue-700"
-                  >
-                    <p className="font-semibold text-fd-foreground">
+              <p className="mb-8 text-center text-fd-muted-foreground">
+                {content.emeritusSponsorsNote}
+              </p>
+              <p className="text-center leading-relaxed text-fd-muted-foreground">
+                {emeritusSponsors.map((sponsor, index) => (
+                  <span key={sponsor.name}>
+                    <a
+                      href={sponsor.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-fd-foreground hover:text-blue-600 hover:underline"
+                    >
                       {sponsor.name}
-                    </p>
-                  </a>
+                    </a>
+                    {index < emeritusSponsors.length - 1 && ', '}
+                  </span>
                 ))}
-              </div>
+              </p>
             </div>
           </div>
         </section>
