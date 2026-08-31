@@ -3,7 +3,9 @@ import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
 import { useState } from 'react'
-import clarusLogo from '../../../content/assets/clarus.svg'
+// Sponsorship postponed — see draft article in content/news/
+// import clarusLogo from '../../../content/assets/clarus.svg'
+import eightLabsLogo from '../../../content/assets/8labs.png'
 
 const avatarColors = [
   '#3b82f6',
@@ -78,22 +80,22 @@ const corporateSponsors = [
     url: 'https://hostbadak.com',
     className: 'framed-image'
   },
+  // Sponsorship postponed
+  // {
+  //   name: 'PT Clarus Innovace Teknologi',
+  //   logo: clarusLogo,
+  //   url: 'https://clarus-it.co.id/',
+  // },
   {
-    name: 'PT Clarus Innovace Teknologi',
-    logo: clarusLogo,
-    url: 'https://clarus-it.co.id/',
+    name: '8Labs',
+    logo: eightLabsLogo,
+    url: 'https://8labs.id/',
+    className: 'framed-image',
   },
 ]
 
 const individualSponsors = [
-  {
-    name: 'Adekabang',
-    github: 'Adekabang',
-    contribution: {
-      id: 'AMD64 Server (56 cores, 500GB RAM, 4.3TB storage)',
-      en: 'AMD64 Server (56 cores, 500GB RAM, 4.3TB storage)',
-    },
-  },
+  // Adekabang's AMD64 server sponsorship is now continued corporately through 8Labs
   {
     name: 'Aryulianto',
     github: 'aryulianto',
@@ -322,14 +324,14 @@ function Sponsorship() {
               <h3 className="mb-8 text-center text-xl font-semibold text-fd-foreground md:text-2xl">
                 {content.individualSponsors}
               </h3>
-              <div className="grid gap-6 sm:grid-cols-2">
+              <div className="flex flex-wrap justify-center gap-6">
                 {individualSponsors.map((sponsor) => (
                   <a
                     key={sponsor.github}
                     href={`https://github.com/${sponsor.github}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 rounded-2xl border border-fd-border bg-fd-card p-5 transition-all hover:border-blue-300 hover:shadow-lg dark:hover:border-blue-700"
+                    className="flex w-full items-center gap-4 rounded-2xl border border-fd-border bg-fd-card p-5 transition-all hover:border-blue-300 hover:shadow-lg sm:w-[calc(50%-0.75rem)] dark:hover:border-blue-700"
                   >
                     <Avatar name={sponsor.name} github={sponsor.github} />
                     <div className="min-w-0">
