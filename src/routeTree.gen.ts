@@ -22,6 +22,7 @@ import { Route as LangDownloadRouteImport } from './routes/$lang/download'
 import { Route as LangDonateRouteImport } from './routes/$lang/donate'
 import { Route as LangContactUsRouteImport } from './routes/$lang/contact-us'
 import { Route as LangCodeOfConductRouteImport } from './routes/$lang/code-of-conduct'
+import { Route as LangAiPolicyRouteImport } from './routes/$lang/ai-policy'
 import { Route as LangNewsSlugRouteImport } from './routes/$lang/news_.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -90,6 +91,11 @@ const LangCodeOfConductRoute = LangCodeOfConductRouteImport.update({
   path: '/$lang/code-of-conduct',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangAiPolicyRoute = LangAiPolicyRouteImport.update({
+  id: '/$lang/ai-policy',
+  path: '/$lang/ai-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LangNewsSlugRoute = LangNewsSlugRouteImport.update({
   id: '/$lang/news_/$slug',
   path: '/$lang/news/$slug',
@@ -98,6 +104,7 @@ const LangNewsSlugRoute = LangNewsSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$lang/ai-policy': typeof LangAiPolicyRoute
   '/$lang/code-of-conduct': typeof LangCodeOfConductRoute
   '/$lang/contact-us': typeof LangContactUsRoute
   '/$lang/donate': typeof LangDonateRoute
@@ -114,6 +121,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$lang/ai-policy': typeof LangAiPolicyRoute
   '/$lang/code-of-conduct': typeof LangCodeOfConductRoute
   '/$lang/contact-us': typeof LangContactUsRoute
   '/$lang/donate': typeof LangDonateRoute
@@ -131,6 +139,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$lang/ai-policy': typeof LangAiPolicyRoute
   '/$lang/code-of-conduct': typeof LangCodeOfConductRoute
   '/$lang/contact-us': typeof LangContactUsRoute
   '/$lang/donate': typeof LangDonateRoute
@@ -149,6 +158,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$lang/ai-policy'
     | '/$lang/code-of-conduct'
     | '/$lang/contact-us'
     | '/$lang/donate'
@@ -165,6 +175,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/$lang/ai-policy'
     | '/$lang/code-of-conduct'
     | '/$lang/contact-us'
     | '/$lang/donate'
@@ -181,6 +192,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/$lang/ai-policy'
     | '/$lang/code-of-conduct'
     | '/$lang/contact-us'
     | '/$lang/donate'
@@ -198,6 +210,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LangAiPolicyRoute: typeof LangAiPolicyRoute
   LangCodeOfConductRoute: typeof LangCodeOfConductRoute
   LangContactUsRoute: typeof LangContactUsRoute
   LangDonateRoute: typeof LangDonateRoute
@@ -306,6 +319,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangCodeOfConductRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang/ai-policy': {
+      id: '/$lang/ai-policy'
+      path: '/$lang/ai-policy'
+      fullPath: '/$lang/ai-policy'
+      preLoaderRoute: typeof LangAiPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/$lang/news_/$slug': {
       id: '/$lang/news_/$slug'
       path: '/$lang/news/$slug'
@@ -318,6 +338,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LangAiPolicyRoute: LangAiPolicyRoute,
   LangCodeOfConductRoute: LangCodeOfConductRoute,
   LangContactUsRoute: LangContactUsRoute,
   LangDonateRoute: LangDonateRoute,

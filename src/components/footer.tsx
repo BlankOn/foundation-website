@@ -22,7 +22,7 @@ const footerContent = {
           { label: 'Warta', url: 'https://warta.blankon.id' },
           { label: 'Lokakarya', url: 'https://www.youtube.com/@blankonlinux_official' },
           { label: 'Code of Conduct', url: '/$lang/code-of-conduct' },
-          { label: 'AI Policy', url: 'https://gist.github.com/herpiko/6b3f14e8490be07a2af7f8bd1b217c9c' },
+          { label: 'Kebijakan AI', url: '/$lang/ai-policy' },
         ],
       },
       {
@@ -59,7 +59,7 @@ const footerContent = {
           { label: 'Warta', url: 'https://warta.blankon.id' },
           { label: 'Lokakarya', url: 'https://www.youtube.com/@blankonlinux_official' },
           { label: 'Code of Conduct', url: '/$lang/code-of-conduct' },
-          { label: 'AI Policy', url: 'https://gist.github.com/herpiko/6b3f14e8490be07a2af7f8bd1b217c9c' },
+          { label: 'AI Policy', url: '/$lang/ai-policy' },
         ],
       },
       {

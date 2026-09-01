@@ -57,7 +57,7 @@ const translations = {
       about: {
         title: 'Yayasan BlankOn',
         description:
-          'Kami adalah organisasi nirlaba yang berdedikasi untuk memajukan ekosistem teknologi bebas terbuka dan kemandirian teknologi di Indonesia. Melalui kolaborasi komunitas dan inovasi berkelanjutan, kami membangun masa depan digital yang lebih inklusif dan berdaulat.',
+          'Kami adalah organisasi nirlaba yang berdedikasi untuk memajukan ekosistem teknologi bebas terbuka dan kemandirian teknologi di Indonesia. Melalui kolaborasi komunitas dan inisiatif berkelanjutan, kami membangun masa depan digital yang lebih inklusif dan berdaulat.',
         cta: 'Pelajari Lebih Lanjut',
       },
       timeline: {
@@ -111,10 +111,10 @@ const translations = {
         title: 'Misi',
         mission: 'Misi',
         missions: [
-          'Merawat BlankOn Linux sebagai proyek teknologi bebas terbuka yang dikelola dengan baik, dikembangkan secara terbuka dan berkelanjutan.',
           'Mendorong edukasi dan literasi teknologi bebas terbuka dan kemandirian teknologi melalui penguatan kapasitas di bidang sistem, infrastruktur, dan keamanan.',
           'Menumbuhkan dan menaungi proyek serta kegiatan teknologi bebas terbuka melalui dukungan dan penguatan komunitas.',
           'Mendorong akses yang setara terhadap teknologi, internet, dan pengetahuan digital, sehingga setiap orang dapat berpartisipasi, berkarya, dan memperoleh manfaat dari dunia digital.',
+          'Merawat BlankOn Linux sebagai proyek teknologi bebas terbuka yang dikelola dengan baik, dikembangkan secara terbuka dan berkelanjutan.',
         ],
       },
       donate: {
@@ -123,10 +123,20 @@ const translations = {
           'Kontribusi Anda membantu kami terus mengembangkan teknologi bebas terbuka, menyelenggarakan program edukasi, dan memperkuat komunitas open source di Indonesia.',
         cta: 'Donasi Sekarang',
       },
+      events: {
+        title: 'Kegiatan',
+        description:
+          'Kegiatan yang kami selenggarakan dan ikuti bersama komunitas.',
+        upcoming: 'Kegiatan Mendatang',
+        past: 'Kegiatan Terdahulu',
+        noUpcoming: 'Belum ada kegiatan mendatang yang dijadwalkan.',
+        noPast: 'Belum ada catatan kegiatan terdahulu.',
+        seeMore: 'Lihat selengkapnya...',
+      },
       products: {
         title: 'Proyek dan Inisiatif',
         description:
-          'Jelajahi berbagai proyek dan platform yang kami kembangkan dan dukung untuk komunitas.',
+          'Jelajahi berbagai proyek, platform, dan inisiatif yang kami kembangkan dan dukung untuk komunitas.',
         items: [
           {
             name: 'BlankOn Linux',
@@ -159,7 +169,7 @@ const translations = {
       supportedInitiatives: {
         title: 'Inisiatif yang Kami Dukung',
         description:
-          'Selain mengembangkan proyek sendiri, kami juga turut mendukung proyek sumber terbuka lain yang sejalan dengan visi kemandirian teknologi Indonesia.',
+          'Selain mengembangkan proyek sendiri, kami juga turut mendukung inisiatif sumber terbuka dan komunitas lain yang sejalan dengan visi kami.',
         items: [
           {
             name: 'LangitKetujuh',
@@ -213,7 +223,7 @@ const translations = {
       about: {
         title: 'The BlankOn Foundation',
         description:
-          'We are a non-profit organization dedicated to advancing the open source technology ecosystem and technological independence in Indonesia. Through community collaboration and sustainable innovation, we build a more inclusive and sovereign digital future.',
+          'We are a non-profit organization dedicated to advancing the open source technology ecosystem and technological independence in Indonesia. Through community collaboration and sustainable initiatives, we build a more inclusive and sovereign digital future.',
         cta: 'Learn More',
       },
       timeline: {
@@ -267,10 +277,10 @@ const translations = {
         title: 'Mission',
         mission: 'Mission',
         missions: [
-          'Maintain BlankOn Linux as a well-managed open source technology project, developed openly and sustainably.',
           'Promote education and literacy in open source technology and technological independence through capacity building in systems, infrastructure, and security.',
           'Nurture and support open source projects and activities through community strengthening and support.',
           'Promote equitable access to technology, the internet and digital knowledge, enabling everyone to participate, create and benefit from the digital world.',
+          'Maintain BlankOn Linux as a well-managed open source technology project, developed openly and sustainably.',
         ],
       },
       donate: {
@@ -279,10 +289,20 @@ const translations = {
           'Your contribution helps us continue developing open source technology, organizing educational programs, and strengthening the open source community in Indonesia.',
         cta: 'Donate Now',
       },
+      events: {
+        title: 'Events',
+        description:
+          'Events we host and take part in together with the community.',
+        upcoming: 'Upcoming Events',
+        past: 'Past Events',
+        noUpcoming: 'No upcoming events are scheduled yet.',
+        noPast: 'No past events recorded yet.',
+        seeMore: 'See more...',
+      },
       products: {
         title: 'Projects and Initiatives',
         description:
-          'Explore various projects and platforms we develop for the community.',
+          'Explore various projects, platforms and initiatives we develop for the community.',
         items: [
           {
             name: 'BlankOn Linux',
@@ -315,7 +335,7 @@ const translations = {
       supportedInitiatives: {
         title: 'Supported Initiatives',
         description:
-          'Beyond our own projects, we also support other open source initiatives that share Indonesia\'s vision of technological independence.',
+          'Beyond our own projects, we also support other open source and community initiatives that share our vision.',
         items: [
           {
             name: 'LangitKetujuh',

@@ -138,7 +138,7 @@ const emeritusSponsors = [
 const sponsorshipContent = {
   id: {
     title: 'Sponsorship',
-    subtitle: 'Dukung Kemandirian Teknologi Indonesia',
+    subtitle: 'Dukung Kedaulatan Digital Indonesia',
     intro:
       'Yayasan BlankOn didanai sepenuhnya oleh sponsorship dan donasi dari individu maupun organisasi yang peduli terhadap ekosistem teknologi bebas terbuka di Indonesia.',
     principles: {
@@ -163,7 +163,7 @@ const sponsorshipContent = {
   },
   en: {
     title: 'Sponsorship',
-    subtitle: 'Support Technological Independence in Indonesia',
+    subtitle: 'Support Digital Sovereignty in Indonesia',
     intro:
       'BlankOn Foundation is funded entirely by sponsorships and donations from individuals and organizations who care about the open source technology ecosystem in Indonesia.',
     principles: {

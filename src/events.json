@@ -1,0 +1,33 @@
+{
+  "$comment": "Events shown on the home page. `date` accepts YYYY, YYYY-MM or YYYY-MM-DD; anything on/after today lands in Upcoming, everything else in Past. `endDate`, `link` and `image` are optional. `title` and `place` accept either a plain string or { id, en } for per-language text. `link` may be an absolute URL (opens in a new tab) or a site-relative path without the language prefix, e.g. /news/some-slug (the current language is prepended). `image` may be a /content/assets/... path or a file under public/.",
+  "events": [
+    {
+      "title": "openSUSE.Asia Summit 2026",
+      "date": "2026-10-03",
+      "endDate": "2026-10-04",
+      "place": "Yogyakarta, Indonesia",
+      "link": "https://events.opensuse.org/conferences/oSAS26",
+      "image": "/images/osas2026.png"
+    },
+    {
+      "title": "Debian Day 2026 Jakarta",
+      "date": "2026-08-29",
+      "place": {
+        "id": "Kantor MULA, Jakarta",
+        "en": "MULA Office, Jakarta"
+      },
+      "link": "/news/debian-day-2026-jakarta",
+      "image": "/content/assets/debian-day-jakarta-2026-group-photo.jpg"
+    },
+    {
+      "title": "Debian Day 2026 Purbalingga",
+      "date": "2026-08-22",
+      "place": {
+        "id": "Universitas Jenderal Soedirman, Purbalingga",
+        "en": "Universitas Jenderal Soedirman, Purbalingga"
+      },
+      "link": "/news/debian-day-2026-purbalingga",
+      "image": "/content/assets/debian-day-2026-purbalingga-bersama.jpg"
+    }
+  ]
+}
