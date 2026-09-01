@@ -25,7 +25,7 @@ const teamContent = {
         },
         {
           name: 'Akhmat Safrudin',
-          email: 'somat@blankon.id',
+          email: 'asafrudin@blankon.id',
           position: 'Pengawas',
           bio: (
             <>
@@ -111,7 +111,7 @@ const teamContent = {
         },
         {
           name: 'Akhmat Safrudin',
-          email: 'somat@blankon.id',
+          email: 'asafrudin@blankon.id',
           position: 'Supervisor',
           bio: (
             <>
