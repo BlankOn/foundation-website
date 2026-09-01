@@ -208,7 +208,7 @@ const translations = {
             description:
               'Komunitas pengguna dan kontributor GNOME di Indonesia, yang menjadi wadah belajar dan berbagi seputar lingkungan desktop GNOME.',
             cta: 'Kunjungi GNOME Indonesia',
-            url: 'https://gnome.id',
+            url: 'https://t.me/gnomeid',
             tags: ['Sponsorship', 'Komunitas'],
           },
         ],
@@ -382,7 +382,7 @@ const translations = {
             description:
               'A community of GNOME users and contributors in Indonesia, offering a space to learn and share around the GNOME desktop environment.',
             cta: 'Visit GNOME Indonesia',
-            url: 'https://gnome.id',
+            url: 'https://t.me/gnomeid',
             tags: ['Sponsorship', 'Community'],
           },
         ],
