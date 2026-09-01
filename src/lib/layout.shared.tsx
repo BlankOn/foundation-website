@@ -126,7 +126,7 @@ const translations = {
       events: {
         title: 'Kegiatan',
         description:
-          'Kegiatan yang kami selenggarakan dan ikuti bersama komunitas.',
+          'Kegiatan yang kami selenggarakan atau ikuti bersama komunitas.',
         upcoming: 'Kegiatan Mendatang',
         past: 'Kegiatan Terdahulu',
         noUpcoming: 'Belum ada kegiatan mendatang yang dijadwalkan.',
@@ -300,7 +300,7 @@ const translations = {
       events: {
         title: 'Events',
         description:
-          'Events we host and take part in together with the community.',
+          'Events we host or take part in together with the community.',
         upcoming: 'Upcoming Events',
         past: 'Past Events',
         noUpcoming: 'No upcoming events are scheduled yet.',
