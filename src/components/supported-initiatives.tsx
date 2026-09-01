@@ -3,12 +3,14 @@ import langitKetujuhLogo from '../../content/assets/langitketujuh_logo_horizonta
 import jktlugLogo from '../../content/assets/jktlug.png'
 import osas2026Logo from '../../content/assets/osas2026.png'
 import belajarFreeBSDLogo from '../../content/assets/belajarfreebsdindonesia.jpeg'
+import gnomeIndonesiaLogo from '../../content/assets/gnome-id.png'
 
 const supportedInitiativeLogos: Record<string, string> = {
   LangitKetujuh: langitKetujuhLogo,
   'Jakarta Linux Users Group': jktlugLogo,
   'openSUSE.Asia Summit 2026': osas2026Logo,
   'Belajar FreeBSD Indonesia': belajarFreeBSDLogo,
+  'GNOME Indonesia': gnomeIndonesiaLogo,
 }
 
 export function SupportedInitiativesList({
@@ -19,14 +21,12 @@ export function SupportedInitiativesList({
   return (
     <>
       <div className="flex flex-wrap justify-center gap-6">
-        {t.hero.supportedInitiatives.items.map((item, index) => (
-          <a
-            key={index}
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex w-full max-w-sm flex-col rounded-2xl border border-fd-border bg-fd-card p-8 transition-all hover:border-blue-300 hover:shadow-xl dark:hover:border-blue-700"
-          >
+        {t.hero.supportedInitiatives.items.map((item, index) => {
+          const cardClassName =
+            'group flex w-full max-w-sm flex-col rounded-2xl border border-fd-border bg-fd-card p-8 transition-all hover:border-blue-300 hover:shadow-xl dark:hover:border-blue-700'
+
+          const cardContent = (
+            <>
             <div className="mb-6 flex h-20 items-center">
               {supportedInitiativeLogos[item.name] ? (
                 <img
@@ -68,24 +68,48 @@ export function SupportedInitiativesList({
             <p className="mb-6 flex-1 text-sm text-fd-muted-foreground">
               {item.description}
             </p>
-            <span className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-colors group-hover:text-blue-500 dark:text-blue-400 dark:group-hover:text-blue-300">
-              {item.cta}
-              <svg
-                className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </span>
-          </a>
-        ))}
+            {item.url && item.cta ? (
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-colors group-hover:text-blue-500 dark:text-blue-400 dark:group-hover:text-blue-300">
+                {item.cta}
+                <svg
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </span>
+            ) : null}
+            </>
+          )
+
+          // Items without a url stay non-interactive.
+          if (!item.url) {
+            return (
+              <div key={index} className={cardClassName}>
+                {cardContent}
+              </div>
+            )
+          }
+
+          return (
+            <a
+              key={index}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cardClassName}
+            >
+              {cardContent}
+            </a>
+          )
+        })}
       </div>
 
       <p className="mx-auto mt-12 max-w-2xl text-center text-sm text-fd-muted-foreground">

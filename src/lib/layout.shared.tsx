@@ -185,7 +185,7 @@ const translations = {
               'Komunitas pengguna Linux di Jakarta yang bercita-cita menjadi rumah bagi para kontributor proyek bebas dan sumber terbuka, baik lokal maupun global.',
             cta: 'Kunjungi JKTLUG',
             url: 'https://jktlug.id/',
-            tags: ['Pendanaan', 'Legal'],
+            tags: ['Pendanaan', 'Legal', 'Komunitas'],
           },
           {
             name: 'openSUSE.Asia Summit 2026',
@@ -202,6 +202,14 @@ const translations = {
             cta: 'Kunjungi Belajar FreeBSD Indonesia',
             url: 'https://www.belajarfreebsd.or.id',
             tags: ['Infrastruktur', 'Server'],
+          },
+          {
+            name: 'GNOME Indonesia',
+            description:
+              'Komunitas pengguna dan kontributor GNOME di Indonesia, yang menjadi wadah belajar dan berbagi seputar lingkungan desktop GNOME.',
+            cta: 'Kunjungi GNOME Indonesia',
+            url: 'https://gnome.id',
+            tags: ['Sponsorship', 'Komunitas'],
           },
         ],
         contact: {
@@ -351,7 +359,7 @@ const translations = {
               "A Linux user community in Jakarta, aiming to be a home for local and global free and open source projects' contributors.",
             cta: 'Visit JKTLUG',
             url: 'https://jktlug.id/',
-            tags: ['Funding', 'Legal'],
+            tags: ['Funding', 'Legal', 'Community'],
           },
           {
             name: 'openSUSE.Asia Summit 2026',
@@ -368,6 +376,14 @@ const translations = {
             cta: 'Visit Belajar FreeBSD Indonesia',
             url: 'https://www.belajarfreebsd.or.id',
             tags: ['Infrastructure', 'Server'],
+          },
+          {
+            name: 'GNOME Indonesia',
+            description:
+              'A community of GNOME users and contributors in Indonesia, offering a space to learn and share around the GNOME desktop environment.',
+            cta: 'Visit GNOME Indonesia',
+            url: 'https://gnome.id',
+            tags: ['Sponsorship', 'Community'],
           },
         ],
         contact: {
