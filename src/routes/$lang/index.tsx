@@ -4,6 +4,7 @@ import { baseOptions, getTranslations } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
 import { useEffect, useState } from 'react'
 import { SupportedInitiativesList } from '@/components/supported-initiatives'
+import { EventsList } from '@/components/events'
 import blankOnLinuxPreview from '../../../content/assets/blankon-linux.png'
 import wartaBlankOnPreview from '../../../content/assets/retas.png'
 import lokakaryaPreview from '../../../content/assets/lokakarya.jpeg'
@@ -189,7 +190,7 @@ const missionIcons = [
 
 function HeroVision({ t }: { t: ReturnType<typeof getTranslations> }) {
   return (
-    <section className="bg-fd-background py-20">
+    <section className="bg-fd-background py-14">
       <div className="container mx-auto max-w-5xl px-6">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-fd-foreground md:text-4xl">
@@ -238,7 +239,7 @@ function HeroDonate({
   lang: string
 }) {
   return (
-    <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-slate-800 py-20 text-white">
+    <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-slate-800 py-14 text-white">
       <div className="container mx-auto max-w-4xl px-6 text-center">
         <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white/10">
           <svg
@@ -292,63 +293,82 @@ function HeroProducts({
   t: ReturnType<typeof getTranslations>
 }) {
   return (
-    <section className="bg-slate-50 py-20 dark:bg-slate-900/50">
+    <section className="bg-slate-50 py-14 dark:bg-slate-900/50">
       <div className="container mx-auto max-w-5xl px-6">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-fd-foreground md:text-4xl">
             {t.hero.products.title}
           </h2>
+          <div className="mx-auto mb-4 h-1 w-16 rounded-full bg-gradient-to-r from-blue-600 to-blue-400" />
           <p className="mx-auto max-w-2xl text-fd-muted-foreground">
             {t.hero.products.description}
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          {t.hero.products.items.map((item, index) => (
-            <div
-              key={index}
-              className="group overflow-hidden rounded-2xl border border-fd-border bg-fd-card transition-all hover:border-blue-300 hover:shadow-xl dark:hover:border-blue-700"
-            >
-              <div className="aspect-video w-full overflow-hidden">
-                <img
-                  src={productPreviewImages[item.name]}
-                  alt={item.name}
-                  className="h-full w-full object-cover transition-transform group-hover:scale-105"
-                />
-              </div>
-              <div className="p-8">
-                <h3 className="mb-3 text-xl font-bold text-fd-foreground">
-                  {item.name}
-                </h3>
-                <p className="mb-6 text-fd-muted-foreground">
-                  {item.description}
-                </p>
-                {item.url && item.cta && (
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-medium text-blue-600 transition-colors hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
-                  >
-                    {item.cta}
-                    <svg
-                      className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
-                )}
-              </div>
-            </div>
-          ))}
+          {t.hero.products.items.map((item, index) => {
+            const cardClassName =
+              'group block overflow-hidden rounded-2xl border border-fd-border bg-fd-card transition-all hover:border-blue-300 hover:shadow-xl dark:hover:border-blue-700'
+
+            const cardContent = (
+              <>
+                <div className="aspect-video w-full overflow-hidden">
+                  <img
+                    src={productPreviewImages[item.name]}
+                    alt={item.name}
+                    className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-8">
+                  <h3 className="mb-3 text-xl font-bold text-fd-foreground">
+                    {item.name}
+                  </h3>
+                  <p className="mb-6 text-fd-muted-foreground">
+                    {item.description}
+                  </p>
+                  {item.url && item.cta && (
+                    <span className="inline-flex items-center gap-2 font-medium text-blue-600 transition-colors group-hover:text-blue-500 dark:text-blue-400 dark:group-hover:text-blue-300">
+                      {item.cta}
+                      <svg
+                        className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </span>
+                  )}
+                </div>
+              </>
+            )
+
+            // Items without a url (e.g. BlanKonf) stay non-interactive.
+            if (!item.url) {
+              return (
+                <div key={index} className={cardClassName}>
+                  {cardContent}
+                </div>
+              )
+            }
+
+            return (
+              <a
+                key={index}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cardClassName}
+              >
+                {cardContent}
+              </a>
+            )
+          })}
         </div>
       </div>
     </section>
@@ -361,18 +381,45 @@ function HeroSupportedInitiatives({
   t: ReturnType<typeof getTranslations>
 }) {
   return (
-    <section className="bg-slate-50 py-20 dark:bg-slate-900/50">
+    <section className="bg-slate-50 py-14 dark:bg-slate-900/50">
       <div className="container mx-auto max-w-5xl px-6">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-fd-foreground md:text-4xl">
             {t.hero.supportedInitiatives.title}
           </h2>
+          <div className="mx-auto mb-4 h-1 w-16 rounded-full bg-gradient-to-r from-blue-600 to-blue-400" />
           <p className="mx-auto max-w-2xl text-fd-muted-foreground">
             {t.hero.supportedInitiatives.description}
           </p>
         </div>
 
         <SupportedInitiativesList t={t} />
+      </div>
+    </section>
+  )
+}
+
+function HeroEvents({
+  t,
+  lang,
+}: {
+  t: ReturnType<typeof getTranslations>
+  lang: string
+}) {
+  return (
+    <section className="bg-fd-background py-14">
+      <div className="container mx-auto max-w-5xl px-6">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold text-fd-foreground md:text-4xl">
+            {t.hero.events.title}
+          </h2>
+          <div className="mx-auto mb-4 h-1 w-16 rounded-full bg-gradient-to-r from-blue-600 to-blue-400" />
+          <p className="mx-auto max-w-2xl text-fd-muted-foreground">
+            {t.hero.events.description}
+          </p>
+        </div>
+
+        <EventsList t={t} lang={lang} />
       </div>
     </section>
   )
@@ -390,6 +437,7 @@ function Home() {
         <HeroDonate t={t} lang={lang} />
         <HeroProducts t={t} />
         <HeroSupportedInitiatives t={t} />
+        <HeroEvents t={t} lang={lang} />
       </main>
       <Footer lang={lang} />
     </HomeLayout>
