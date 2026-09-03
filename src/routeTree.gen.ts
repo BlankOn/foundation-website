@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
+import { Route as LangTermsAndConditionsRouteImport } from './routes/$lang/terms-and-conditions'
 import { Route as LangTeamRouteImport } from './routes/$lang/team'
 import { Route as LangSupportedInitiativesRouteImport } from './routes/$lang/supported-initiatives'
 import { Route as LangSponsorshipRouteImport } from './routes/$lang/sponsorship'
@@ -33,6 +34,11 @@ const IndexRoute = IndexRouteImport.update({
 const LangIndexRoute = LangIndexRouteImport.update({
   id: '/$lang/',
   path: '/$lang/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangTermsAndConditionsRoute = LangTermsAndConditionsRouteImport.update({
+  id: '/$lang/terms-and-conditions',
+  path: '/$lang/terms-and-conditions',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangTeamRoute = LangTeamRouteImport.update({
@@ -116,6 +122,7 @@ export interface FileRoutesByFullPath {
   '/$lang/sponsorship': typeof LangSponsorshipRoute
   '/$lang/supported-initiatives': typeof LangSupportedInitiativesRoute
   '/$lang/team': typeof LangTeamRoute
+  '/$lang/terms-and-conditions': typeof LangTermsAndConditionsRoute
   '/$lang': typeof LangIndexRoute
   '/$lang/news/$slug': typeof LangNewsSlugRoute
 }
@@ -133,6 +140,7 @@ export interface FileRoutesByTo {
   '/$lang/sponsorship': typeof LangSponsorshipRoute
   '/$lang/supported-initiatives': typeof LangSupportedInitiativesRoute
   '/$lang/team': typeof LangTeamRoute
+  '/$lang/terms-and-conditions': typeof LangTermsAndConditionsRoute
   '/$lang': typeof LangIndexRoute
   '/$lang/news/$slug': typeof LangNewsSlugRoute
 }
@@ -151,6 +159,7 @@ export interface FileRoutesById {
   '/$lang/sponsorship': typeof LangSponsorshipRoute
   '/$lang/supported-initiatives': typeof LangSupportedInitiativesRoute
   '/$lang/team': typeof LangTeamRoute
+  '/$lang/terms-and-conditions': typeof LangTermsAndConditionsRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/news_/$slug': typeof LangNewsSlugRoute
 }
@@ -170,6 +179,7 @@ export interface FileRouteTypes {
     | '/$lang/sponsorship'
     | '/$lang/supported-initiatives'
     | '/$lang/team'
+    | '/$lang/terms-and-conditions'
     | '/$lang'
     | '/$lang/news/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -187,6 +197,7 @@ export interface FileRouteTypes {
     | '/$lang/sponsorship'
     | '/$lang/supported-initiatives'
     | '/$lang/team'
+    | '/$lang/terms-and-conditions'
     | '/$lang'
     | '/$lang/news/$slug'
   id:
@@ -204,6 +215,7 @@ export interface FileRouteTypes {
     | '/$lang/sponsorship'
     | '/$lang/supported-initiatives'
     | '/$lang/team'
+    | '/$lang/terms-and-conditions'
     | '/$lang/'
     | '/$lang/news_/$slug'
   fileRoutesById: FileRoutesById
@@ -222,6 +234,7 @@ export interface RootRouteChildren {
   LangSponsorshipRoute: typeof LangSponsorshipRoute
   LangSupportedInitiativesRoute: typeof LangSupportedInitiativesRoute
   LangTeamRoute: typeof LangTeamRoute
+  LangTermsAndConditionsRoute: typeof LangTermsAndConditionsRoute
   LangIndexRoute: typeof LangIndexRoute
   LangNewsSlugRoute: typeof LangNewsSlugRoute
 }
@@ -240,6 +253,13 @@ declare module '@tanstack/react-router' {
       path: '/$lang'
       fullPath: '/$lang'
       preLoaderRoute: typeof LangIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$lang/terms-and-conditions': {
+      id: '/$lang/terms-and-conditions'
+      path: '/$lang/terms-and-conditions'
+      fullPath: '/$lang/terms-and-conditions'
+      preLoaderRoute: typeof LangTermsAndConditionsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/team': {
@@ -350,6 +370,7 @@ const rootRouteChildren: RootRouteChildren = {
   LangSponsorshipRoute: LangSponsorshipRoute,
   LangSupportedInitiativesRoute: LangSupportedInitiativesRoute,
   LangTeamRoute: LangTeamRoute,
+  LangTermsAndConditionsRoute: LangTermsAndConditionsRoute,
   LangIndexRoute: LangIndexRoute,
   LangNewsSlugRoute: LangNewsSlugRoute,
 }

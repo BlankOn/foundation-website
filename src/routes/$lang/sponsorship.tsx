@@ -151,7 +151,7 @@ const sponsorshipContent = {
     howTo: {
       title: 'Menjadi Sponsor',
       description:
-        'Kami menerima donasi satu kali maupun donasi rutin bulanan. Jika Anda atau organisasi Anda ingin memberikan dukungan besar, kami dengan senang hati akan menampilkan logo Anda di situs web ini.',
+        'Kami menerima donasi satu kali maupun donasi rutin bulanan. Jika Anda atau organisasi Anda ingin memberikan dukungan besar, kami dengan senang hati akan menampilkan logo Anda di situs web ini dan/atau menyebutkan nama Anda dalam acara maupun kesempatan lainnya.',
       cta: 'Hubungi kami untuk menjadi sponsor.',
     },
     currentSponsors: 'Sponsor Kami',
@@ -176,7 +176,7 @@ const sponsorshipContent = {
     howTo: {
       title: 'Become a Sponsor',
       description:
-        'We accept one-time and recurring monthly donations. If you or your organization would like to make a significant contribution, we would be happy to display your logo on this website.',
+        'We accept one-time and recurring monthly donations. If you or your organization would like to make a significant contribution, we would be happy to display your logo on this website and/or mention you at our events and on other occasions.',
       cta: 'Contact us to become a sponsor.',
     },
     currentSponsors: 'Our Sponsors',
