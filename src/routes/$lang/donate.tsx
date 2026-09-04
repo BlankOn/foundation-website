@@ -83,7 +83,7 @@ const donateContent = {
     transparency: {
       title: 'Transparansi & Akuntabilitas',
       description:
-        'Kami berkomitmen untuk mengelola dana donasi dengan transparan dan bertanggung jawab. Kami memelihara dua pembukuan: buku kas publik dan buku kas internal. Buku kas publik adalah lapisan transparansi untuk dana yang terkumpul dari donasi perorangan, dipublikasikan dan dapat diakses oleh publik kapan saja. Buku kas internal mencakup keseluruhan keuangan yayasan dan akan diringkas serta dilaporkan dalam laporan tahunan.',
+        'Kami berkomitmen untuk mengelola dana donasi dengan transparan dan bertanggung jawab. Kami menerbitkan buku kas publik untuk dana yang terkumpul dari donasi perorangan, yang dapat diakses oleh publik kapan saja. Keseluruhan keuangan Yayasan diringkas dan dilaporkan dalam laporan tahunan.',
       cta: 'Lihat Buku Kas Publik',
     },
     contact: {
@@ -166,8 +166,8 @@ const donateContent = {
     transparency: {
       title: 'Transparency & Accountability',
       description:
-        "We are committed to managing donation funds transparently and responsibly. We maintain two ledgers: a public ledger and an internal ledger. The public ledger is the transparency layer for funds gathered from individual donations, published and accessible to the public at any time. The internal ledger covers the foundation's overall finances and will be summarized and reported in our annual report.",
-      cta: 'View Public Ledger',
+        'We are committed to managing donation funds transparently and responsibly. We publish a public cash book for funds gathered from individual donations, accessible to the public at any time. The Foundation’s full accounts are summarized and reported in our annual report.',
+      cta: 'View the Public Cash Book',
     },
     contact: {
       title: 'Questions?',
