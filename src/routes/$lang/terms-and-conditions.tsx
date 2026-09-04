@@ -8,6 +8,8 @@ export const Route = createFileRoute('/$lang/terms-and-conditions')({
 })
 
 const foundationEmail = 'humas@blankon.id'
+const foundationAddress =
+  'Jalan Raya Lenteng Agung, RT 005 / RW 001, Kelurahan Srengseng Sawah, Kecamatan Jagakarsa, Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12640'
 const publicLedgerUrl =
   'https://docs.google.com/spreadsheets/d/1oQKe2ehnWqNHIseqbp3yJTvbCSzGctdV0JWAERF1IUg/edit?usp=sharing'
 
@@ -30,7 +32,8 @@ const termsContent = {
         title: 'Identitas Penyelenggara',
         paragraphs: [
           'Situs ini dikelola oleh Yayasan BlankOn Penggiat Sumber Terbuka, sebuah yayasan nirlaba yang berbadan hukum di Republik Indonesia berdasarkan Keputusan Menteri Hukum Republik Indonesia Nomor AHU-0004533.AH.01.04 Tahun 2026 dan tercatat dalam Daftar Yayasan Nomor AHU-0006657.AH.01.12 Tahun 2026 tanggal 13 Februari 2026.',
-          `Seluruh korespondensi resmi terkait donasi, sponsorship, dan ketentuan ini dapat dikirimkan ke ${foundationEmail}.`,
+          `Yayasan berkedudukan dan beralamat di ${foundationAddress}.`,
+          `Seluruh korespondensi resmi terkait donasi, sponsorship, dan ketentuan ini dapat dikirimkan ke ${foundationEmail} atau ke alamat tersebut di atas.`,
         ],
       },
       {
@@ -45,6 +48,7 @@ const termsContent = {
         items: [
           'Donasi dan sponsorship bersifat sukarela dan tanpa syarat (unrestricted), kecuali apabila donatur secara tertulis menyebutkan proyek atau inisiatif tertentu dan Yayasan menyetujuinya.',
           'Donasi dan sponsorship tidak menimbulkan hak atas barang, jasa, kepemilikan, saham, atau keuntungan komersial dalam bentuk apa pun.',
+          'Pencantuman nama dan penempatan logo donatur atau sponsor merupakan bentuk apresiasi dan pengakuan atas dukungan yang diberikan, bukan pemasangan iklan maupun layanan promosi. Yayasan tidak menjual ruang iklan, dan pencantuman tersebut tidak dapat diartikan sebagai dukungan (endorsement) Yayasan terhadap produk, jasa, atau kegiatan pihak yang bersangkutan. Yayasan sepenuhnya menentukan bentuk, ukuran, dan penempatan pencantuman tersebut.',
           'Segala manfaat, pengakuan, atau fasilitas yang kami tawarkan sehubungan dengan keanggotaan, donasi, atau sponsorship — misalnya manfaat keanggotaan, penempatan logo, pencantuman nama donatur, penyebutan dalam acara, atau akses ke program tertentu — bersifat penawaran atas kebijakan Yayasan dan tidak permanen. Penawaran tersebut dapat diubah, dibatasi ketersediaannya, ditangguhkan, atau dihentikan sewaktu-waktu, termasuk untuk donatur yang kontribusinya sedang berjalan. Yayasan akan berupaya memberitahukan perubahan tersebut melalui surel atau situs ini.',
           'Perubahan atau penghentian suatu manfaat tidak menimbulkan hak atas ganti rugi maupun pengembalian kontribusi yang telah diberikan. Anda dapat menghentikan donasi rutin Anda apabila tidak menyetujui perubahan tersebut.',
           'Posisi di kepengurusan dan segala bentuk pengaruh terhadap arah organisasi tidak dapat dibeli melalui donasi maupun sponsorship.',
@@ -97,7 +101,7 @@ const termsContent = {
         title: 'Penggunaan Dana dan Transparansi',
         paragraphs: [
           'Dana donasi digunakan untuk pengembangan dan pemeliharaan proyek perangkat lunak bebas terbuka, program edukasi, infrastruktur, kegiatan komunitas, dan operasional Yayasan.',
-          'Kami memelihara dua pembukuan: buku kas publik untuk dana yang terkumpul dari donasi perorangan yang dapat diakses publik kapan saja, dan buku kas internal yang mencakup keseluruhan keuangan Yayasan dan diringkas dalam laporan tahunan.',
+          'Kami menerbitkan buku kas publik untuk dana yang terkumpul dari donasi perorangan, yang dapat diakses publik kapan saja; keseluruhan keuangan Yayasan diringkas dalam laporan tahunan.',
         ],
       },
       {
@@ -133,9 +137,9 @@ const termsContent = {
         ],
       },
       {
-        title: 'Hukum yang Berlaku dan Penyelesaian Sengketa',
+        title: 'Hukum yang Berlaku',
         paragraphs: [
-          'Syarat & Ketentuan ini tunduk pada hukum yang berlaku di Republik Indonesia. Setiap sengketa yang timbul akan diupayakan diselesaikan secara musyawarah terlebih dahulu, dan apabila tidak tercapai kesepakatan, akan diselesaikan melalui pengadilan yang berwenang di Republik Indonesia.',
+          'Syarat & Ketentuan ini tunduk pada hukum yang berlaku di Republik Indonesia. Setiap pertanyaan atau perbedaan pendapat yang timbul akan kami upayakan diselesaikan secara musyawarah dengan itikad baik.',
         ],
       },
     ] as Array<Section>,
@@ -144,6 +148,7 @@ const termsContent = {
       title: 'Pertanyaan?',
       description:
         'Jika Anda memiliki pertanyaan mengenai Syarat & Ketentuan ini, donasi, sponsorship, atau permohonan pengembalian dana, silakan hubungi kami.',
+      addressLabel: 'Alamat',
     },
   },
   en: {
@@ -158,7 +163,8 @@ const termsContent = {
         title: 'Who We Are',
         paragraphs: [
           'This site is operated by Yayasan BlankOn Penggiat Sumber Terbuka, a non-profit foundation established as a legal entity in the Republic of Indonesia under Decree of the Minister of Law of the Republic of Indonesia Number AHU-0004533.AH.01.04 of 2026 and registered in the Register of Foundations Number AHU-0006657.AH.01.12 of 2026, dated 13 February 2026.',
-          `All official correspondence regarding donations, sponsorships, and these terms may be sent to ${foundationEmail}.`,
+          `The Foundation is domiciled at ${foundationAddress}.`,
+          `All official correspondence regarding donations, sponsorships, and these terms may be sent to ${foundationEmail} or to the address above.`,
         ],
       },
       {
@@ -173,6 +179,7 @@ const termsContent = {
         items: [
           'Donations and sponsorships are voluntary and unrestricted, unless a donor specifies a particular project or initiative in writing and the Foundation agrees to it.',
           'Donations and sponsorships do not create any entitlement to goods, services, ownership, shares, or commercial benefits of any kind.',
+          'Listing a donor’s or sponsor’s name and placing their logo is a form of appreciation and acknowledgement of the support given — it is not advertising or a promotional service. The Foundation does not sell advertising space, and such acknowledgement may not be construed as an endorsement by the Foundation of that party’s products, services, or activities. The Foundation determines the form, size, and placement of any such acknowledgement.',
           'Any benefit, recognition, or facility we offer in connection with membership, donations, or sponsorships — such as membership benefits, logo placement, listing as a donor, a mention at our events, or access to particular programs — is offered at the Foundation’s discretion and is not permanent. Such offers may be changed, limited in availability, suspended, or discontinued at any time, including for donors whose contributions are ongoing. We will make reasonable efforts to announce any such change by email or on this site.',
           'A change to or discontinuation of a benefit does not give rise to any claim for compensation or to a refund of contributions already made. You may stop your recurring donation if you do not agree with the change.',
           'Board seats and any form of influence over the direction of the organization cannot be purchased through donations or sponsorships.',
@@ -225,7 +232,7 @@ const termsContent = {
         title: 'Use of Funds and Transparency',
         paragraphs: [
           'Donated funds are used for the development and maintenance of open source software projects, educational programs, infrastructure, community activities, and the Foundation’s operations.',
-          'We maintain two sets of books: a public cash book for funds collected from individual donations, accessible to the public at any time, and an internal cash book covering the Foundation’s finances as a whole, summarized in our annual report.',
+          'We publish a public cash book for funds collected from individual donations, accessible to the public at any time; the Foundation’s full accounts are summarized in our annual report.',
         ],
       },
       {
@@ -261,9 +268,9 @@ const termsContent = {
         ],
       },
       {
-        title: 'Governing Law and Dispute Resolution',
+        title: 'Governing Law',
         paragraphs: [
-          'These Terms & Conditions are governed by the laws in force in the Republic of Indonesia. Any dispute will first be addressed through good-faith discussion and, failing agreement, resolved before the competent courts of the Republic of Indonesia.',
+          'These Terms & Conditions are governed by the laws in force in the Republic of Indonesia. Any question or disagreement that arises will be addressed through good-faith discussion.',
         ],
       },
     ] as Array<Section>,
@@ -272,6 +279,7 @@ const termsContent = {
       title: 'Questions?',
       description:
         'If you have questions about these Terms & Conditions, donations, sponsorships, or a refund request, please get in touch.',
+      addressLabel: 'Address',
     },
   },
 }
@@ -367,6 +375,12 @@ function TermsAndConditions() {
                 >
                   {foundationEmail}
                 </a>
+              </p>
+              <p className="mt-4 text-[15px] leading-8 text-fd-muted-foreground">
+                <span className="font-medium text-fd-foreground">
+                  {content.contact.addressLabel}:
+                </span>{' '}
+                {foundationAddress}
               </p>
             </div>
           </div>
