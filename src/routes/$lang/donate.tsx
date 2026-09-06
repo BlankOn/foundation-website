@@ -423,7 +423,7 @@ function Donate() {
               {content.transparency.description}
             </p>
             <a
-              href="https://docs.google.com/spreadsheets/d/1oQKe2ehnWqNHIseqbp3yJTvbCSzGctdV0JWAERF1IUg/edit?usp=sharing"
+              href="https://docs.google.com/spreadsheets/d/1C6bbNLCTwGavjFYyyTwES1z2NvqHgPEzySqe_Xw_m60/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border-2 border-blue-600 px-8 py-4 font-semibold text-blue-600 transition-all hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-white"

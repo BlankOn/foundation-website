@@ -11,7 +11,7 @@ const foundationEmail = 'humas@blankon.id'
 const foundationAddress =
   'Jalan Raya Lenteng Agung, RT 005 / RW 001, Kelurahan Srengseng Sawah, Kecamatan Jagakarsa, Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12640'
 const publicLedgerUrl =
-  'https://docs.google.com/spreadsheets/d/1oQKe2ehnWqNHIseqbp3yJTvbCSzGctdV0JWAERF1IUg/edit?usp=sharing'
+  'https://docs.google.com/spreadsheets/d/1C6bbNLCTwGavjFYyyTwES1z2NvqHgPEzySqe_Xw_m60/edit?usp=sharing'
 
 type Section = {
   title: string
