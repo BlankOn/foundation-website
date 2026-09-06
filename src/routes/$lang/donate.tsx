@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions } from '@/lib/layout.shared'
@@ -48,15 +49,22 @@ const donateContent = {
         'Kami menyediakan berbagai metode donasi untuk kemudahan Anda:',
       methods: [
         {
-          name: 'Transfer Bank',
+          name: 'Transfer Bank Lokal',
           description: 'Donasi melalui transfer bank lokal',
           details: [
-            'Bank: Bank BNI',
-            'No. Rekening: 6111622231',
-            'Atas Nama: BlankOn Penggiat Sumber Terbuka Yayasan',
+            { label: 'Bank', value: 'BNI (Bank Negara Indonesia)' },
+            {
+              label: 'Atas Nama',
+              value: 'BlankOn Penggiat Sumber Terbuka Yayasan',
+            },
+            { label: 'No. Rekening', value: '6111622231', copyable: true },
           ],
         },
       ],
+      copy: {
+        label: 'Salin nomor rekening',
+        copied: 'Nomor rekening tersalin',
+      },
       note: {
         beforeEmail:
           'Setelah berdonasi, mohon kirimkan konfirmasi melalui surel ke',
@@ -132,15 +140,22 @@ const donateContent = {
       description: 'We provide various donation methods for your convenience:',
       methods: [
         {
-          name: 'Bank Transfer',
+          name: 'Local Bank Transfer',
           description: 'Donate via local bank transfer',
           details: [
-            'Bank: Bank BNI',
-            'Account Number: 6111622231',
-            'Account Name: BlankOn Penggiat Sumber Terbuka Yayasan',
+            { label: 'Bank', value: 'BNI (Bank Negara Indonesia)' },
+            {
+              label: 'Account Owner Name',
+              value: 'BlankOn Penggiat Sumber Terbuka Yayasan',
+            },
+            { label: 'Account Number', value: '6111622231', copyable: true },
           ],
         },
       ],
+      copy: {
+        label: 'Copy account number',
+        copied: 'Account number copied',
+      },
       note: {
         beforeEmail: 'After donating, please send a confirmation email to',
         email: 'humas@blankon.id',
@@ -176,6 +191,91 @@ const donateContent = {
       email: 'humas@blankon.id',
     },
   },
+}
+
+function CopyButton({
+  value,
+  label,
+  copiedLabel,
+}: {
+  value: string
+  label: string
+  copiedLabel: string
+}) {
+  const [copied, setCopied] = useState(false)
+
+  useEffect(() => {
+    if (!copied) return
+    const timer = setTimeout(() => setCopied(false), 2000)
+    return () => clearTimeout(timer)
+  }, [copied])
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(value)
+      setCopied(true)
+      return
+    } catch {
+      // Clipboard API unavailable or blocked - fall back below.
+    }
+
+    // Fallback for browsers without the async Clipboard API.
+    const textarea = document.createElement('textarea')
+    textarea.value = value
+    textarea.setAttribute('readonly', '')
+    textarea.style.position = 'fixed'
+    textarea.style.opacity = '0'
+    document.body.appendChild(textarea)
+    textarea.select()
+    try {
+      setCopied(document.execCommand('copy'))
+    } catch {
+      // Leave the value on screen for the user to copy manually.
+    }
+    document.body.removeChild(textarea)
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={handleCopy}
+      aria-label={copied ? copiedLabel : label}
+      title={copied ? copiedLabel : label}
+      className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-fd-muted-foreground transition-colors hover:bg-slate-200 hover:text-fd-foreground dark:hover:bg-slate-700"
+    >
+      {copied ? (
+        <svg
+          className="h-5 w-5 text-green-600 dark:text-green-400"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M4.5 12.75l6 6 9-13.5"
+          />
+        </svg>
+      ) : (
+        <svg
+          className="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"
+          />
+        </svg>
+      )}
+    </button>
+  )
 }
 
 function Donate() {
@@ -324,14 +424,32 @@ function Donate() {
                     {method.description}
                   </p>
                   <div className="space-y-2 rounded-lg bg-slate-100 p-4 dark:bg-slate-800">
-                    {method.details.map((detail, idx) => (
-                      <p
-                        key={idx}
-                        className="text-sm font-mono text-fd-foreground"
-                      >
-                        {detail}
-                      </p>
-                    ))}
+                    {method.details.map((detail, idx) =>
+                      'copyable' in detail && detail.copyable ? (
+                        <div key={idx} className="pt-1">
+                          <p className="font-mono text-sm text-fd-foreground">
+                            {detail.label}:
+                          </p>
+                          <div className="mt-1 flex items-center gap-2">
+                            <p className="font-mono text-2xl font-bold tracking-wide text-fd-foreground">
+                              {detail.value}
+                            </p>
+                            <CopyButton
+                              value={detail.value}
+                              label={content.howToDonate.copy.label}
+                              copiedLabel={content.howToDonate.copy.copied}
+                            />
+                          </div>
+                        </div>
+                      ) : (
+                        <p
+                          key={idx}
+                          className="font-mono text-sm text-fd-foreground"
+                        >
+                          {detail.label}: {detail.value}
+                        </p>
+                      ),
+                    )}
                   </div>
                 </div>
               ))}
@@ -378,7 +496,7 @@ function Donate() {
                 >
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white">
                     <svg
-                      className="h-4 w-4"
+                      className="h-5 w-5"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
