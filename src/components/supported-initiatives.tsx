@@ -4,6 +4,7 @@ import jktlugLogo from '../../content/assets/jktlug.png'
 import osas2026Logo from '../../content/assets/osas2026.png'
 import belajarFreeBSDLogo from '../../content/assets/belajarfreebsdindonesia.jpeg'
 import gnomeIndonesiaLogo from '../../content/assets/gnome-id.png'
+import farmAccessLogo from '../../content/assets/farmaccessorg.jpg'
 
 const supportedInitiativeLogos: Record<string, string> = {
   LangitKetujuh: langitKetujuhLogo,
@@ -11,6 +12,7 @@ const supportedInitiativeLogos: Record<string, string> = {
   'openSUSE.Asia Summit 2026': osas2026Logo,
   'Belajar FreeBSD Indonesia': belajarFreeBSDLogo,
   'GNOME Indonesia': gnomeIndonesiaLogo,
+  FarmAccess: farmAccessLogo,
 }
 
 export function SupportedInitiativesList({
