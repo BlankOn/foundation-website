@@ -211,6 +211,14 @@ const translations = {
             url: 'https://t.me/gnomeid',
             tags: ['Sponsorship', 'Komunitas'],
           },
+          {
+            name: 'FarmAccess',
+            description:
+              'Inisiatif konektivitas bermakna yang menghadirkan internet dan layanan digital yang dikelola secara lokal bagi komunitas petani dataran tinggi di Nueva Vizcaya, Filipina, untuk memantau lahan, mencatat produksi, dan menjangkau pasar.',
+            cta: 'Kunjungi FarmAccess',
+            url: 'https://farmaccess.org/',
+            tags: ['Sponsorship'],
+          },
         ],
         contact: {
           text: 'Jika proyek, inisiatif, atau komunitasmu membutuhkan dukungan, baik berupa infrastruktur, pendanaan, maupun bentuk lainnya, silakan menghubungi kami. Kami tidak selalu dapat menjamin ketersediaan sumber daya, tetapi kami dengan senang hati berdiskusi dan mencari solusi terbaik bersama. Hubungi kami di',
@@ -384,6 +392,14 @@ const translations = {
             cta: 'Visit GNOME Indonesia',
             url: 'https://t.me/gnomeid',
             tags: ['Sponsorship', 'Community'],
+          },
+          {
+            name: 'FarmAccess',
+            description:
+              'A meaningful connectivity initiative bringing the internet and locally-run digital tools to highland farming communities in Nueva Vizcaya, Philippines, helping them monitor their farms, track production, and reach markets.',
+            cta: 'Visit FarmAccess',
+            url: 'https://farmaccess.org/',
+            tags: ['Sponsorship'],
           },
         ],
         contact: {
