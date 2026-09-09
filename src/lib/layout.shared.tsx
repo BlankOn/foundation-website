@@ -142,8 +142,8 @@ const translations = {
             name: 'BlankOn Linux',
             description:
               'Distribusi Linux berbasis Debian yang dikembangkan khusus untuk pengguna Indonesia dengan dukungan bahasa dan kebutuhan lokal.',
-            cta: 'Unduh Sekarang',
-            url: 'https://blankonlinux.id/en/download',
+            cta: 'Kunjungi Situs',
+            url: 'https://blankonlinux.id/en',
           },
           {
             name: 'BlanKonf',
@@ -324,8 +324,8 @@ const translations = {
             name: 'BlankOn Linux',
             description:
               'A Debian-based Linux distribution developed specifically for Indonesian users with local language support and needs.',
-            cta: 'Download Now',
-            url: 'https://blankonlinux.id/en/download',
+            cta: 'Visit Website',
+            url: 'https://blankonlinux.id/en',
           },
           {
             name: 'BlanKonf',
