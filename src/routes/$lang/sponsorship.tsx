@@ -1,8 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { useState } from 'react'
-// Sponsorship postponed — see draft article in content/news/
-// import clarusLogo from '../../../content/assets/clarus.svg'
+import clarusLogo from '../../../content/assets/clarus.svg'
 import eightLabsLogoLight from '../../../content/assets/8labs-black.png'
 import eightLabsLogoDark from '../../../content/assets/8labs-white.png'
 import { Footer } from '@/components/footer'
@@ -81,18 +80,17 @@ const corporateSponsors = [
     url: 'https://hostbadak.com',
     className: 'framed-image'
   },
-  // Sponsorship postponed
-  // {
-  //   name: 'PT Clarus Innovace Teknologi',
-  //   logo: clarusLogo,
-  //   url: 'https://clarus-it.co.id/',
-  // },
   {
     name: '8Labs',
     logo: eightLabsLogoLight,
     // Dedicated light-on-dark variant, swapped in via the `dark:` class below
     logoDark: eightLabsLogoDark,
     url: 'https://8labs.id/',
+  },
+  {
+    name: 'PT Clarus Innovace Teknologi',
+    logo: clarusLogo,
+    url: 'https://clarus-it.co.id/',
   },
 ]
 
