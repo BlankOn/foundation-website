@@ -4,15 +4,16 @@
 
 <img src="content/assets/clarus.svg" alt="PT Clarus Innovace Teknologi" width="320" />
 
-BlankOn Foundation is pleased to announce PT Clarus Innovace Teknologi as its newest corporate sponsor. The support comes in the form of a virtual private server (VPS) that will help sustain the foundation's infrastructure needs and the projects it hosts.
+BlankOn Foundation is pleased to announce PT Clarus Innovace Teknologi as its newest corporate sponsor. The support comes in the form of virtual private server (VPS) capacity that will help sustain the foundation's infrastructure needs and the projects it hosts.
 
 ## Infrastructure Support
 
-The virtual machine sponsored by PT Clarus Innovace Teknologi comes with the following specifications:
+The support from PT Clarus Innovace Teknologi consists of two virtual machines with the following specifications:
 
-- **Processor**: 8 cores
-- **Memory**: 16 GB RAM
-- **Storage**: 2 TB
+| Virtual Machine | Specifications |
+| --- | --- |
+| OPNsense (firewall) | 2 vCPU · 4 GB RAM · 30 GB disk |
+| Proxmox BlankOn | 12 vCPU · 20 GB RAM · 50 GB + 2 TB disk |
 
 Infrastructure is one of the most fundamental and most expensive needs of any open source project. Support like this allows the foundation to direct its resources toward project development, educational programs, and strengthening the community.
 
