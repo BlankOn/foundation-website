@@ -2,6 +2,15 @@
   "$comment": "Events shown on the home page. `date` accepts YYYY, YYYY-MM or YYYY-MM-DD; anything on/after today lands in Upcoming, everything else in Past. `endDate`, `link` and `image` are optional. `title` and `place` accept either a plain string or { id, en } for per-language text. `link` may be an absolute URL (opens in a new tab) or a site-relative path without the language prefix, e.g. /news/some-slug (the current language is prepended). `image` may be a /content/assets/... path or a file under public/.",
   "events": [
     {
+      "title": "JKTLUG September Meetup",
+      "date": "2026-09-27",
+      "place": {
+        "id": "Ruang Berkarya, Perpustakaan Jakarta dan Pusat Dokumentasi Sastra H.B. Jassin, Jakarta",
+        "en": "Ruang Berkarya, Jakarta Library and H.B. Jassin Literary Documentation Center, Jakarta"
+      },
+      "link": "https://lu.ma/3piobror"
+    },
+    {
       "title": "openSUSE.Asia Summit 2026",
       "date": "2026-10-03",
       "endDate": "2026-10-04",
