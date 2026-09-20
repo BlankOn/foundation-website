@@ -23,7 +23,7 @@ jobs:
       - name: Deploy on VM
         uses: appleboy/ssh-action@0ff4204d59e8e51228ff73bce53f80d53301dee2
         with:
-          host: ${{ secrets.RAFI_HOSTNAME }}
+          host: ${{ secrets.RAFI_SSH_HOSTNAME }}
           port: ${{ secrets.RAFI_SSH_PORT }}
           username: ${{ secrets.RAFI_SSH_USER }}
           key: ${{ secrets.FOUNDATION_DEPLOY_KEY }}
