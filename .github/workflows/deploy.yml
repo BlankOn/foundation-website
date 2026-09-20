@@ -14,10 +14,6 @@ concurrency:
 permissions:
   contents: read
 
-env:
-  SERVICE: foundation-website
-  HEALTH_HOST: blankon.id
-
 jobs:
   deploy:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
@@ -27,16 +23,9 @@ jobs:
       - name: Deploy on VM
         uses: appleboy/ssh-action@0ff4204d59e8e51228ff73bce53f80d53301dee2
         with:
-          host: ${{ secrets.DEPLOY_SSH_HOST }}
-          port: ${{ secrets.DEPLOY_SSH_PORT }}
-          username: ${{ secrets.DEPLOY_SSH_USER }}
-          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          host: ${{ secrets.RAFI_HOSTNAME }}
+          port: ${{ secrets.RAFI_SSH_PORT }}
+          username: ${{ secrets.RAFI_SSH_USER }}
+          key: ${{ secrets.FOUNDATION_DEPLOY_KEY }}
           command_timeout: 5m
-          script: |
-            set -e
-            cd ~ 
-            docker compose pull ${{ env.SERVICE }}
-            docker compose up -d --force-recreate ${{ env.SERVICE }}
-            sleep 3
-            curl -fsS --max-time 10 -H "Host: ${{ env.HEALTH_HOST }}" http://127.0.0.1/ >/dev/null \
-              && echo "OK ${{ env.SERVICE }}" || { echo "HEALTH FAIL"; exit 1; }
+          script: bash deploy-foundation-website.sh
