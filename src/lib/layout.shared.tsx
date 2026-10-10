@@ -1,44 +1,18 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared'
 import { i18n } from '@/lib/i18n'
-import { useEffect, useState } from 'react'
 
 function Logo() {
-  const [clipPercent, setClipPercent] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const y = window.scrollY
-      const pageHeight = document.documentElement.scrollHeight - window.innerHeight
-      const start = pageHeight * 0.3
-      const end = pageHeight * 0.5
-      if (y <= start) {
-        setClipPercent(0)
-      } else if (y >= end) {
-        setClipPercent(78)
-      } else {
-        setClipPercent(((y - start) / (end - start)) * 78)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const clipPath = `inset(0 ${clipPercent}% 0 0)`
-
   return (
     <>
       <img
-        src="/logo-black.png"
-        alt="BlankOn"
-        className="block h-6 w-auto dark:hidden"
-        style={{ clipPath }}
+        src="/blankon-foundation-light.png"
+        alt="BlankOn Foundation"
+        className="block h-8 w-auto dark:hidden"
       />
       <img
-        src="/logo-white.png"
-        alt="BlankOn"
-        className="hidden h-4 w-auto dark:block"
-        style={{ clipPath }}
+        src="/blankon-foundation-dark.png"
+        alt="BlankOn Foundation"
+        className="hidden h-8 w-auto dark:block"
       />
     </>
   )
