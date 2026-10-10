@@ -2,7 +2,7 @@
 
 ---
 
-Pada Sabtu dan Minggu, 3-4 Oktober 2026, openSUSE Asia Summit 2026 telah sukses diadakan di Convention Hall UIN Sunan Kalijaga. openSUSE Asia Summit adalah konferensi tahunan yang mempertemukan komunitas pengguna, kontributor, dan penggiat perangkat lunak sumber terbuka (Free and Libre Open Source Software / FLOSS), khususnya di wilayah Asia.
+Pada Sabtu dan Minggu, 3-4 Oktober 2026, openSUSE Asia Summit 2026 telah sukses diadakan di Convention Hall UIN Sunan Kalijaga. openSUSE Asia Summit adalah salah satu acara besar bagi komunitas openSUSE, baik kontributor maupun pengguna, di Asia. Para anggota komunitas yang biasanya berkomunikasi secara daring dapat berkumpul dari berbagai penjuru dunia, bertatap muka, dan bersenang-senang bersama. Mereka berbagi pengetahuan dan pengalaman terbaru, serta mempelajari teknologi FLOSS (Free and Libre Open Source Software) di sekitar openSUSE.
 
 Muhammad Taufiq Nuruzzaman, Ph.D. dari UIN Sunan Kalijaga membuka kegiatan di hari pertama melalui keynote perdana. Patrick Fitzgerald, pendiri Geeko Foundation sekaligus anggota openSUSE, melanjutkan rangkaian acara dengan keynote di sesi kedua yang bertajuk "The Great Migration".
 
@@ -37,5 +37,7 @@ Selain Linux Gaming Indonesia, area booth juga diramaikan oleh openSUSE, Novaclo
 Banyak booth dalam acara ini membagikan freebies berupa stiker. Booth openSUSE selain membagikan stiker gratis juga mengadakan kuis berhadiah merchandise menarik, sementara Novacloud mengadakan mini game untuk pengunjung booth.
 
 ![Pengunjung berkumpul di meja booth BlankOn dengan laptop dan stiker](/content/assets/osas26-linux-gaming-7.jpeg)
+
+Terima kasih kepada panitia openSUSE Asia Summit 2026, UIN Sunan Kalijaga, GNOME Indonesia, serta seluruh pengunjung yang telah mampir ke booth Linux Gaming Indonesia. Sampai jumpa di acara berikutnya.
 
 *Ditulis oleh Amiruloh.*

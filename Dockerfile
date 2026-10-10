@@ -23,6 +23,7 @@ RUN printf 'server {\n\
 \n\
     location / {\n\
         try_files $uri $uri/ /index.html;\n\
+        add_header Cache-Control "no-cache";\n\
     }\n\
 \n\
     location ~* \\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {\n\
