@@ -4,6 +4,8 @@ import { useState } from 'react'
 import clarusLogo from '../../../content/assets/clarus.svg'
 import eightLabsLogoLight from '../../../content/assets/8labs-black.png'
 import eightLabsLogoDark from '../../../content/assets/8labs-white.png'
+import mailtrapLogoLight from '../../../content/assets/mailtrap-light.svg'
+import mailtrapLogoDark from '../../../content/assets/mailtrap-dark.svg'
 import { Footer } from '@/components/footer'
 import { baseOptions } from '@/lib/layout.shared'
 
@@ -94,6 +96,15 @@ const corporateSponsors = [
   },
 ]
 
+const serviceSponsors = [
+  {
+    name: 'Mailtrap',
+    logo: mailtrapLogoLight,
+    logoDark: mailtrapLogoDark,
+    url: 'https://mailtrap.io/',
+  },
+]
+
 const individualSponsors = [
   // Adekabang's AMD64 server sponsorship is now continued corporately through 8Labs
   {
@@ -154,6 +165,7 @@ const sponsorshipContent = {
     },
     currentSponsors: 'Sponsor Kami',
     corporateSponsors: 'Sponsor Korporat',
+    serviceSponsors: 'Sponsor Layanan',
     individualSponsors: 'Sponsor Individu',
     emeritusSponsors: 'Sponsor Emeritus',
     emeritusSponsorsNote:
@@ -179,6 +191,7 @@ const sponsorshipContent = {
     },
     currentSponsors: 'Our Sponsors',
     corporateSponsors: 'Corporate Sponsors',
+    serviceSponsors: 'Service Sponsors',
     individualSponsors: 'Individual Sponsors',
     emeritusSponsors: 'Emeritus Sponsors',
     emeritusSponsorsNote: 'We are grateful for their past contributions.',
@@ -321,6 +334,36 @@ function Sponsorship() {
                         className="hidden h-16 w-auto object-contain md:h-20 dark:block"
                       />
                     )}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Service Sponsors (in-kind, e.g. non-profit programs) */}
+            <div className="mb-16">
+              <h3 className="mb-8 text-center text-xl font-semibold text-fd-foreground md:text-2xl">
+                {content.serviceSponsors}
+              </h3>
+              <div className="flex flex-wrap items-center justify-center gap-12">
+                {serviceSponsors.map((sponsor) => (
+                  <a
+                    key={sponsor.name}
+                    href={sponsor.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-opacity hover:opacity-80"
+                    title={sponsor.name}
+                  >
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className="block h-16 w-auto object-contain md:h-20 dark:hidden"
+                    />
+                    <img
+                      src={sponsor.logoDark}
+                      alt={sponsor.name}
+                      className="hidden h-16 w-auto object-contain md:h-20 dark:block"
+                    />
                   </a>
                 ))}
               </div>
