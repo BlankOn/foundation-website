@@ -3,6 +3,7 @@ import { RootProvider } from 'fumadocs-ui/provider/base'
 import { TanstackProvider } from 'fumadocs-core/framework/tanstack'
 import { defineI18nUI } from 'fumadocs-ui/i18n'
 import { i18n } from '@/lib/i18n'
+import { SiteNotice } from '@/components/site-notice'
 
 const { provider } = defineI18nUI(i18n, {
   translations: {
@@ -35,6 +36,7 @@ function RootComponent() {
     <TanstackProvider>
       <RootProvider i18n={provider(lang)}>
         <Outlet />
+        <SiteNotice lang={lang} />
       </RootProvider>
     </TanstackProvider>
   )
