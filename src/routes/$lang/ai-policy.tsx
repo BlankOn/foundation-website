@@ -44,6 +44,21 @@ const aiPolicyContent = {
           'Kontributor diharapkan menjaga komunikasi yang jelas untuk membantu kolaborator memahami konteks, asumsi, serta batasan dari kode yang dibantu oleh Gen-AI.',
       },
     ],
+    communicationTitle: 'Komunikasi Antarmanusia',
+    communicationIntro:
+      'Kolaborasi berjalan paling baik ketika setiap orang mendengar pemikiran asli satu sama lain. Teks panjang hasil AI lebih melelahkan untuk dibaca daripada dibuat, dan menyulitkan pembaca mengetahui apa yang sebenarnya dipahami dan dimaksud oleh pengirimnya. Karena itu, kolaborasi antarmanusia, seperti diskusi pada issue, pull request, komentar review, milis, dan ruang obrolan, dianjurkan mengikuti ketentuan berikut:',
+    communication: [
+      {
+        title: 'Tulis dengan Kata-Kata Sendiri',
+        description:
+          'Komunikasi dan diskusi antarmanusia dianjurkan untuk tidak menggunakan teks yang dihasilkan AI. Penggunaan AI untuk menerjemahkan atau memperbaiki tata bahasa dari tulisan Anda sendiri diperbolehkan, selama gagasan dan maksudnya tetap berasal dari Anda.',
+      },
+      {
+        title: 'Apabila Teks Hasil AI Digunakan',
+        description:
+          'Teks hasil AI boleh disertakan sebagai pelengkap, misalnya ringkasan, referensi, atau hasil analisis, tetapi tidak sebagai isi utama dari komunikasi dan diskusi. Tandai teks tersebut dengan jelas, misalnya dalam bentuk kutipan dengan keterangan, sehingga pembaca dapat membedakannya dari tulisan Anda sendiri. Baca dan verifikasi isinya sebelum dibagikan, karena pengirim tetap bertanggung jawab atas kebenaran dan relevansinya.',
+      },
+    ],
     prohibitionsTitle: 'Larangan',
     prohibitionsIntro:
       'Penggunaan Agentic AI (AI dengan kemampuan eksekusi otomatis dan tindakan mandiri) tidak diperbolehkan untuk:',
@@ -89,6 +104,21 @@ const aiPolicyContent = {
         title: 'Proactive Communication',
         description:
           'Contributors are expected to maintain clear communication so that collaborators can understand the context, assumptions, and limitations of Gen-AI-assisted code.',
+      },
+    ],
+    communicationTitle: 'Human-to-Human Communication',
+    communicationIntro:
+      "Collaboration works best when people hear each other's own thinking. Long AI-generated text takes more effort to read than it took to produce, and makes it hard to tell what the sender actually understands and means. For this reason, human-to-human collaboration, such as discussions in issues, pull requests, review comments, mailing lists, and chat rooms, is recommended to follow these provisions:",
+    communication: [
+      {
+        title: 'Write in Your Own Words',
+        description:
+          'We recommend writing discussions and messages yourself rather than using AI-generated text. Using AI to translate or fix the grammar of your own writing is fine, as long as the ideas and intent remain yours.',
+      },
+      {
+        title: 'When AI-Generated Text Is Used',
+        description:
+          'AI-generated text may be added as a supplement, for example a summary, a reference, or the result of an analysis, but not as the main content of the communication and discussion. Mark it clearly, for example as a quote with a note, so that readers can tell it apart from your own writing. Read and verify it before sharing, as the sender remains responsible for its accuracy and relevance.',
       },
     ],
     prohibitionsTitle: 'Prohibitions',
@@ -172,8 +202,46 @@ function AiPolicy() {
           </div>
         </section>
 
-        {/* Prohibitions */}
+        {/* Human-to-human communication */}
         <section className="bg-slate-50 py-14 dark:bg-slate-900/50">
+          <div className="container mx-auto max-w-3xl px-6">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 text-3xl font-bold text-fd-foreground md:text-4xl">
+                {content.communicationTitle}
+              </h2>
+              <div className="mx-auto mb-4 h-1 w-16 rounded-full bg-gradient-to-r from-blue-600 to-blue-400" />
+              <p className="mx-auto max-w-2xl text-fd-muted-foreground">
+                {content.communicationIntro}
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-6">
+              {content.communication.map((item, index) => (
+                <div
+                  key={index}
+                  className="rounded-2xl border border-fd-border bg-fd-card p-6"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 text-lg font-bold text-white">
+                      {index + 1}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="mb-2 text-lg font-bold text-fd-foreground">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm leading-relaxed text-fd-muted-foreground">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Prohibitions */}
+        <section className="bg-fd-background py-14">
           <div className="container mx-auto max-w-3xl px-6">
             <div className="mb-12 text-center">
               <h2 className="mb-4 text-3xl font-bold text-fd-foreground md:text-4xl">
@@ -216,7 +284,7 @@ function AiPolicy() {
         </section>
 
         {/* Policy updates */}
-        <section className="bg-fd-background py-14">
+        <section className="bg-slate-50 py-14 dark:bg-slate-900/50">
           <div className="container mx-auto max-w-3xl px-6">
             <div className="rounded-2xl border border-blue-200 bg-blue-50 p-8 dark:border-blue-900 dark:bg-blue-950/40">
               <h2 className="mb-2 text-lg font-bold text-fd-foreground">
