@@ -6,17 +6,17 @@ const BLANKON_LINUX_URL = 'https://blankonlinux.id'
 const siteNoticeContent = {
   id: {
     label: 'Pemberitahuan situs',
-    title: 'Ini bukan situs BlankOn Linux',
+    title: 'Mencari BlankOn Linux?',
     description:
-      'blankon.id adalah situs BlankOn Foundation (Yayasan Penggiat Sumber Terbuka), sebuah organisasi nirlaba yang merupakan entitas terpisah dari proyek BlankOn Linux. Jika Anda mencari situs BlankOn Linux, silakan kunjungi blankonlinux.id.',
+      'Selamat datang! blankon.id adalah rumah bagi BlankOn Foundation (Yayasan Penggiat Sumber Terbuka), organisasi nirlaba yang merupakan entitas terpisah dari proyek BlankOn Linux. Jika Anda mencari BlankOn Linux, Anda dapat menemukannya di blankonlinux.id.',
     cta: 'Buka blankonlinux.id',
     dismiss: 'Mengerti, jangan tampilkan lagi',
   },
   en: {
     label: 'Site notice',
-    title: 'This is not the BlankOn Linux website',
+    title: 'Looking for BlankOn Linux?',
     description:
-      'blankon.id is the website of BlankOn Foundation (Yayasan Penggiat Sumber Terbuka), a non-profit organization that is a separate entity from the BlankOn Linux project. If you are looking for the BlankOn Linux website, please visit blankonlinux.id.',
+      'Welcome! blankon.id is the home of BlankOn Foundation (Yayasan Penggiat Sumber Terbuka), a non-profit organization and a separate entity from the BlankOn Linux project. If you are looking for BlankOn Linux, you will find it at blankonlinux.id.',
     cta: 'Go to blankonlinux.id',
     dismiss: "Got it, don't show this again",
   },
