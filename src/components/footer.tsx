@@ -25,6 +25,7 @@ const footerContent = {
           { label: 'Lokakarya', url: 'https://www.youtube.com/@blankonlinux_official' },
           { label: 'Code of Conduct', url: '/$lang/code-of-conduct' },
           { label: 'Kebijakan AI', url: '/$lang/ai-policy' },
+          { label: 'Brand Guidelines', url: '/$lang/brand-guidelines' },
         ],
       },
       {
@@ -64,6 +65,7 @@ const footerContent = {
           { label: 'Lokakarya', url: 'https://www.youtube.com/@blankonlinux_official' },
           { label: 'Code of Conduct', url: '/$lang/code-of-conduct' },
           { label: 'AI Policy', url: '/$lang/ai-policy' },
+          { label: 'Brand Guidelines', url: '/$lang/brand-guidelines' },
         ],
       },
       {

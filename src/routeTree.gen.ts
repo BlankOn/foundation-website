@@ -23,6 +23,7 @@ import { Route as LangDownloadRouteImport } from './routes/$lang/download'
 import { Route as LangDonateRouteImport } from './routes/$lang/donate'
 import { Route as LangContactUsRouteImport } from './routes/$lang/contact-us'
 import { Route as LangCodeOfConductRouteImport } from './routes/$lang/code-of-conduct'
+import { Route as LangBrandGuidelinesRouteImport } from './routes/$lang/brand-guidelines'
 import { Route as LangAiPolicyRouteImport } from './routes/$lang/ai-policy'
 import { Route as LangNewsSlugRouteImport } from './routes/$lang/news_.$slug'
 
@@ -97,6 +98,11 @@ const LangCodeOfConductRoute = LangCodeOfConductRouteImport.update({
   path: '/$lang/code-of-conduct',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangBrandGuidelinesRoute = LangBrandGuidelinesRouteImport.update({
+  id: '/$lang/brand-guidelines',
+  path: '/$lang/brand-guidelines',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LangAiPolicyRoute = LangAiPolicyRouteImport.update({
   id: '/$lang/ai-policy',
   path: '/$lang/ai-policy',
@@ -111,6 +117,7 @@ const LangNewsSlugRoute = LangNewsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$lang/ai-policy': typeof LangAiPolicyRoute
+  '/$lang/brand-guidelines': typeof LangBrandGuidelinesRoute
   '/$lang/code-of-conduct': typeof LangCodeOfConductRoute
   '/$lang/contact-us': typeof LangContactUsRoute
   '/$lang/donate': typeof LangDonateRoute
@@ -129,6 +136,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$lang/ai-policy': typeof LangAiPolicyRoute
+  '/$lang/brand-guidelines': typeof LangBrandGuidelinesRoute
   '/$lang/code-of-conduct': typeof LangCodeOfConductRoute
   '/$lang/contact-us': typeof LangContactUsRoute
   '/$lang/donate': typeof LangDonateRoute
@@ -148,6 +156,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$lang/ai-policy': typeof LangAiPolicyRoute
+  '/$lang/brand-guidelines': typeof LangBrandGuidelinesRoute
   '/$lang/code-of-conduct': typeof LangCodeOfConductRoute
   '/$lang/contact-us': typeof LangContactUsRoute
   '/$lang/donate': typeof LangDonateRoute
@@ -168,6 +177,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/$lang/ai-policy'
+    | '/$lang/brand-guidelines'
     | '/$lang/code-of-conduct'
     | '/$lang/contact-us'
     | '/$lang/donate'
@@ -186,6 +196,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/$lang/ai-policy'
+    | '/$lang/brand-guidelines'
     | '/$lang/code-of-conduct'
     | '/$lang/contact-us'
     | '/$lang/donate'
@@ -204,6 +215,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/$lang/ai-policy'
+    | '/$lang/brand-guidelines'
     | '/$lang/code-of-conduct'
     | '/$lang/contact-us'
     | '/$lang/donate'
@@ -223,6 +235,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   LangAiPolicyRoute: typeof LangAiPolicyRoute
+  LangBrandGuidelinesRoute: typeof LangBrandGuidelinesRoute
   LangCodeOfConductRoute: typeof LangCodeOfConductRoute
   LangContactUsRoute: typeof LangContactUsRoute
   LangDonateRoute: typeof LangDonateRoute
@@ -339,6 +352,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangCodeOfConductRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang/brand-guidelines': {
+      id: '/$lang/brand-guidelines'
+      path: '/$lang/brand-guidelines'
+      fullPath: '/$lang/brand-guidelines'
+      preLoaderRoute: typeof LangBrandGuidelinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/$lang/ai-policy': {
       id: '/$lang/ai-policy'
       path: '/$lang/ai-policy'
@@ -359,6 +379,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   LangAiPolicyRoute: LangAiPolicyRoute,
+  LangBrandGuidelinesRoute: LangBrandGuidelinesRoute,
   LangCodeOfConductRoute: LangCodeOfConductRoute,
   LangContactUsRoute: LangContactUsRoute,
   LangDonateRoute: LangDonateRoute,
