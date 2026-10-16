@@ -37,6 +37,21 @@ const codeOfConductContent = {
           'Mari kita hindari pengulangan apa yang sudah dikatakan. Percakapan besar sulit dikendalikan. Orang kadang merasa diserang bila menerima banyak pesan yang intinya sama.',
       },
     ],
+    sexualMisconduct: {
+      title: 'Kekerasan dan Pelecehan Seksual',
+      description:
+        'Kekerasan dan pelecehan seksual, baik daring maupun luring, adalah pelanggaran paling berat terhadap kode etik ini dan dikenai sanksi paling tegas.',
+      examplesTitle: 'Termasuk namun tidak terbatas pada:',
+      examples: [
+        'Sentuhan fisik, rayuan, atau ajakan bersifat seksual yang tidak diinginkan',
+        'Komentar, lelucon, atau isyarat bernuansa seksual terhadap seseorang',
+        'Mengirim atau menampilkan gambar, video, atau materi seksual tanpa persetujuan',
+        'Menguntit, mengintimidasi, atau memaksa seseorang untuk tujuan seksual',
+        'Merekam, menyebarkan, atau mengancam menyebarkan konten intim seseorang',
+      ],
+      consequences:
+        'Pelaku akan dikeluarkan secara permanen dari komunitas dan seluruh kegiatannya tanpa peringatan sebelumnya. Bila diperlukan, kasus akan dilaporkan kepada pihak berwajib. Kami akan mendampingi penyintas dan menjaga kerahasiaan identitas pelapor.',
+    },
     boundariesTitle: 'Batasan',
     boundaries:
       'Komunitas maupun acara yang diselenggarakan di dalamnya ini didedikasikan untuk memberikan pengalaman berbagi yang bebas dari tindakan pelecehan untuk semua orang, terlepas dari jenis kelamin, identitas dan ekspresi gender, usia, orientasi seksual, kecacatan, penampilan fisik, ukuran tubuh, ras, etnisitas, agama (atau kekurangannya), sudut pandang politik, atau pilihan teknologi. Kami tidak mentolerir pelecehan terhadap individu menyangkut hal-hal di atas dalam bentuk apapun baik di tempat penyelenggaraan komunitas/acara maupun publikasi media sosial dan media online lainnya. Individu yang melanggar peraturan ini dapat dikenai sanksi atau diusir dari komunitas/acara tanpa pengembalian dana (jika ada) atas kebijaksanaan pengurus komunitas.',
@@ -91,6 +106,21 @@ const codeOfConductContent = {
           'Let us avoid repeating what has already been said. Large conversations are hard to follow, and people can feel piled on when they receive many messages making the same point.',
       },
     ],
+    sexualMisconduct: {
+      title: 'Sexual Abuse and Harassment',
+      description:
+        'Sexual abuse and sexual harassment, whether online or offline, are the gravest violations of this code of conduct and carry the strictest consequences.',
+      examplesTitle: 'This includes, but is not limited to:',
+      examples: [
+        'Unwelcome physical contact, sexual advances, or propositions',
+        'Sexual comments, jokes, or gestures directed at someone',
+        'Sending or displaying sexual images, videos, or material without consent',
+        'Stalking, intimidating, or coercing someone for sexual purposes',
+        'Recording, sharing, or threatening to share intimate content of someone',
+      ],
+      consequences:
+        'Offenders will be permanently removed from the community and all of its activities without prior warning. Where appropriate, cases will be reported to the authorities. We will support survivors and keep the identity of those who report confidential.',
+    },
     boundariesTitle: 'Boundaries',
     boundaries:
       'This community and the events held within it are dedicated to providing a harassment-free shared experience for everyone, regardless of sex, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack of it), political views, or technology choices. We do not tolerate harassment of individuals on any of these grounds in any form, whether at community or event venues or in posts on social media and other online media. Individuals who break these rules may be sanctioned or expelled from the community or event without a refund (if any), at the discretion of the community organizers.',
@@ -204,6 +234,44 @@ function CodeOfConduct() {
             <div className="rounded-2xl border border-fd-border bg-fd-card p-8">
               <p className="leading-relaxed text-fd-muted-foreground">
                 {content.boundaries}
+              </p>
+            </div>
+
+            <div className="mt-6 rounded-2xl border-2 border-red-300 bg-red-50 p-8 dark:border-red-900 dark:bg-red-950/40">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600 to-red-400 text-white">
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-red-700 dark:text-red-400">
+                  {content.sexualMisconduct.title}
+                </h3>
+              </div>
+              <p className="mb-4 leading-relaxed text-fd-foreground">
+                {content.sexualMisconduct.description}
+              </p>
+              <p className="mb-2 text-sm font-semibold text-fd-foreground">
+                {content.sexualMisconduct.examplesTitle}
+              </p>
+              <ul className="mb-4 list-disc space-y-1 pl-5 text-sm leading-relaxed text-fd-muted-foreground">
+                {content.sexualMisconduct.examples.map((example) => (
+                  <li key={example}>{example}</li>
+                ))}
+              </ul>
+              <p className="font-medium leading-relaxed text-fd-foreground">
+                {content.sexualMisconduct.consequences}
               </p>
             </div>
 
