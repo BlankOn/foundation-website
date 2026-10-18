@@ -6,6 +6,7 @@ import eightLabsLogoLight from '../../../content/assets/8labs-black.png'
 import eightLabsLogoDark from '../../../content/assets/8labs-white.png'
 import mailtrapLogoLight from '../../../content/assets/mailtrap-light.svg'
 import mailtrapLogoDark from '../../../content/assets/mailtrap-dark.svg'
+import arfhacomLogo from '../../../content/assets/arfhacom-sponsor.jpeg'
 import { Footer } from '@/components/footer'
 import { baseOptions } from '@/lib/layout.shared'
 
@@ -93,6 +94,13 @@ const corporateSponsors = [
     name: 'PT Clarus Innovace Teknologi',
     logo: clarusLogo,
     url: 'https://clarus-it.co.id/',
+  },
+  {
+    name: 'Arfhacom',
+    logo: arfhacomLogo,
+    url: 'https://arfha.com/',
+    // The logo ships on a white background, so frame it in dark mode
+    className: 'framed-image',
   },
 ]
 

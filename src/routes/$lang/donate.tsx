@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
+import qrisImage from '../../../content/assets/qris-ID2026610635107_A01.png'
 
 export const Route = createFileRoute('/$lang/donate')({
   component: Donate,
@@ -49,15 +50,34 @@ const donateContent = {
         'Kami menyediakan berbagai metode donasi untuk kemudahan Anda:',
       methods: [
         {
-          name: 'Transfer Bank Lokal',
-          description: 'Donasi melalui transfer bank lokal',
+          name: 'Transfer Bank',
+          description:
+            'Donasi melalui transfer bank, dari dalam negeri maupun internasional',
           details: [
-            { label: 'Bank', value: 'BNI (Bank Negara Indonesia)' },
+            {
+              label: 'Bank',
+              value: 'BNI (Bank Negara Indonesia) · Kode SWIFT: BNINIDJA',
+            },
             {
               label: 'Atas Nama',
               value: 'BlankOn Penggiat Sumber Terbuka Yayasan',
             },
             { label: 'No. Rekening', value: '6111622231', copyable: true },
+          ],
+        },
+        {
+          name: 'QRIS',
+          description:
+            'Pindai kode QR menggunakan aplikasi bank atau dompet digital yang mendukung QRIS. Klik gambar untuk memperbesar.',
+          image: {
+            src: qrisImage,
+            alt: 'Kode QRIS BlankOn Foundation',
+            open: 'Buka gambar QRIS ukuran penuh',
+            close: 'Tutup',
+          },
+          details: [
+            { label: 'Nama Merchant', value: 'BlankOn Foundation' },
+            { label: 'NMID', value: 'ID2026610635107' },
           ],
         },
       ],
@@ -140,15 +160,33 @@ const donateContent = {
       description: 'We provide various donation methods for your convenience:',
       methods: [
         {
-          name: 'Local Bank Transfer',
-          description: 'Donate via local bank transfer',
+          name: 'Bank Transfer',
+          description: 'Donate via domestic or international bank transfer',
           details: [
-            { label: 'Bank', value: 'BNI (Bank Negara Indonesia)' },
+            {
+              label: 'Bank',
+              value: 'BNI (Bank Negara Indonesia) · SWIFT Code: BNINIDJA',
+            },
             {
               label: 'Account Owner Name',
               value: 'BlankOn Penggiat Sumber Terbuka Yayasan',
             },
             { label: 'Account Number', value: '6111622231', copyable: true },
+          ],
+        },
+        {
+          name: 'QRIS',
+          description:
+            'Scan the QR code with any QRIS-enabled banking or e-wallet app. Click the image to enlarge.',
+          image: {
+            src: qrisImage,
+            alt: 'BlankOn Foundation QRIS code',
+            open: 'Open full-size QRIS image',
+            close: 'Close',
+          },
+          details: [
+            { label: 'Merchant Name', value: 'BlankOn Foundation' },
+            { label: 'NMID', value: 'ID2026610635107' },
           ],
         },
       ],
@@ -191,6 +229,81 @@ const donateContent = {
       email: 'humas@blankon.id',
     },
   },
+}
+
+function ImageLightbox({
+  src,
+  alt,
+  openLabel,
+  closeLabel,
+}: {
+  src: string
+  alt: string
+  openLabel: string
+  closeLabel: string
+}) {
+  const dialogRef = useRef<HTMLDialogElement>(null)
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => dialogRef.current?.showModal()}
+        aria-label={openLabel}
+        title={openLabel}
+        className="block w-full shrink-0 cursor-zoom-in overflow-hidden rounded-lg border border-fd-border bg-white md:w-[420px]"
+      >
+        <img
+          src={src}
+          alt={alt}
+          width={1400}
+          height={1972}
+          loading="lazy"
+          className="h-auto w-full"
+        />
+      </button>
+      <dialog
+        ref={dialogRef}
+        aria-label={alt}
+        // Clicks on the backdrop land on the dialog element itself.
+        onClick={(event) => {
+          if (event.target === event.currentTarget) event.currentTarget.close()
+        }}
+        className="m-auto max-h-none max-w-none overflow-visible bg-transparent p-0 backdrop:bg-black/80"
+      >
+        <img
+          src={src}
+          alt={alt}
+          width={1400}
+          height={1972}
+          className="h-auto max-h-[90vh] w-auto max-w-[90vw] rounded-lg"
+        />
+        <button
+          type="button"
+          onClick={() => dialogRef.current?.close()}
+          aria-label={closeLabel}
+          title={closeLabel}
+          className="absolute -top-3 -right-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900 shadow-lg hover:bg-slate-100"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="h-5 w-5"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </dialog>
+    </>
+  )
 }
 
 function CopyButton({
@@ -406,51 +519,61 @@ function Donate() {
               </p>
             </div>
 
-            <div className="mx-auto max-w-md">
+            <div className="mx-auto max-w-4xl space-y-6">
               {content.howToDonate.methods.map((method, index) => (
                 <div
                   key={index}
-                  className="rounded-2xl border border-fd-border bg-fd-card p-6 transition-shadow hover:shadow-lg"
+                  className="flex flex-col gap-6 rounded-2xl border border-fd-border bg-fd-card p-6 transition-shadow hover:shadow-lg md:flex-row md:items-start"
                 >
-                  <div className="mb-4 flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-lg font-bold text-white">
-                      {index + 1}
+                  <div className="min-w-0 flex-1">
+                    <div className="mb-4 flex items-center gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-lg font-bold text-white">
+                        {index + 1}
+                      </div>
+                      <h3 className="text-xl font-bold text-fd-foreground">
+                        {method.name}
+                      </h3>
                     </div>
-                    <h3 className="text-xl font-bold text-fd-foreground">
-                      {method.name}
-                    </h3>
-                  </div>
-                  <p className="mb-4 text-sm text-fd-muted-foreground">
-                    {method.description}
-                  </p>
-                  <div className="space-y-2 rounded-lg bg-slate-100 p-4 dark:bg-slate-800">
-                    {method.details.map((detail, idx) =>
-                      'copyable' in detail && detail.copyable ? (
-                        <div key={idx} className="pt-1">
-                          <p className="font-mono text-sm text-fd-foreground">
-                            {detail.label}:
-                          </p>
-                          <div className="mt-1 flex items-center gap-2">
-                            <p className="font-mono text-2xl font-bold tracking-wide text-fd-foreground">
-                              {detail.value}
+                    <p className="mb-4 text-sm text-fd-muted-foreground">
+                      {method.description}
+                    </p>
+                    <div className="space-y-2 rounded-lg bg-slate-100 p-4 dark:bg-slate-800">
+                      {method.details.map((detail, idx) =>
+                        'copyable' in detail && detail.copyable ? (
+                          <div key={idx} className="pt-1">
+                            <p className="font-mono text-sm text-fd-foreground">
+                              {detail.label}:
                             </p>
-                            <CopyButton
-                              value={detail.value}
-                              label={content.howToDonate.copy.label}
-                              copiedLabel={content.howToDonate.copy.copied}
-                            />
+                            <div className="mt-1 flex items-center gap-2">
+                              <p className="font-mono text-2xl font-bold tracking-wide text-fd-foreground">
+                                {detail.value}
+                              </p>
+                              <CopyButton
+                                value={detail.value}
+                                label={content.howToDonate.copy.label}
+                                copiedLabel={content.howToDonate.copy.copied}
+                              />
+                            </div>
                           </div>
-                        </div>
-                      ) : (
-                        <p
-                          key={idx}
-                          className="font-mono text-sm text-fd-foreground"
-                        >
-                          {detail.label}: {detail.value}
-                        </p>
-                      ),
-                    )}
+                        ) : (
+                          <p
+                            key={idx}
+                            className="font-mono text-sm text-fd-foreground"
+                          >
+                            {detail.label}: {detail.value}
+                          </p>
+                        ),
+                      )}
+                    </div>
                   </div>
+                  {'image' in method && method.image && (
+                    <ImageLightbox
+                      src={method.image.src}
+                      alt={method.image.alt}
+                      openLabel={method.image.open}
+                      closeLabel={method.image.close}
+                    />
+                  )}
                 </div>
               ))}
             </div>
