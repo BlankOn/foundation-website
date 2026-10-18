@@ -45,28 +45,26 @@ const teamContent = {
               photo: '/images/herpiko-v2.png',
             },
             {
-              name: 'Iwan stwn',
-              email: 'stwn@blankon.id',
+              name: 'Akhmat Safrudin',
+              email: 'asafrudin@blankon.id',
               position: 'Koordinator Program',
               bio: (
                 <>
-                  Pencetus proyek dan pengelola{' '}
+                  Mantan kontributor{' '}
                   <a
-                    href="https://speakerdeck.com/stwn/linux-distribution-for-higher-education-still-relevant"
+                    href="https://blankonlinux.id"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline dark:text-blue-400"
                   >
-                    Kuliax
-                  </a>
-                  , distribusi GNU/Linux yang menyasar pendidikan tinggi. Ia
-                  terlibat dalam beberapa proyek dan komunitas perangkat lunak
-                  free/open-source di Indonesia sejak tahun 2001. Saat ini aktif
-                  sebagai dosen/peneliti Teknik Elektro di Universitas Jenderal
-                  Soedirman.
+                    BlankOn Linux
+                  </a>{' '}
+                  sejak era 2000-an dengan keterlibatan mendalam di sisi teknis
+                  maupun strategis. Berpengalaman lebih dari satu dekade dalam
+                  pengelolaan organisasi nirlaba seperti AirPutih.
                 </>
               ),
-              photo: '/images/iwan.png',
+              photo: '/images/akhmat-safrudin.png',
             },
             {
               name: 'Riza Disti Lestari',
@@ -97,26 +95,28 @@ const teamContent = {
               photo: '/images/rusmanto.jpg',
             },
             {
-              name: 'Akhmat Safrudin',
-              email: 'asafrudin@blankon.id',
+              name: 'Iwan stwn',
+              email: 'stwn@blankon.id',
               position: 'Pengawas',
               bio: (
                 <>
-                  Mantan kontributor{' '}
+                  Pencetus proyek dan pengelola{' '}
                   <a
-                    href="https://blankonlinux.id"
+                    href="https://speakerdeck.com/stwn/linux-distribution-for-higher-education-still-relevant"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline dark:text-blue-400"
                   >
-                    BlankOn Linux
-                  </a>{' '}
-                  sejak era 2000-an dengan keterlibatan mendalam di sisi teknis
-                  maupun strategis. Berpengalaman lebih dari satu dekade dalam
-                  pengelolaan organisasi nirlaba seperti AirPutih.
+                    Kuliax
+                  </a>
+                  , distribusi GNU/Linux yang menyasar pendidikan tinggi. Ia
+                  terlibat dalam beberapa proyek dan komunitas perangkat lunak
+                  free/open-source di Indonesia sejak tahun 2001. Saat ini aktif
+                  sebagai dosen/peneliti Teknik Elektro di Universitas Jenderal
+                  Soedirman.
                 </>
               ),
-              photo: '/images/akhmat-safrudin.png',
+              photo: '/images/iwan.png',
             },
           ],
         },
@@ -158,27 +158,27 @@ const teamContent = {
               photo: '/images/herpiko-v2.png',
             },
             {
-              name: 'Iwan stwn',
-              email: 'stwn@blankon.id',
+              name: 'Akhmat Safrudin',
+              email: 'asafrudin@blankon.id',
               position: 'Program Manager',
               bio: (
                 <>
-                  The project initiator and maintainer of{' '}
+                  A former{' '}
                   <a
-                    href="https://speakerdeck.com/stwn/linux-distribution-for-higher-education-still-relevant"
+                    href="https://blankonlinux.id"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline dark:text-blue-400"
                   >
-                    Kuliax
-                  </a>
-                  , a GNU/Linux distribution targeting higher education. He has
-                  been involved in several free/open-source software projects
-                  and communities in Indonesia since 2001. He is currently an EE
-                  lecturer/researcher at Universitas Jenderal Soedirman.
+                    BlankOn Linux
+                  </a>{' '}
+                  contributor since the 2000s, deeply involved in both technical
+                  development and strategic direction. Brings over a decade of
+                  experience in non-profit management through his work with
+                  AirPutih.
                 </>
               ),
-              photo: '/images/iwan.png',
+              photo: '/images/akhmat-safrudin.png',
             },
             {
               name: 'Riza Disti Lestari',
@@ -209,27 +209,27 @@ const teamContent = {
               photo: '/images/rusmanto.jpg',
             },
             {
-              name: 'Akhmat Safrudin',
-              email: 'asafrudin@blankon.id',
+              name: 'Iwan stwn',
+              email: 'stwn@blankon.id',
               position: 'Supervisor',
               bio: (
                 <>
-                  A former{' '}
+                  The project initiator and maintainer of{' '}
                   <a
-                    href="https://blankonlinux.id"
+                    href="https://speakerdeck.com/stwn/linux-distribution-for-higher-education-still-relevant"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline dark:text-blue-400"
                   >
-                    BlankOn Linux
-                  </a>{' '}
-                  contributor since the 2000s, deeply involved in both technical
-                  development and strategic direction. Brings over a decade of
-                  experience in non-profit management through his work with
-                  AirPutih.
+                    Kuliax
+                  </a>
+                  , a GNU/Linux distribution targeting higher education. He has
+                  been involved in several free/open-source software projects
+                  and communities in Indonesia since 2001. He is currently an EE
+                  lecturer/researcher at Universitas Jenderal Soedirman.
                 </>
               ),
-              photo: '/images/akhmat-safrudin.png',
+              photo: '/images/iwan.png',
             },
           ],
         },
