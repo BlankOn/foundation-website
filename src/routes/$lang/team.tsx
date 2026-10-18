@@ -67,7 +67,7 @@ const teamContent = {
               photo: '/images/akhmat-safrudin.png',
             },
             {
-              name: 'R. Lestari',
+              name: 'Riza Disti',
               position: 'Manajer Keuangan',
               photo: rizaPhoto,
             },
@@ -181,7 +181,7 @@ const teamContent = {
               photo: '/images/akhmat-safrudin.png',
             },
             {
-              name: 'R. Lestari',
+              name: 'Riza Disti',
               position: 'Finance Manager',
               photo: rizaPhoto,
             },
