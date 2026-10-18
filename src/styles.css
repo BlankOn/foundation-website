@@ -160,3 +160,10 @@ code {
     @apply dark:border-white p-1.25 dark:bg-white;
   }
 }
+
+/* Round portrait matching the team page, for photos inside news articles */
+@layer components {
+  .team-photo {
+    @apply h-32 w-32 rounded-full object-cover ring-4 ring-blue-600/20;
+  }
+}
