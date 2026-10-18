@@ -2,6 +2,9 @@ import { createFileRoute } from '@tanstack/react-router'
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions, getTranslations } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
+import rizaPhoto from '../../../content/assets/riza-finance-manager.png'
+import sisPhoto from '../../../content/assets/sis-public-relation.jpeg'
+import siskaPhoto from '../../../content/assets/siska-community-manager.png'
 
 export const Route = createFileRoute('/$lang/team')({
   component: Team,
@@ -15,81 +18,106 @@ const teamContent = {
       'BlankOn dikelola oleh tim yang berpengalaman dan berdedikasi dalam memajukan teknologi bebas terbuka dan kemandirian teknologi di Indonesia.',
     organization: {
       title: 'Struktur Organisasi',
-      team: [
+      groups: [
         {
-          name: 'Rusmanto',
-          email: 'rusmanto@blankon.id',
-          position: 'Pembina',
-          bio: 'Dikenal luas sebagai "Bapak Linux Indonesia," pendiri majalah legendaris InfoLINUX, YPLI (Yayasan Penggerak Linux Indonesia), dan ILC (Indonesia Linux Conference).',
-          photo: '/images/rusmanto.jpg',
+          title: 'Pimpinan',
+          members: [
+            {
+              name: 'Rusmanto',
+              email: 'rusmanto@blankon.id',
+              position: 'Pembina',
+              bio: 'Dikenal luas sebagai "Bapak Linux Indonesia," pendiri majalah legendaris InfoLINUX, YPLI (Yayasan Penggerak Linux Indonesia), dan ILC (Indonesia Linux Conference).',
+              photo: '/images/rusmanto.jpg',
+            },
+            {
+              name: 'Akhmat Safrudin',
+              email: 'asafrudin@blankon.id',
+              position: 'Pengawas',
+              bio: (
+                <>
+                  Mantan kontributor{' '}
+                  <a
+                    href="https://blankonlinux.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    BlankOn Linux
+                  </a>{' '}
+                  sejak era 2000-an dengan keterlibatan mendalam di sisi teknis
+                  maupun strategis. Berpengalaman lebih dari satu dekade dalam
+                  pengelolaan organisasi nirlaba seperti AirPutih.
+                </>
+              ),
+              photo: '/images/akhmat-safrudin.png',
+            },
+            {
+              name: 'Herpiko Dwi Aguno',
+              email: 'herpiko@blankon.id',
+              position: 'Direktur Eksekutif',
+              bio: (
+                <>
+                  Kontributor aktif{' '}
+                  <a
+                    href="https://blankonlinux.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    BlankOn Linux
+                  </a>{' '}
+                  sejak 2009 yang saat ini memimpin seluruh tim pengembangan
+                  distribusi Linux derivatif. Mantan hacktivist di beberapa
+                  Linux User Group (KPLI NTB dan GLiBogor).
+                </>
+              ),
+              photo: '/images/herpiko-v2.png',
+            },
+            {
+              name: 'Iwan stwn',
+              email: 'stwn@blankon.id',
+              position: 'Koordinator Program',
+              bio: (
+                <>
+                  Pencetus proyek dan pengelola{' '}
+                  <a
+                    href="https://speakerdeck.com/stwn/linux-distribution-for-higher-education-still-relevant"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    Kuliax
+                  </a>
+                  , distribusi GNU/Linux yang menyasar pendidikan tinggi. Ia
+                  terlibat dalam beberapa proyek dan komunitas perangkat lunak
+                  free/open-source di Indonesia sejak tahun 2001. Saat ini aktif
+                  sebagai dosen/peneliti Teknik Elektro di Universitas Jenderal
+                  Soedirman.
+                </>
+              ),
+              photo: '/images/iwan.png',
+            },
+          ],
         },
         {
-          name: 'Akhmat Safrudin',
-          email: 'asafrudin@blankon.id',
-          position: 'Pengawas',
-          bio: (
-            <>
-              Mantan kontributor{' '}
-              <a
-                href="https://blankonlinux.id"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline dark:text-blue-400"
-              >
-                BlankOn Linux
-              </a>{' '}
-              sejak era 2000-an dengan keterlibatan mendalam di sisi teknis
-              maupun strategis. Berpengalaman lebih dari satu dekade dalam
-              pengelolaan organisasi nirlaba seperti AirPutih.
-            </>
-          ),
-          photo: '/images/akhmat-safrudin.png',
-        },
-        {
-          name: 'Herpiko Dwi Aguno',
-          email: 'herpiko@blankon.id',
-          position: 'Direktur Eksekutif',
-          bio: (
-            <>
-              Kontributor aktif{' '}
-              <a
-                href="https://blankonlinux.id"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline dark:text-blue-400"
-              >
-                BlankOn Linux
-              </a>{' '}
-              sejak 2009 yang saat ini memimpin seluruh tim pengembangan
-              distribusi Linux derivatif. Mantan hacktivist di beberapa Linux
-              User Group (KPLI NTB dan GLiBogor).
-            </>
-          ),
-          photo: '/images/herpiko-v2.png',
-        },
-        {
-          name: 'Iwan stwn',
-          email: 'stwn@blankon.id',
-          position: 'Koordinator Program',
-          bio: (
-            <>
-              Pencetus proyek dan pengelola{' '}
-              <a
-                href="https://speakerdeck.com/stwn/linux-distribution-for-higher-education-still-relevant"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline dark:text-blue-400"
-              >
-                Kuliax
-              </a>
-              , distribusi GNU/Linux yang menyasar pendidikan tinggi. Ia
-              terlibat dalam beberapa proyek dan komunitas perangkat lunak
-              free/open-source di Indonesia sejak tahun 2001. Saat ini aktif
-              sebagai dosen/peneliti Teknik Elektro di Universitas Jenderal
-              Soedirman.
-            </>
-          ),
-          photo: '/images/iwan.png',
+          title: 'Staf',
+          members: [
+            {
+              name: 'Riza Disti Lestari',
+              position: 'Manajer Keuangan',
+              photo: rizaPhoto,
+            },
+            {
+              name: 'Siska Iskandar',
+              position: 'Manajer Komunitas',
+              photo: siskaPhoto,
+            },
+            {
+              name: 'Sistiandy Syahbana Nugraha',
+              position: 'Hubungan Masyarakat',
+              photo: sisPhoto,
+            },
+          ],
         },
       ],
     },
@@ -101,81 +129,107 @@ const teamContent = {
       'BlankOn is managed by an experienced and dedicated team committed to advancing open source technology and technological independence in Indonesia.',
     organization: {
       title: 'Organization Structure',
-      team: [
+      groups: [
         {
-          name: 'Rusmanto',
-          email: 'rusmanto@blankon.id',
-          position: 'Advisor',
-          bio: 'Widely recognized as the "Father of Linux Indonesia," founder of the legendary InfoLINUX magazine, YPLI (Yayasan Penggerak Linux Indonesia), and ILC (Indonesia Linux Conference).',
-          photo: '/images/rusmanto.jpg',
+          title: 'Leadership',
+          members: [
+            {
+              name: 'Rusmanto',
+              email: 'rusmanto@blankon.id',
+              position: 'Advisor',
+              bio: 'Widely recognized as the "Father of Linux Indonesia," founder of the legendary InfoLINUX magazine, YPLI (Yayasan Penggerak Linux Indonesia), and ILC (Indonesia Linux Conference).',
+              photo: '/images/rusmanto.jpg',
+            },
+            {
+              name: 'Akhmat Safrudin',
+              email: 'asafrudin@blankon.id',
+              position: 'Supervisor',
+              bio: (
+                <>
+                  A former{' '}
+                  <a
+                    href="https://blankonlinux.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    BlankOn Linux
+                  </a>{' '}
+                  contributor since the 2000s, deeply involved in both technical
+                  development and strategic direction. Brings over a decade of
+                  experience in non-profit management through his work with
+                  AirPutih.
+                </>
+              ),
+              photo: '/images/akhmat-safrudin.png',
+            },
+            {
+              name: 'Herpiko Dwi Aguno',
+              email: 'herpiko@blankon.id',
+              position: 'Executive Director',
+              bio: (
+                <>
+                  An active{' '}
+                  <a
+                    href="https://blankonlinux.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    BlankOn Linux
+                  </a>{' '}
+                  contributor since 2009 who currently leads the entire
+                  derivative Linux distribution development team. Former
+                  hacktivist for a few Linux User Groups (KPLI NTB and
+                  GLiBogor).
+                </>
+              ),
+              photo: '/images/herpiko-v2.png',
+            },
+            {
+              name: 'Iwan stwn',
+              email: 'stwn@blankon.id',
+              position: 'Program Manager',
+              bio: (
+                <>
+                  The project initiator and maintainer of{' '}
+                  <a
+                    href="https://speakerdeck.com/stwn/linux-distribution-for-higher-education-still-relevant"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    Kuliax
+                  </a>
+                  , a GNU/Linux distribution targeting higher education. He has
+                  been involved in several free/open-source software projects
+                  and communities in Indonesia since 2001. He is currently an EE
+                  lecturer/researcher at Universitas Jenderal Soedirman.
+                </>
+              ),
+              photo: '/images/iwan.png',
+            },
+          ],
         },
         {
-          name: 'Akhmat Safrudin',
-          email: 'asafrudin@blankon.id',
-          position: 'Supervisor',
-          bio: (
-            <>
-              A former{' '}
-              <a
-                href="https://blankonlinux.id"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline dark:text-blue-400"
-              >
-                BlankOn Linux
-              </a>{' '}
-              contributor since the 2000s, deeply involved in both technical
-              development and strategic direction. Brings over a decade of
-              experience in non-profit management through his work with
-              AirPutih.
-            </>
-          ),
-          photo: '/images/akhmat-safrudin.png',
-        },
-        {
-          name: 'Herpiko Dwi Aguno',
-          email: 'herpiko@blankon.id',
-          position: 'Executive Director',
-          bio: (
-            <>
-              An active{' '}
-              <a
-                href="https://blankonlinux.id"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline dark:text-blue-400"
-              >
-                BlankOn Linux
-              </a>{' '}
-              contributor since 2009 who currently leads the entire derivative
-              Linux distribution development team. Former hacktivist for a few
-              Linux User Groups (KPLI NTB and GLiBogor).
-            </>
-          ),
-          photo: '/images/herpiko-v2.png',
-        },
-        {
-          name: 'Iwan stwn',
-          email: 'stwn@blankon.id',
-          position: 'Program Manager',
-          bio: (
-            <>
-              The project initiator and maintainer of{' '}
-              <a
-                href="https://speakerdeck.com/stwn/linux-distribution-for-higher-education-still-relevant"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline dark:text-blue-400"
-              >
-                Kuliax
-              </a>
-              , a GNU/Linux distribution targeting higher education. He has been
-              involved in several free/open-source software projects and
-              communities in Indonesia since 2001. He is currently an EE
-              lecturer/researcher at Universitas Jenderal Soedirman.
-            </>
-          ),
-          photo: '/images/iwan.png',
+          title: 'Staff',
+          members: [
+            {
+              name: 'Riza Disti Lestari',
+              position: 'Finance Manager',
+              photo: rizaPhoto,
+            },
+            {
+              name: 'Siska Iskandar',
+              position: 'Community Manager',
+              photo: siskaPhoto,
+            },
+            {
+              name: 'Sistiandy Syahbana Nugraha',
+              position: 'Public Relations',
+              photo: sisPhoto,
+            },
+          ],
         },
       ],
     },
@@ -207,41 +261,54 @@ function Team() {
         {/* Organization Structure */}
         <section className="bg-fd-background py-20">
           <div className="container mx-auto max-w-4xl px-6">
-            <div className="mb-12 text-center">
-              <div className="mx-auto h-1 w-16 rounded-full bg-gradient-to-r from-blue-600 to-blue-400" />
-            </div>
-
-            <div className="space-y-8">
-              {content.organization.team.map((member, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col gap-6 sm:flex-row sm:items-start"
-                >
-                  <div className="flex shrink-0 justify-center sm:justify-start">
-                    <div className="relative h-32 w-32 overflow-hidden rounded-full ring-4 ring-blue-600/20">
-                      <img
-                        src={member.photo}
-                        alt={member.name}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
+            <div className="space-y-16">
+              {content.organization.groups.map((group) => (
+                <div key={group.title}>
+                  <div className="mb-12 text-center">
+                    <h2 className="mb-4 text-3xl font-bold text-fd-foreground md:text-4xl">
+                      {group.title}
+                    </h2>
+                    <div className="mx-auto h-1 w-16 rounded-full bg-gradient-to-r from-blue-600 to-blue-400" />
                   </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="mb-1 text-xl font-bold text-fd-foreground">
-                      {member.name}
-                    </h3>
-                    <p className="text-base font-medium text-blue-600 dark:text-blue-400">
-                      {member.position}
-                    </p>
-                    <a
-                      href={`mailto:${member.email}`}
-                      className="mb-3 inline-block text-sm text-fd-muted-foreground transition-colors hover:text-blue-600 dark:hover:text-blue-400"
-                    >
-                      {member.email}
-                    </a>
-                    <p className="leading-relaxed text-fd-muted-foreground">
-                      {member.bio}
-                    </p>
+
+                  <div className="space-y-8">
+                    {group.members.map((member) => (
+                      <div
+                        key={member.name}
+                        className="flex flex-col gap-6 sm:flex-row sm:items-start"
+                      >
+                        <div className="flex shrink-0 justify-center sm:justify-start">
+                          <div className="relative h-32 w-32 overflow-hidden rounded-full ring-4 ring-blue-600/20">
+                            <img
+                              src={member.photo}
+                              alt={member.name}
+                              className="h-full w-full object-cover"
+                            />
+                          </div>
+                        </div>
+                        <div className="flex-1 text-center sm:text-left">
+                          <h3 className="mb-1 text-xl font-bold text-fd-foreground">
+                            {member.name}
+                          </h3>
+                          <p className="text-base font-medium text-blue-600 dark:text-blue-400">
+                            {member.position}
+                          </p>
+                          {'email' in member && (
+                            <a
+                              href={`mailto:${member.email}`}
+                              className="mb-3 inline-block text-sm text-fd-muted-foreground transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+                            >
+                              {member.email}
+                            </a>
+                          )}
+                          {'bio' in member && (
+                            <p className="leading-relaxed text-fd-muted-foreground">
+                              {member.bio}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}
