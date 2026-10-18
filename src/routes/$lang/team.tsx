@@ -20,37 +20,8 @@ const teamContent = {
       title: 'Struktur Organisasi',
       groups: [
         {
-          title: 'Pimpinan',
+          title: 'Tim',
           members: [
-            {
-              name: 'Rusmanto',
-              email: 'rusmanto@blankon.id',
-              position: 'Pembina',
-              bio: 'Dikenal luas sebagai "Bapak Linux Indonesia," pendiri majalah legendaris InfoLINUX, YPLI (Yayasan Penggerak Linux Indonesia), dan ILC (Indonesia Linux Conference).',
-              photo: '/images/rusmanto.jpg',
-            },
-            {
-              name: 'Akhmat Safrudin',
-              email: 'asafrudin@blankon.id',
-              position: 'Pengawas',
-              bio: (
-                <>
-                  Mantan kontributor{' '}
-                  <a
-                    href="https://blankonlinux.id"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline dark:text-blue-400"
-                  >
-                    BlankOn Linux
-                  </a>{' '}
-                  sejak era 2000-an dengan keterlibatan mendalam di sisi teknis
-                  maupun strategis. Berpengalaman lebih dari satu dekade dalam
-                  pengelolaan organisasi nirlaba seperti AirPutih.
-                </>
-              ),
-              photo: '/images/akhmat-safrudin.png',
-            },
             {
               name: 'Herpiko Dwi Aguno',
               email: 'herpiko@blankon.id',
@@ -74,9 +45,59 @@ const teamContent = {
               photo: '/images/herpiko-v2.png',
             },
             {
+              name: 'Akhmat Safrudin',
+              email: 'asafrudin@blankon.id',
+              position: 'Koordinator Program',
+              bio: (
+                <>
+                  Mantan kontributor{' '}
+                  <a
+                    href="https://blankonlinux.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    BlankOn Linux
+                  </a>{' '}
+                  sejak era 2000-an dengan keterlibatan mendalam di sisi teknis
+                  maupun strategis. Berpengalaman lebih dari satu dekade dalam
+                  pengelolaan organisasi nirlaba seperti AirPutih.
+                </>
+              ),
+              photo: '/images/akhmat-safrudin.png',
+            },
+            {
+              name: 'Riza Disti Lestari',
+              position: 'Manajer Keuangan',
+              photo: rizaPhoto,
+            },
+            {
+              name: 'Sistiandy Syahbana Nugraha',
+              position: 'Hubungan Masyarakat',
+              photo: sisPhoto,
+            },
+            {
+              name: 'Siska Iskandar',
+              position:
+                'Koordinator GEDSI (Kesetaraan Gender, Disabilitas, dan Inklusi Sosial)',
+              photo: siskaPhoto,
+            },
+          ],
+        },
+        {
+          title: 'Pembina dan Penasihat',
+          members: [
+            {
+              name: 'Rusmanto',
+              email: 'rusmanto@blankon.id',
+              position: 'Pembina',
+              bio: 'Dikenal luas sebagai "Bapak Linux Indonesia," pendiri majalah legendaris InfoLINUX, YPLI (Yayasan Penggerak Linux Indonesia), dan ILC (Indonesia Linux Conference).',
+              photo: '/images/rusmanto.jpg',
+            },
+            {
               name: 'Iwan stwn',
               email: 'stwn@blankon.id',
-              position: 'Koordinator Program',
+              position: 'Pengawas',
               bio: (
                 <>
                   Pencetus proyek dan pengelola{' '}
@@ -99,26 +120,6 @@ const teamContent = {
             },
           ],
         },
-        {
-          title: 'Staf',
-          members: [
-            {
-              name: 'Riza Disti Lestari',
-              position: 'Manajer Keuangan',
-              photo: rizaPhoto,
-            },
-            {
-              name: 'Siska Iskandar',
-              position: 'Manajer Pemasaran',
-              photo: siskaPhoto,
-            },
-            {
-              name: 'Sistiandy Syahbana Nugraha',
-              position: 'Hubungan Masyarakat',
-              photo: sisPhoto,
-            },
-          ],
-        },
       ],
     },
   },
@@ -131,38 +132,8 @@ const teamContent = {
       title: 'Organization Structure',
       groups: [
         {
-          title: 'Leadership',
+          title: 'Team',
           members: [
-            {
-              name: 'Rusmanto',
-              email: 'rusmanto@blankon.id',
-              position: 'Advisor',
-              bio: 'Widely recognized as the "Father of Linux Indonesia," founder of the legendary InfoLINUX magazine, YPLI (Yayasan Penggerak Linux Indonesia), and ILC (Indonesia Linux Conference).',
-              photo: '/images/rusmanto.jpg',
-            },
-            {
-              name: 'Akhmat Safrudin',
-              email: 'asafrudin@blankon.id',
-              position: 'Supervisor',
-              bio: (
-                <>
-                  A former{' '}
-                  <a
-                    href="https://blankonlinux.id"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline dark:text-blue-400"
-                  >
-                    BlankOn Linux
-                  </a>{' '}
-                  contributor since the 2000s, deeply involved in both technical
-                  development and strategic direction. Brings over a decade of
-                  experience in non-profit management through his work with
-                  AirPutih.
-                </>
-              ),
-              photo: '/images/akhmat-safrudin.png',
-            },
             {
               name: 'Herpiko Dwi Aguno',
               email: 'herpiko@blankon.id',
@@ -187,9 +158,60 @@ const teamContent = {
               photo: '/images/herpiko-v2.png',
             },
             {
+              name: 'Akhmat Safrudin',
+              email: 'asafrudin@blankon.id',
+              position: 'Program Manager',
+              bio: (
+                <>
+                  A former{' '}
+                  <a
+                    href="https://blankonlinux.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    BlankOn Linux
+                  </a>{' '}
+                  contributor since the 2000s, deeply involved in both technical
+                  development and strategic direction. Brings over a decade of
+                  experience in non-profit management through his work with
+                  AirPutih.
+                </>
+              ),
+              photo: '/images/akhmat-safrudin.png',
+            },
+            {
+              name: 'Riza Disti Lestari',
+              position: 'Finance Manager',
+              photo: rizaPhoto,
+            },
+            {
+              name: 'Sistiandy Syahbana Nugraha',
+              position: 'Public Relations',
+              photo: sisPhoto,
+            },
+            {
+              name: 'Siska Iskandar',
+              position:
+                'GEDSI Coordinator (Gender Equality, Disability, and Social Inclusion)',
+              photo: siskaPhoto,
+            },
+          ],
+        },
+        {
+          title: 'Trustees and Advisors',
+          members: [
+            {
+              name: 'Rusmanto',
+              email: 'rusmanto@blankon.id',
+              position: 'Advisor',
+              bio: 'Widely recognized as the "Father of Linux Indonesia," founder of the legendary InfoLINUX magazine, YPLI (Yayasan Penggerak Linux Indonesia), and ILC (Indonesia Linux Conference).',
+              photo: '/images/rusmanto.jpg',
+            },
+            {
               name: 'Iwan stwn',
               email: 'stwn@blankon.id',
-              position: 'Program Manager',
+              position: 'Supervisor',
               bio: (
                 <>
                   The project initiator and maintainer of{' '}
@@ -208,26 +230,6 @@ const teamContent = {
                 </>
               ),
               photo: '/images/iwan.png',
-            },
-          ],
-        },
-        {
-          title: 'Staff',
-          members: [
-            {
-              name: 'Riza Disti Lestari',
-              position: 'Finance Manager',
-              photo: rizaPhoto,
-            },
-            {
-              name: 'Siska Iskandar',
-              position: 'Marketing Manager',
-              photo: siskaPhoto,
-            },
-            {
-              name: 'Sistiandy Syahbana Nugraha',
-              position: 'Public Relations',
-              photo: sisPhoto,
             },
           ],
         },
