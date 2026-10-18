@@ -109,7 +109,7 @@ const teamContent = {
             },
             {
               name: 'Siska Iskandar',
-              position: 'Manajer Komunitas',
+              position: 'Manajer Pemasaran',
               photo: siskaPhoto,
             },
             {
@@ -221,7 +221,7 @@ const teamContent = {
             },
             {
               name: 'Siska Iskandar',
-              position: 'Community Manager',
+              position: 'Marketing Manager',
               photo: siskaPhoto,
             },
             {
