@@ -67,7 +67,7 @@ const teamContent = {
               photo: '/images/akhmat-safrudin.png',
             },
             {
-              name: 'Riza Disti Lestari',
+              name: 'Riza Disti',
               position: 'Manajer Keuangan',
               photo: rizaPhoto,
             },
@@ -88,7 +88,7 @@ const teamContent = {
           title: 'Pembina dan Penasihat',
           members: [
             {
-              name: 'Rusmanto',
+              name: 'Rusmanto Maryanto',
               email: 'rusmanto@blankon.id',
               position: 'Pembina',
               bio: 'Dikenal luas sebagai "Bapak Linux Indonesia," pendiri majalah legendaris InfoLINUX, YPLI (Yayasan Penggerak Linux Indonesia), dan ILC (Indonesia Linux Conference).',
@@ -181,7 +181,7 @@ const teamContent = {
               photo: '/images/akhmat-safrudin.png',
             },
             {
-              name: 'Riza Disti Lestari',
+              name: 'Riza Disti',
               position: 'Finance Manager',
               photo: rizaPhoto,
             },
@@ -202,7 +202,7 @@ const teamContent = {
           title: 'Trustees and Advisors',
           members: [
             {
-              name: 'Rusmanto',
+              name: 'Rusmanto Maryanto',
               email: 'rusmanto@blankon.id',
               position: 'Advisor',
               bio: 'Widely recognized as the "Father of Linux Indonesia," founder of the legendary InfoLINUX magazine, YPLI (Yayasan Penggerak Linux Indonesia), and ILC (Indonesia Linux Conference).',

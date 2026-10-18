@@ -52,7 +52,9 @@ function Avatar({ name, github }: { name: string; github: string }) {
   )
 }
 
-const { contributors: activeMembers, donors: recurringDonors } = data
+const activeMembers = data.contributors
+// Typed explicitly: an empty `donors` array in the JSON would infer as never[]
+const recurringDonors: Array<{ name: string; github: string }> = data.donors
 
 const sectionContent = {
   id: {
@@ -107,39 +109,43 @@ export function ActiveMembers({ lang }: { lang: string }) {
         </div>
 
         {/* Recurring Donors */}
-        <p className="mt-16 mb-6 text-center text-fd-muted-foreground">
-          {content.donorsSub}
-        </p>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {recurringDonors.map((donor, i) => {
-            const inner = (
-              <>
-                <Avatar name={donor.name} github={donor.github} />
-                <div className="min-w-0">
-                  <p className="truncate font-semibold text-fd-foreground">
-                    {donor.name}
-                  </p>
-                </div>
-              </>
-            )
-            const cls = "flex items-center gap-4 rounded-2xl border border-fd-border bg-fd-card p-5 transition-all hover:border-blue-300 hover:shadow-lg dark:hover:border-blue-700"
-            return donor.github ? (
-              <a
-                key={donor.github}
-                href={`https://github.com/${donor.github}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cls}
-              >
-                {inner}
-              </a>
-            ) : (
-              <div key={`donor-${i}`} className={cls}>
-                {inner}
-              </div>
-            )
-          })}
-        </div>
+        {recurringDonors.length > 0 && (
+          <>
+            <p className="mt-16 mb-6 text-center text-fd-muted-foreground">
+              {content.donorsSub}
+            </p>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {recurringDonors.map((donor, i) => {
+                const inner = (
+                <>
+                    <Avatar name={donor.name} github={donor.github} />
+                    <div className="min-w-0">
+                      <p className="truncate font-semibold text-fd-foreground">
+                        {donor.name}
+                      </p>
+                    </div>
+                </>
+                )
+                const cls = "flex items-center gap-4 rounded-2xl border border-fd-border bg-fd-card p-5 transition-all hover:border-blue-300 hover:shadow-lg dark:hover:border-blue-700"
+                return donor.github ? (
+                  <a
+                    key={donor.github}
+                    href={`https://github.com/${donor.github}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cls}
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <div key={`donor-${i}`} className={cls}>
+                    {inner}
+                  </div>
+                )
+              })}
+            </div>
+          </>
+        )}
       </div>
     </section>
   )
