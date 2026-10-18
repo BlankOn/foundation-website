@@ -65,10 +65,5 @@
       "contribution": { "id": "Hubungan Masyarakat", "en": "Public Relation" }
     }
   ],
-  "donors": [
-    {
-      "name": "Riza Lestari",
-      "github": ""
-    }
-  ]
+  "donors": []
 }
