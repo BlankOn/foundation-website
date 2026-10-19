@@ -1,10 +1,10 @@
-# Menyambut Tiga Staf Baru BlankOn Foundation
+# Menyambut Empat Staf Baru BlankOn Foundation
 
 ---
 
-BlankOn Foundation dengan gembira menyambut tiga anggota baru yang kini bergabung sebagai staf yayasan: Riza Disti, Sistiandy Syahbana Nugraha, dan Siska Iskandar.
+BlankOn Foundation dengan gembira menyambut empat anggota baru yang kini bergabung sebagai staf yayasan: Riza Disti, Sistiandy Syahbana Nugraha, Siska Iskandar, dan Pahlevy Tawainella.
 
-Seiring bertambahnya program, mitra, dan komunitas yang kami dukung, yayasan membutuhkan tim yang dapat mengelola kegiatan sehari-hari secara lebih tertata. Kehadiran ketiganya melengkapi jajaran pimpinan yayasan dan memperkuat kemampuan kami dalam menjalankan misi memajukan teknologi bebas terbuka di Indonesia.
+Seiring bertambahnya program, mitra, dan komunitas yang kami dukung, yayasan membutuhkan tim yang dapat mengelola kegiatan sehari-hari secara lebih tertata. Kehadiran keempatnya melengkapi jajaran pimpinan yayasan dan memperkuat kemampuan kami dalam menjalankan misi memajukan teknologi bebas terbuka di Indonesia.
 
 ## Riza Disti, Manajer Keuangan
 
@@ -20,7 +20,7 @@ Sebagai organisasi nirlaba yang didanai sepenuhnya oleh donasi, sponsorship, dan
 
 <img src="content/assets/sis-public-relation.jpeg" alt="Sistiandy Syahbana Nugraha" class="team-photo" />
 
-Sistiandy Syahbana Nugraha bergabung sebagai staf Hubungan Masyarakat (Humas). Sistiandy adalah pegiat Relawan TIK yang telah lama aktif, dan sebelumnya bergabung dengan tim humas proyek BlankOn Linux sebelum kini berfokus pada yayasan.
+Sistiandy Syahbana Nugraha bergabung sebagai staf Hubungan Masyarakat (Humas). Sistiandy sebelumnya bergabung dengan tim humas proyek BlankOn Linux sebelum kini berfokus pada yayasan.
 
 Dalam peran barunya, Sistiandy akan menjadi penghubung antara yayasan dengan publik, media, komunitas, dan mitra, termasuk menyampaikan kabar dan kegiatan yayasan serta menjalin kerja sama baru.
 
@@ -35,6 +35,14 @@ Siska Iskandar bergabung sebagai Koordinator GEDSI (Kesetaraan Gender, Disabilit
 Dalam peran barunya, Siska akan memastikan program dan kegiatan yayasan terbuka serta dapat diakses oleh semua orang, tanpa memandang gender, disabilitas, maupun latar belakang sosial.
 
 Ekosistem sumber terbuka tumbuh paling sehat ketika siapa pun merasa diterima untuk belajar dan berkontribusi. Peran ini menegaskan komitmen yayasan untuk membangun komunitas teknologi yang lebih inklusif di Indonesia.
+
+## Pahlevy Tawainella, Manajer Komunitas
+
+<img src="content/assets/levy-lev.png" alt="Pahlevy Tawainella" class="team-photo" />
+
+Pahlevy Tawainella, yang akrab disapa Levay, bergabung sebagai Manajer Komunitas. Sebelumnya, Levay pernah menjadi bagian dari tim humas proyek BlankOn Linux selama sekitar dua tahun. Levay juga merupakan hacktivist di GLiB (GNU/Linux Bogor).
+
+Dalam peran barunya, Levay akan merawat hubungan yayasan dengan komunitas-komunitas yang kami dukung, mendampingi kegiatan mereka, serta membantu lebih banyak orang menemukan cara untuk terlibat dan berkontribusi.
 
 ## Penyesuaian Peran Pimpinan
 
@@ -52,6 +60,6 @@ Kami percaya bahwa tim yang beragam akan menghasilkan keputusan yang lebih baik 
 
 ## Selamat Bergabung
 
-Kami mengucapkan selamat datang kepada Riza, Sistiandy, dan Siska. Kami menantikan kontribusi mereka dalam memperkuat yayasan beserta komunitas yang kami dukung.
+Kami mengucapkan selamat datang kepada Riza, Sistiandy, Siska, dan Levay. Kami menantikan kontribusi mereka dalam memperkuat yayasan beserta komunitas yang kami dukung.
 
 Kenali seluruh tim kami di [halaman Tim](https://blankon.id/id/team).
