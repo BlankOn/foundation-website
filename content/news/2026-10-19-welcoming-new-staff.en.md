@@ -1,8 +1,8 @@
-# Welcoming Three New Staff Members to BlankOn Foundation
+# Welcoming Four New Staff Members to BlankOn Foundation
 
 ---
 
-BlankOn Foundation is delighted to welcome three new people who have joined the foundation's staff: Riza Disti, Sistiandy Syahbana Nugraha, and Siska Iskandar.
+BlankOn Foundation is delighted to welcome four new people who have joined the foundation's staff: Riza Disti, Sistiandy Syahbana Nugraha, Siska Iskandar, and Pahlevy Tawainella.
 
 As the programs, partners, and communities we support continue to grow, the foundation needs a team that can manage day-to-day work in a more structured way. Their arrival complements the foundation's leadership and strengthens our ability to carry out our mission of advancing open source technology in Indonesia.
 
@@ -20,7 +20,7 @@ As a non-profit funded entirely by donations, sponsorships, and grants, transpar
 
 <img src="content/assets/sis-public-relation.jpeg" alt="Sistiandy Syahbana Nugraha" class="team-photo" />
 
-Sistiandy Syahbana Nugraha joins as Public Relations staff. Sistiandy is a long-standing volunteer with Relawan TIK, Indonesia's ICT volunteer movement, and was part of the BlankOn Linux project's public relations team before turning his focus to the foundation.
+Sistiandy Syahbana Nugraha joins as Public Relations staff. Sistiandy was previously part of the BlankOn Linux project's public relations team before turning his focus to the foundation.
 
 In this new role, Sistiandy will act as the bridge between the foundation and the public, the media, communities, and partners, sharing news about the foundation's work and building new collaborations.
 
@@ -35,6 +35,14 @@ Siska Iskandar joins as GEDSI (Gender Equality, Disability, and Social Inclusion
 In this new role, Siska will make sure the foundation's programs and activities are open and accessible to everyone, regardless of gender, disability, or social background.
 
 Open source ecosystems thrive when everyone feels welcome to learn and contribute. This role reaffirms the foundation's commitment to building a more inclusive technology community in Indonesia.
+
+## Pahlevy Tawainella, Community Manager
+
+<img src="content/assets/levy-lev.png" alt="Pahlevy Tawainella" class="team-photo" />
+
+Pahlevy Tawainella, known as Levay, joins as Community Manager. Levay previously served on the BlankOn Linux project's public relations team for about two years. He was also a hacktivist at GLiB (GNU/Linux Bogor).
+
+In this new role, Levay will nurture the foundation's relationships with the communities we support, accompany their activities, and help more people find ways to get involved and contribute.
 
 ## Changes in Leadership Roles
 
@@ -52,6 +60,6 @@ We believe a diverse team makes better decisions and builds programs that are mo
 
 ## Welcome Aboard
 
-We extend a warm welcome to Riza, Sistiandy, and Siska, and we look forward to their contributions to the foundation and the communities we support.
+We extend a warm welcome to Riza, Sistiandy, Siska, and Levay, and we look forward to their contributions to the foundation and the communities we support.
 
 Meet our whole team on the [Team page](https://blankon.id/en/team).

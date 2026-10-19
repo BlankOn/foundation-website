@@ -5,6 +5,7 @@ import { Footer } from '@/components/footer'
 import rizaPhoto from '../../../content/assets/riza-finance-manager.png'
 import sisPhoto from '../../../content/assets/sis-public-relation.jpeg'
 import siskaPhoto from '../../../content/assets/siska-community-manager.png'
+import levyPhoto from '../../../content/assets/levy-lev.png'
 
 export const Route = createFileRoute('/$lang/team')({
   component: Team,
@@ -81,6 +82,11 @@ const teamContent = {
               position:
                 'Koordinator GEDSI (Kesetaraan Gender, Disabilitas, dan Inklusi Sosial)',
               photo: siskaPhoto,
+            },
+            {
+              name: 'Pahlevy Tawainella',
+              position: 'Manajer Komunitas',
+              photo: levyPhoto,
             },
           ],
         },
@@ -195,6 +201,11 @@ const teamContent = {
               position:
                 'GEDSI Coordinator (Gender Equality, Disability, and Social Inclusion)',
               photo: siskaPhoto,
+            },
+            {
+              name: 'Pahlevy Tawainella',
+              position: 'Community Manager',
+              photo: levyPhoto,
             },
           ],
         },
