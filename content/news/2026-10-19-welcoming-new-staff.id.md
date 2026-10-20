@@ -1,10 +1,10 @@
-# Menyambut Empat Staf Baru BlankOn Foundation
+# Menyambut Lima Staf Baru BlankOn Foundation
 
 ---
 
-BlankOn Foundation dengan gembira menyambut empat anggota baru yang kini bergabung sebagai staf yayasan: Riza Disti, Sistiandy Syahbana Nugraha, Siska Iskandar, dan Pahlevy Tawainella.
+BlankOn Foundation dengan gembira menyambut lima anggota baru yang kini bergabung sebagai staf yayasan: Riza Disti, Sistiandy Syahbana Nugraha, Siska Iskandar, Pahlevy Tawainella, dan Yanuar Arafat.
 
-Seiring bertambahnya program, mitra, dan komunitas yang kami dukung, yayasan membutuhkan tim yang dapat mengelola kegiatan sehari-hari secara lebih tertata. Kehadiran keempatnya melengkapi jajaran pimpinan yayasan dan memperkuat kemampuan kami dalam menjalankan misi memajukan teknologi bebas terbuka di Indonesia.
+Seiring bertambahnya program, mitra, dan komunitas yang kami dukung, yayasan membutuhkan tim yang dapat mengelola kegiatan sehari-hari secara lebih tertata. Kehadiran kelimanya melengkapi jajaran pimpinan yayasan dan memperkuat kemampuan kami dalam menjalankan misi memajukan teknologi bebas terbuka di Indonesia.
 
 ## Riza Disti, Manajer Keuangan
 
@@ -44,6 +44,14 @@ Pahlevy Tawainella, yang akrab disapa Levay, bergabung sebagai Manajer Komunitas
 
 Dalam peran barunya, Levay akan merawat hubungan yayasan dengan komunitas-komunitas yang kami dukung, mendampingi kegiatan mereka, serta membantu lebih banyak orang menemukan cara untuk terlibat dan berkontribusi.
 
+## Yanuar Arafat, Penasihat Pajak
+
+<img src="content/assets/tax-advisor-yanuar-arafat.png" alt="Yanuar Arafat" class="team-photo" />
+
+Yanuar Arafat bergabung sebagai Penasihat Pajak. Yanuar adalah pegiat KPLI NTB (Kelompok Pengguna Linux Indonesia Nusa Tenggara Barat) yang telah lama aktif sebelum pindah ke Jabodetabek. Yanuar memiliki pengalaman profesional di otoritas perpajakan.
+
+Dalam peran barunya, Yanuar akan memberikan masukan kepada yayasan terkait perpajakan, membantu memastikan kewajiban kami sebagai organisasi nirlaba terpenuhi dengan baik dan dana yang dipercayakan kepada kami dikelola sesuai dengan peraturan yang berlaku.
+
 ## Penyesuaian Peran Pimpinan
 
 Bersamaan dengan bergabungnya staf baru, kami juga melakukan penyesuaian peran di jajaran pimpinan yayasan. Akhmat Safrudin kini menjabat sebagai Koordinator Program, sementara Iwan stwn beralih menjadi Pengawas.
@@ -54,12 +62,12 @@ Iwan akan terus mendampingi yayasan sebagai Pengawas dan penasihat. Dalam peran 
 
 ## Langkah Menuju Kesetaraan
 
-Kehadiran Riza dan Siska memiliki arti penting bagi upaya kami mewujudkan kesetaraan. Dengan bergabungnya mereka, perempuan kini mencakup 28% dari tim yayasan. Angka ini belum cukup, dan kami menargetkan komposisi perempuan minimal 40%.
+Kehadiran Riza dan Siska memiliki arti penting bagi upaya kami mewujudkan kesetaraan. Dengan bergabungnya mereka, perempuan kini mencakup 22% dari tim yayasan. Angka ini belum cukup, dan kami menargetkan komposisi perempuan minimal 40%.
 
 Kami percaya bahwa tim yang beragam akan menghasilkan keputusan yang lebih baik dan program yang lebih relevan bagi seluruh lapisan masyarakat. Komitmen ini akan terus kami jaga dalam setiap perekrutan dan pengembangan tim ke depan.
 
 ## Selamat Bergabung
 
-Kami mengucapkan selamat datang kepada Riza, Sistiandy, Siska, dan Levay. Kami menantikan kontribusi mereka dalam memperkuat yayasan beserta komunitas yang kami dukung.
+Kami mengucapkan selamat datang kepada Riza, Sistiandy, Siska, Levay, dan Yanuar. Kami menantikan kontribusi mereka dalam memperkuat yayasan beserta komunitas yang kami dukung.
 
 Kenali seluruh tim kami di [halaman Tim](https://blankon.id/id/team).
