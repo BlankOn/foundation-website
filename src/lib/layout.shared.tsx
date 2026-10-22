@@ -193,6 +193,14 @@ const translations = {
             url: 'https://farmaccess.org/',
             tags: ['Sponsorship'],
           },
+          {
+            name: 'IGOS Nusantara',
+            description:
+              'Distribusi Linux berbasis Fedora yang lahir dari gerakan Indonesia, Go Open Source! (IGOS), dikembangkan untuk mendorong pemanfaatan perangkat lunak sumber terbuka di Indonesia.',
+            cta: 'Kunjungi IGOS Nusantara',
+            url: 'https://igos-nusantara.or.id/',
+            tags: ['Infrastruktur', 'Server'],
+          },
         ],
         contact: {
           text: 'Jika proyek, inisiatif, atau komunitasmu membutuhkan dukungan, baik berupa infrastruktur, pendanaan, maupun bentuk lainnya, silakan menghubungi kami. Kami tidak selalu dapat menjamin ketersediaan sumber daya, tetapi kami dengan senang hati berdiskusi dan mencari solusi terbaik bersama. Hubungi kami di',
@@ -374,6 +382,14 @@ const translations = {
             cta: 'Visit FarmAccess',
             url: 'https://farmaccess.org/',
             tags: ['Sponsorship'],
+          },
+          {
+            name: 'IGOS Nusantara',
+            description:
+              'A Fedora-based Linux distribution born from the Indonesia, Go Open Source! (IGOS) movement, developed to encourage the adoption of open source software in Indonesia.',
+            cta: 'Visit IGOS Nusantara',
+            url: 'https://igos-nusantara.or.id/',
+            tags: ['Infrastructure', 'Server'],
           },
         ],
         contact: {
