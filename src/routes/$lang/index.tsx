@@ -392,9 +392,9 @@ function HeroSupportedInitiatives({
             {t.hero.supportedInitiatives.description}
           </p>
         </div>
-
-        <SupportedInitiativesList t={t} />
       </div>
+
+      <SupportedInitiativesList t={t} variant="marquee" />
     </section>
   )
 }
