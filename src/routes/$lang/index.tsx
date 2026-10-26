@@ -320,9 +320,16 @@ function HeroProducts({
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="mb-3 text-xl font-bold text-fd-foreground">
-                    {item.name}
-                  </h3>
+                  <div className="mb-3 flex flex-wrap items-center gap-3">
+                    <h3 className="text-xl font-bold text-fd-foreground">
+                      {item.name}
+                    </h3>
+                    {'badge' in item && item.badge ? (
+                      <span className="rounded-full bg-amber-400 px-2.5 py-0.5 text-xs font-semibold text-amber-950">
+                        {item.badge}
+                      </span>
+                    ) : null}
+                  </div>
                   <p className="mb-6 text-fd-muted-foreground">
                     {item.description}
                   </p>

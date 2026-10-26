@@ -1,3 +1,7 @@
+---
+labels: [sponsor]
+---
+
 # Arfhacom Joins BlankOn Foundation as a Corporate Sponsor
 
 ---

@@ -1,3 +1,7 @@
+---
+labels: [support]
+---
+
 # BlankOn Foundation Berikan Dukungan Infrastruktur untuk LangitKetujuh
 
 ---

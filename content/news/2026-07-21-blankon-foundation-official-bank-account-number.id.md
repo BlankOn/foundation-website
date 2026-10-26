@@ -1,3 +1,7 @@
+---
+labels: [announcement]
+---
+
 # Rekening Bank Resmi BlankOn Foundation
 
 ---

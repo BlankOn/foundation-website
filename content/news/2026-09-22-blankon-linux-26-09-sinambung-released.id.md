@@ -1,3 +1,7 @@
+---
+labels: [release]
+---
+
 # BlankOn Linux 26.09 Sinambung Resmi Dirilis
 
 ---

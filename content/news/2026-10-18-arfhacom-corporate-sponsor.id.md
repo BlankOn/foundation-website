@@ -1,3 +1,7 @@
+---
+labels: [sponsor]
+---
+
 # Arfhacom Menjadi Sponsor Korporat BlankOn Foundation
 
 ---

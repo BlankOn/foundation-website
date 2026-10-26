@@ -120,6 +120,70 @@ function SupportedInitiativeCard({
   )
 }
 
+// Compact row used instead of the marquee on small screens.
+function SupportedInitiativeListItem({ item }: { item: SupportedInitiative }) {
+  const logo = supportedInitiativeLogos[item.name]
+  const rowContent = (
+    <>
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-fd-border bg-white p-1">
+        {logo ? (
+          <img
+            src={logo}
+            alt=""
+            className="max-h-full max-w-full object-contain"
+          />
+        ) : (
+          <span className="text-sm font-bold text-blue-600">
+            {item.name.charAt(0)}
+          </span>
+        )}
+      </div>
+      <div className="min-w-0 flex-1">
+        <p className="truncate text-sm font-semibold text-fd-foreground">
+          {item.name}
+        </p>
+        <p className="truncate text-xs text-fd-muted-foreground">
+          {item.tags.join(' · ')}
+        </p>
+      </div>
+      {item.url ? (
+        <svg
+          className="h-4 w-4 shrink-0 text-fd-muted-foreground"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      ) : null}
+    </>
+  )
+  const rowClassName = 'flex items-center gap-3 px-4 py-3'
+
+  return (
+    <li>
+      {item.url ? (
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${rowClassName} transition-colors hover:bg-fd-accent`}
+        >
+          {rowContent}
+        </a>
+      ) : (
+        <div className={rowClassName}>{rowContent}</div>
+      )}
+    </li>
+  )
+}
+
 // Auto-scroll speed in pixels per second.
 const marqueeSpeed = 40
 
@@ -154,7 +218,13 @@ function SupportedInitiativesMarquee({ t }: { t: Translations }) {
     }
 
     const tick = (time: number) => {
-      if (lastTime !== null && !paused && !reduceMotion) {
+      // clientWidth is 0 while the marquee is hidden on small screens.
+      if (
+        lastTime !== null &&
+        !paused &&
+        !reduceMotion &&
+        scroller.clientWidth > 0
+      ) {
         position = wrap(position + ((time - lastTime) / 1000) * marqueeSpeed)
         scroller.scrollLeft = position
       }
@@ -253,7 +323,18 @@ export function SupportedInitiativesList({
   return (
     <>
       {variant === 'marquee' ? (
-        <SupportedInitiativesMarquee t={t} />
+        <>
+          <div className="px-6 md:hidden">
+            <ul className="mx-auto max-w-md divide-y divide-fd-border overflow-hidden rounded-2xl border border-fd-border bg-fd-card">
+              {t.hero.supportedInitiatives.items.map((item, index) => (
+                <SupportedInitiativeListItem key={index} item={item} />
+              ))}
+            </ul>
+          </div>
+          <div className="hidden md:block">
+            <SupportedInitiativesMarquee t={t} />
+          </div>
+        </>
       ) : (
         <div className="flex flex-wrap justify-center gap-6">
           {t.hero.supportedInitiatives.items.map((item, index) => (

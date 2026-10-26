@@ -1,3 +1,7 @@
+---
+labels: [event, support]
+---
+
 # BlankOn Foundation Supports openSUSE.Asia Summit 2026 in Yogyakarta as a Custom Sponsor
 
 ---

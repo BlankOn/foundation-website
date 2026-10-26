@@ -1,3 +1,7 @@
+---
+labels: [sponsor]
+---
+
 # PT Clarus Innovace Teknologi Joins BlankOn Foundation as a Corporate Sponsor
 
 ---

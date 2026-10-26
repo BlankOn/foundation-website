@@ -3,6 +3,7 @@ import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import type { NewsLang } from '@/lib/news'
 import { baseOptions } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
+import { NewsLabels } from '@/components/news-labels'
 import { getNewsArticle } from '@/lib/news'
 
 export const Route = createFileRoute('/$lang/news_/$slug')({
@@ -51,9 +52,12 @@ function NewsArticlePage() {
 
             {article ? (
               <>
-                <p className="mb-2 text-sm text-fd-muted-foreground">
-                  {formatDate(article.date, lang)}
-                </p>
+                <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-2">
+                  <span className="text-sm text-fd-muted-foreground">
+                    {formatDate(article.date, lang)}
+                  </span>
+                  <NewsLabels labels={article.labels} lang={lang} />
+                </div>
                 <article
                   className="prose dark:prose-invert max-w-none"
                   dangerouslySetInnerHTML={{ __html: article.html }}

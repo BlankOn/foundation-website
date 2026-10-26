@@ -2,6 +2,23 @@
   "$comment": "Events shown on the home page. `date` accepts YYYY, YYYY-MM or YYYY-MM-DD; anything on/after today lands in Upcoming, everything else in Past. `endDate`, `link` and `image` are optional. `title` and `place` accept either a plain string or { id, en } for per-language text. `link` may be an absolute URL (opens in a new tab) or a site-relative path without the language prefix, e.g. /news/some-slug (the current language is prepended). `image` may be a /content/assets/... path or a file under public/.",
   "events": [
     {
+      "title": {
+        "id": "BlankOn Linux Release Party bersama KLAS Surabaya",
+        "en": "BlankOn Linux Release Party by KLAS Surabaya"
+      },
+      "date": "2026-10-29",
+      "place": "Selasar Gedung F (FIK), Universitas Narotama, Surabaya",
+      "link": "https://s.unnar.id/blankon_sinambung",
+      "image": "/content/assets/blankon-release-party-klas-oct-2026.jpeg"
+    },
+    {
+      "title": "Kubernetes Community Days Indonesia 2026",
+      "date": "2026-10-24",
+      "place": "Selah Hall, Piset Square, Bandung",
+      "link": "/news/blankon-foundation-booth-at-kcd-indonesia-2026",
+      "image": "/content/assets/kcd26.png"
+    },
+    {
       "title": "JKTLUG September Meetup",
       "date": "2026-09-27",
       "place": {
