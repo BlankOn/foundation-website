@@ -1,3 +1,7 @@
+---
+labels: [sponsor]
+---
+
 # 8Labs Menjadi Sponsor Korporat BlankOn Foundation
 
 ---

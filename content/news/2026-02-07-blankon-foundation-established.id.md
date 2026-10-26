@@ -1,3 +1,7 @@
+---
+labels: [announcement]
+---
+
 # Yayasan BlankOn Resmi Berdiri
 
 ---

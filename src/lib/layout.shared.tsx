@@ -25,6 +25,13 @@ const translations = {
     membership: 'Keanggotaan',
     sponsorship: 'Sponsorship',
     news: 'Berita',
+    newsLabels: {
+      event: 'Acara',
+      sponsor: 'Sponsor',
+      support: 'Dukungan',
+      release: 'Rilis',
+      announcement: 'Pengumuman',
+    },
     donate: 'Donasi',
     welcome: 'Selamat datang di BlankOn',
     hero: {
@@ -100,7 +107,7 @@ const translations = {
       events: {
         title: 'Kegiatan',
         description:
-          'Kegiatan yang kami selenggarakan atau ikuti bersama komunitas.',
+          'Ragam kegiatan open source dari berbagai komunitas, termasuk yang kami selenggarakan atau ikuti.',
         upcoming: 'Kegiatan Mendatang',
         past: 'Kegiatan Terdahulu',
         noUpcoming: 'Belum ada kegiatan mendatang yang dijadwalkan.',
@@ -137,6 +144,7 @@ const translations = {
               'Platform berita dan diskusi teknologi ala Hacker News untuk komunitas teknologi Indonesia.',
             cta: 'Kunjungi Warta',
             url: 'https://warta.blankon.id',
+            badge: 'Inkubasi',
           },
         ],
       },
@@ -215,6 +223,13 @@ const translations = {
     membership: 'Membership',
     sponsorship: 'Sponsorship',
     news: 'News',
+    newsLabels: {
+      event: 'Event',
+      sponsor: 'Sponsor',
+      support: 'Support',
+      release: 'Release',
+      announcement: 'Announcement',
+    },
     donate: 'Donate',
     welcome: 'Welcome to BlankOn',
     hero: {
@@ -249,7 +264,7 @@ const translations = {
             year: '2010',
             title: 'Second BlanKonf',
             description:
-              'BlanKonf expanded to East Java, broadening the community\'s reach to the eastern part of Java island.',
+              "BlanKonf expanded to East Java, broadening the community's reach to the eastern part of Java island.",
           },
           {
             year: '2011',
@@ -290,7 +305,7 @@ const translations = {
       events: {
         title: 'Events',
         description:
-          'Events we host or take part in together with the community.',
+          'Events from across open source communities, including those we host or join.',
         upcoming: 'Upcoming Events',
         past: 'Past Events',
         noUpcoming: 'No upcoming events are scheduled yet.',
@@ -327,6 +342,7 @@ const translations = {
               'A Hacker News-style news and discussion platform for the Indonesian technology community.',
             cta: 'Visit Warta',
             url: 'https://warta.blankon.id',
+            badge: 'Incubation',
           },
         ],
       },
@@ -354,7 +370,7 @@ const translations = {
           {
             name: 'openSUSE.Asia Summit 2026',
             description:
-              'One of Asia\'s largest gatherings of the openSUSE community, hosted in Yogyakarta on October 3-4, 2026, with The BlankOn Foundation as a Custom Sponsor.',
+              "One of Asia's largest gatherings of the openSUSE community, hosted in Yogyakarta on October 3-4, 2026, with The BlankOn Foundation as a Custom Sponsor.",
             cta: 'Visit the Event Page',
             url: 'https://events.opensuse.org/conferences/oSAS26',
             tags: ['Sponsorship'],

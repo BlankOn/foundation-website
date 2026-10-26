@@ -225,6 +225,7 @@ export function EventsList({
             <Link
               to="/$lang/news"
               params={{ lang }}
+              search={{ label: 'event' }}
               className="inline-flex items-center gap-1 font-medium text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
             >
               {t.hero.events.seeMore}

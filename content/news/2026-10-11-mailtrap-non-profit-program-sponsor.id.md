@@ -1,3 +1,7 @@
+---
+labels: [sponsor]
+---
+
 # BlankOn Foundation Bergabung dalam Program Nirlaba Mailtrap
 
 ---

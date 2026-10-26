@@ -1,3 +1,7 @@
+---
+labels: [event]
+---
+
 # JKTLUG September Meetup
 
 ---

@@ -1,3 +1,7 @@
+---
+labels: [announcement]
+---
+
 # Menyambut Lima Staf Baru BlankOn Foundation
 
 ---

@@ -1,3 +1,7 @@
+---
+labels: [support]
+---
+
 # BlankOn Foundation Provides Infrastructure Support for LangitKetujuh
 
 ---

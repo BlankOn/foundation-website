@@ -1,3 +1,7 @@
+---
+labels: [event]
+---
+
 # Debian Day 2026 Purbalingga: BlankOn Foundation Discusses What It Means to Be a Derivative Project
 
 ---

@@ -1,3 +1,7 @@
+---
+labels: [announcement]
+---
+
 # Welcoming Five New Staff Members to BlankOn Foundation
 
 ---

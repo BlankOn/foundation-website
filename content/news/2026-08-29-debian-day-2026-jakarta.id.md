@@ -1,3 +1,7 @@
+---
+labels: [event]
+---
+
 # Debian Day 2026 Jakarta: Kolaborasi Jakarta Linux Users Group dan BlankOn Foundation
 
 ---

@@ -1,3 +1,7 @@
+---
+labels: [event]
+---
+
 # Pengalaman Gaming di Linux dalam Kegiatan openSUSE Asia Summit 2026
 
 ---

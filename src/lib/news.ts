@@ -4,16 +4,28 @@ marked.setOptions({ gfm: true })
 
 export type NewsLang = 'id' | 'en'
 
+export const NEWS_LABELS = [
+  'event',
+  'sponsor',
+  'support',
+  'release',
+  'announcement',
+] as const
+
+export type NewsLabel = (typeof NEWS_LABELS)[number]
+
 export interface NewsArticle {
   slug: string
   date: string
   lang: NewsLang
+  labels: Array<NewsLabel>
   title: string
   excerpt: string
   html: string
 }
 
 const FILENAME_PATTERN = /^(\d{4}-\d{2}-\d{2})-([a-z0-9-]+)\.(id|en)\.md$/
+const FRONTMATTER_PATTERN = /^---\r?\n([\s\S]*?)\r?\n---\r?\n/
 
 const rawFiles = import.meta.glob<string>('/content/news/*.md', {
   query: '?raw',
@@ -35,6 +47,24 @@ function resolveAssetPaths(raw: string): string {
       return url ? `${prefix}${url}` : match
     },
   )
+}
+
+// Splits off a leading `---` block; only `labels: [a, b]` is read from it.
+function parseFrontmatter(raw: string): {
+  labels: Array<NewsLabel>
+  body: string
+} {
+  const match = raw.match(FRONTMATTER_PATTERN)
+  if (!match) return { labels: [], body: raw }
+
+  const labelsLine = match[1].match(/^labels:\s*\[([^\]]*)\]\s*$/m)
+  const labels = (labelsLine ? labelsLine[1].split(',') : [])
+    .map((label) => label.trim().replace(/^["']|["']$/g, ''))
+    .filter((label): label is NewsLabel =>
+      (NEWS_LABELS as ReadonlyArray<string>).includes(label),
+    )
+
+  return { labels, body: raw.slice(match[0].length) }
 }
 
 function extractTitle(raw: string): string {
@@ -67,13 +97,15 @@ const articles: Array<NewsArticle> = Object.entries(rawFiles)
     if (!match) return null
 
     const [, date, slug, lang] = match
+    const { labels, body } = parseFrontmatter(raw)
     return {
       slug,
       date,
       lang: lang as NewsLang,
-      title: extractTitle(raw),
-      excerpt: extractExcerpt(raw),
-      html: marked.parse(resolveAssetPaths(raw), { async: false }),
+      labels,
+      title: extractTitle(body),
+      excerpt: extractExcerpt(body),
+      html: marked.parse(resolveAssetPaths(body), { async: false }),
     }
   })
   .filter((article): article is NewsArticle => article !== null)

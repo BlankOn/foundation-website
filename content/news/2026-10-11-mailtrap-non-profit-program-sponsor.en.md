@@ -1,3 +1,7 @@
+---
+labels: [sponsor]
+---
+
 # BlankOn Foundation Joins Mailtrap's Non-Profit Program
 
 ---

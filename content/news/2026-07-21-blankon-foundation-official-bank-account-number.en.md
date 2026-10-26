@@ -1,3 +1,7 @@
+---
+labels: [announcement]
+---
+
 # BlankOn Foundation's Official Bank Account
 
 ---
