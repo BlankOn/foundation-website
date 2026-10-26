@@ -16,7 +16,7 @@ BlankOn Foundation turut berpartisipasi dengan membuka booth di area pameran, be
 
 ## Cobain BlankOn Linux Sinambung
 
-Daya tarik utama booth ini adalah BlankOn Linux 26.09 dengan nama rilis Sinambung. Sebuah ThinkPad berlayar sentuh dalam mode tenda dan satu laptop lainnya disiapkan untuk pengunjung, lengkap dengan ajakan sederhana di meja: "BlankOn Linux Sinambung — please give it a try and share your feedback!"
+Daya tarik utama booth ini adalah BlankOn Linux 26.09 dengan nama rilis Sinambung. Sebuah ThinkPad berlayar sentuh dalam mode tenda dan satu laptop lainnya disiapkan untuk pengunjung, lengkap dengan ajakan sederhana di meja: "BlankOn Linux Sinambung. Please give it a try and share your feedback!"
 
 ![Pengunjung mencoba BlankOn Linux Sinambung di laptop layar sentuh](/content/assets/kcd26_photo_6260136678030774224_w.jpg)
 

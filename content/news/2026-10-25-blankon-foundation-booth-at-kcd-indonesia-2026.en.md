@@ -16,7 +16,7 @@ BlankOn Foundation took part by opening a booth in the exhibition area, alongsid
 
 ## Try BlankOn Linux Sinambung
 
-The main attraction of the booth was BlankOn Linux 26.09, release name Sinambung. A ThinkPad with a touchscreen, set up in tent mode, and a second laptop were ready for visitors, with a simple invitation on the table: "BlankOn Linux Sinambung — please give it a try and share your feedback!"
+The main attraction of the booth was BlankOn Linux 26.09, release name Sinambung. A ThinkPad with a touchscreen, set up in tent mode, and a second laptop were ready for visitors, with a simple invitation on the table: "BlankOn Linux Sinambung. Please give it a try and share your feedback!"
 
 ![Visitors trying BlankOn Linux Sinambung on a touchscreen laptop](/content/assets/kcd26_photo_6260136678030774224_w.jpg)
 

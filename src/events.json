@@ -2,7 +2,10 @@
   "$comment": "Events shown on the home page. `date` accepts YYYY, YYYY-MM or YYYY-MM-DD; anything on/after today lands in Upcoming, everything else in Past. `endDate`, `link` and `image` are optional. `title` and `place` accept either a plain string or { id, en } for per-language text. `link` may be an absolute URL (opens in a new tab) or a site-relative path without the language prefix, e.g. /news/some-slug (the current language is prepended). `image` may be a /content/assets/... path or a file under public/.",
   "events": [
     {
-      "title": "BlankOn Linux Release Party — KLAS Surabaya",
+      "title": {
+        "id": "BlankOn Linux Release Party bersama KLAS Surabaya",
+        "en": "BlankOn Linux Release Party by KLAS Surabaya"
+      },
       "date": "2026-10-29",
       "place": "Selasar Gedung F (FIK), Universitas Narotama, Surabaya",
       "link": "https://s.unnar.id/blankon_sinambung",
