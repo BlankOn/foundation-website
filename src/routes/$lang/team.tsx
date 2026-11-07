@@ -123,9 +123,7 @@ const teamContent = {
                   </a>
                   , distribusi GNU/Linux yang menyasar pendidikan tinggi. Ia
                   terlibat dalam beberapa proyek dan komunitas perangkat lunak
-                  free/open-source di Indonesia sejak tahun 2001. Saat ini aktif
-                  sebagai dosen/peneliti Teknik Elektro di Universitas Jenderal
-                  Soedirman.
+                  bebas/open-source di Indonesia sejak tahun 2001, termasuk Rimbalinux dan KPLI Jogja.
                 </>
               ),
               photo: '/images/iwan.png',
@@ -247,8 +245,7 @@ const teamContent = {
                   </a>
                   , a GNU/Linux distribution targeting higher education. He has
                   been involved in several free/open-source software projects
-                  and communities in Indonesia since 2001. He is currently an EE
-                  lecturer/researcher at Universitas Jenderal Soedirman.
+                  and communities in Indonesia since 2001, including Rimbalinux and KPLI Jogja.
                 </>
               ),
               photo: '/images/iwan.png',
