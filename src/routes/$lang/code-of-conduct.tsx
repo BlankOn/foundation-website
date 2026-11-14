@@ -63,6 +63,7 @@ const codeOfConductContent = {
       email: 'humas@blankon.id',
       femaleLabel: 'Kontak perempuan',
       femaleName: 'Siska',
+      showNumber: 'Tampilkan nomor',
       femaleNote: 'Jika Anda lebih nyaman melapor kepada perempuan, hubungi Siska.',
       outro: 'Semua laporan akan kami tinjau.',
     },
@@ -135,6 +136,7 @@ const codeOfConductContent = {
       email: 'humas@blankon.id',
       femaleLabel: 'Female contact',
       femaleName: 'Siska',
+      showNumber: 'Show number',
       femaleNote: 'If you feel more comfortable talking to a woman, contact Siska.',
       outro: 'We will review every report.',
     },
@@ -312,7 +314,9 @@ function CodeOfConduct() {
                   {content.reporting.femaleName},{' '}
                   <SpamFree
                     parts={femalePhoneParts}
+                    revealLabel={content.reporting.showNumber}
                     className="font-medium text-fd-foreground"
+                    buttonClassName="rounded-md border border-blue-300 px-2 py-0.5 text-sm font-medium text-blue-600 hover:bg-blue-100 dark:border-blue-800 dark:text-blue-400 dark:hover:bg-blue-900/40"
                   />
                   <br />
                   <span className="text-sm">{content.reporting.femaleNote}</span>
