@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { baseOptions } from '@/lib/layout.shared'
 import { Footer } from '@/components/footer'
+import { SpamFree } from '@/components/spam-free'
 
 export const Route = createFileRoute('/$lang/code-of-conduct')({
   component: CodeOfConduct,
@@ -62,7 +63,6 @@ const codeOfConductContent = {
       email: 'humas@blankon.id',
       femaleLabel: 'Kontak perempuan',
       femaleName: 'Siska',
-      femalePhone: '+62 811-2951-290',
       femaleNote: 'Jika Anda lebih nyaman melapor kepada perempuan, hubungi Siska.',
       outro: 'Semua laporan akan kami tinjau.',
     },
@@ -135,7 +135,6 @@ const codeOfConductContent = {
       email: 'humas@blankon.id',
       femaleLabel: 'Female contact',
       femaleName: 'Siska',
-      femalePhone: '+62 811-2951-290',
       femaleNote: 'If you feel more comfortable talking to a woman, contact Siska.',
       outro: 'We will review every report.',
     },
@@ -155,6 +154,10 @@ const codeOfConductContent = {
     },
   },
 }
+
+// Siska's phone number, stored backwards and split so it
+// never appears as plain text in the HTML. See SpamFree.
+const femalePhoneParts = ['092-', '1592-', '118 ', '26+']
 
 const attributionSources = [
   {
@@ -307,12 +310,11 @@ function CodeOfConduct() {
                     {content.reporting.femaleLabel}:
                   </span>{' '}
                   {content.reporting.femaleName},{' '}
-                  <a
-                    href={`tel:${content.reporting.femalePhone.replace(/[^+\d]/g, '')}`}
+                  <SpamFree
+                    parts={femalePhoneParts}
+                    type="tel"
                     className="font-medium text-blue-600 hover:underline dark:text-blue-400"
-                  >
-                    {content.reporting.femalePhone}
-                  </a>
+                  />
                   <br />
                   <span className="text-sm">{content.reporting.femaleNote}</span>
                 </li>
