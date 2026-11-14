@@ -7,12 +7,12 @@ function Logo() {
       <img
         src="/blankon-foundation-light.png"
         alt="BlankOn Foundation"
-        className="block h-8 w-auto dark:hidden"
+        className="block h-6 w-auto max-w-none shrink-0 sm:h-5 md:h-6 lg:h-8 dark:hidden"
       />
       <img
         src="/blankon-foundation-dark.png"
         alt="BlankOn Foundation"
-        className="hidden h-8 w-auto dark:block"
+        className="hidden h-6 w-auto max-w-none shrink-0 sm:h-5 md:h-6 lg:h-8 dark:block"
       />
     </>
   )
