@@ -57,10 +57,14 @@ const codeOfConductContent = {
       'Komunitas maupun acara yang diselenggarakan di dalamnya ini didedikasikan untuk memberikan pengalaman berbagi yang bebas dari tindakan pelecehan untuk semua orang, terlepas dari jenis kelamin, identitas dan ekspresi gender, usia, orientasi seksual, kecacatan, penampilan fisik, ukuran tubuh, ras, etnisitas, agama (atau kekurangannya), sudut pandang politik, atau pilihan teknologi. Kami tidak mentolerir pelecehan terhadap individu menyangkut hal-hal di atas dalam bentuk apapun baik di tempat penyelenggaraan komunitas/acara maupun publikasi media sosial dan media online lainnya. Individu yang melanggar peraturan ini dapat dikenai sanksi atau diusir dari komunitas/acara tanpa pengembalian dana (jika ada) atas kebijaksanaan pengurus komunitas.',
     reporting: {
       title: 'Melaporkan pelanggaran',
-      beforeEmail:
-        'Jika menurut Anda ada pihak yang melanggar kode etik ini, silakan laporkan kepada kami melalui surel ke',
+      intro: 'Jika ada yang melanggar kode etik ini, silakan lapor kepada kami.',
+      emailLabel: 'Surel',
       email: 'humas@blankon.id',
-      afterEmail: 'Setiap laporan yang masuk akan kami tinjau.',
+      femaleLabel: 'Kontak perempuan',
+      femaleName: 'Siska',
+      femalePhone: '+62 811-2951-290',
+      femaleNote: 'Jika Anda lebih nyaman melapor kepada perempuan, hubungi Siska.',
+      outro: 'Semua laporan akan kami tinjau.',
     },
     scopeTitle: 'Kode etik ini berlaku pada',
     scope: [
@@ -126,10 +130,14 @@ const codeOfConductContent = {
       'This community and the events held within it are dedicated to providing a harassment-free shared experience for everyone, regardless of sex, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack of it), political views, or technology choices. We do not tolerate harassment of individuals on any of these grounds in any form, whether at community or event venues or in posts on social media and other online media. Individuals who break these rules may be sanctioned or expelled from the community or event without a refund (if any), at the discretion of the community organizers.',
     reporting: {
       title: 'Reporting a breach',
-      beforeEmail:
-        'If you believe someone has breached this code of conduct, please let us know by email at',
+      intro: 'If someone breaks this code of conduct, please tell us.',
+      emailLabel: 'Email',
       email: 'humas@blankon.id',
-      afterEmail: 'Every report we receive will be reviewed.',
+      femaleLabel: 'Female contact',
+      femaleName: 'Siska',
+      femalePhone: '+62 811-2951-290',
+      femaleNote: 'If you feel more comfortable talking to a woman, contact Siska.',
+      outro: 'We will review every report.',
     },
     scopeTitle: 'This code of conduct applies to',
     scope: [
@@ -279,15 +287,38 @@ function CodeOfConduct() {
               <h3 className="mb-2 text-lg font-bold text-fd-foreground">
                 {content.reporting.title}
               </h3>
+              <p className="mb-4 leading-relaxed text-fd-muted-foreground">
+                {content.reporting.intro}
+              </p>
+              <ul className="mb-4 space-y-3 leading-relaxed text-fd-muted-foreground">
+                <li>
+                  <span className="font-semibold text-fd-foreground">
+                    {content.reporting.emailLabel}:
+                  </span>{' '}
+                  <a
+                    href={`mailto:${content.reporting.email}`}
+                    className="font-medium text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    {content.reporting.email}
+                  </a>
+                </li>
+                <li>
+                  <span className="font-semibold text-fd-foreground">
+                    {content.reporting.femaleLabel}:
+                  </span>{' '}
+                  {content.reporting.femaleName},{' '}
+                  <a
+                    href={`tel:${content.reporting.femalePhone.replace(/[^+\d]/g, '')}`}
+                    className="font-medium text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    {content.reporting.femalePhone}
+                  </a>
+                  <br />
+                  <span className="text-sm">{content.reporting.femaleNote}</span>
+                </li>
+              </ul>
               <p className="leading-relaxed text-fd-muted-foreground">
-                {content.reporting.beforeEmail}{' '}
-                <a
-                  href={`mailto:${content.reporting.email}`}
-                  className="font-medium text-blue-600 hover:underline dark:text-blue-400"
-                >
-                  {content.reporting.email}
-                </a>
-                . {content.reporting.afterEmail}
+                {content.reporting.outro}
               </p>
             </div>
           </div>
