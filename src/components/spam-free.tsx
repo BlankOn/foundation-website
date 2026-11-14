@@ -3,42 +3,29 @@ import { useEffect, useState } from 'react'
 type SpamFreeProps = {
   /**
    * The value written backwards and split into pieces, so it never appears
-   * as plain text in the server-rendered HTML.
+   * as plain text in the source or built files.
    * Example: '+62 800-1234-567' -> ['765-', '4321-', '008 ', '26+']
    */
   parts: string[]
-  /** Link type: `tel` for phone numbers, `mailto` for email addresses. */
-  type: 'tel' | 'mailto'
   className?: string
 }
 
 const decode = (parts: string[]) => parts.join('').split('').reverse().join('')
 
 /**
- * Shows a phone number or email only in the browser, after the page loads.
- * Bots that read the raw HTML see a placeholder instead of the real value.
+ * Shows a phone number or email as plain text, only in the browser after the
+ * page loads. There is no tel:/mailto: link, so bots have less to find.
  */
-export function SpamFree({ parts, type, className }: SpamFreeProps) {
+export function SpamFree({ parts, className }: SpamFreeProps) {
   const [value, setValue] = useState<string | null>(null)
 
   useEffect(() => {
     setValue(decode(parts))
   }, [parts])
 
-  if (!value) {
-    return (
-      <span className={className} aria-hidden="true">
-        •••
-      </span>
-    )
-  }
-
-  const href =
-    type === 'tel' ? `tel:${value.replace(/[^+\d]/g, '')}` : `mailto:${value}`
-
   return (
-    <a href={href} className={className}>
-      {value}
-    </a>
+    <span className={className} aria-hidden={value ? undefined : true}>
+      {value ?? '•••'}
+    </span>
   )
 }

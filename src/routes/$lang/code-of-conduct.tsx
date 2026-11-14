@@ -312,8 +312,7 @@ function CodeOfConduct() {
                   {content.reporting.femaleName},{' '}
                   <SpamFree
                     parts={femalePhoneParts}
-                    type="tel"
-                    className="font-medium text-blue-600 hover:underline dark:text-blue-400"
+                    className="font-medium text-fd-foreground"
                   />
                   <br />
                   <span className="text-sm">{content.reporting.femaleNote}</span>
