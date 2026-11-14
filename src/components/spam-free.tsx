@@ -1,44 +1,48 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 type SpamFreeProps = {
   /**
    * The value written backwards and split into pieces, so it never appears
-   * as plain text in the server-rendered HTML.
+   * as plain text in the source or built files.
    * Example: '+62 800-1234-567' -> ['765-', '4321-', '008 ', '26+']
    */
   parts: string[]
-  /** Link type: `tel` for phone numbers, `mailto` for email addresses. */
-  type: 'tel' | 'mailto'
+  /** Button text shown before the value is revealed, e.g. "Show number". */
+  revealLabel: string
   className?: string
+  buttonClassName?: string
 }
 
 const decode = (parts: string[]) => parts.join('').split('').reverse().join('')
 
 /**
- * Shows a phone number or email only in the browser, after the page loads.
- * Bots that read the raw HTML see a placeholder instead of the real value.
+ * Hides a phone number or email behind a button. The value is put together
+ * only when someone clicks, and shown as plain text with no tel:/mailto:
+ * link, so bots that read the page without clicking never see it.
  */
-export function SpamFree({ parts, type, className }: SpamFreeProps) {
+export function SpamFree({
+  parts,
+  revealLabel,
+  className,
+  buttonClassName,
+}: SpamFreeProps) {
   const [value, setValue] = useState<string | null>(null)
 
-  useEffect(() => {
-    setValue(decode(parts))
-  }, [parts])
-
-  if (!value) {
+  if (value) {
     return (
-      <span className={className} aria-hidden="true">
-        •••
+      <span className={className} aria-live="polite">
+        {value}
       </span>
     )
   }
 
-  const href =
-    type === 'tel' ? `tel:${value.replace(/[^+\d]/g, '')}` : `mailto:${value}`
-
   return (
-    <a href={href} className={className}>
-      {value}
-    </a>
+    <button
+      type="button"
+      onClick={() => setValue(decode(parts))}
+      className={buttonClassName}
+    >
+      {revealLabel}
+    </button>
   )
 }
