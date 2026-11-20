@@ -105,9 +105,8 @@ const translations = {
         cta: 'Donasi Sekarang',
       },
       events: {
-        title: 'Kegiatan',
-        description:
-          'Ragam kegiatan dari berbagai komunitas open source dan teknologi, termasuk yang kami selenggarakan atau ikuti.',
+        title: 'Ragam Kegiatan dari Berbagai Komunitas Open Source dan Teknologi',
+        description: 'Termasuk yang kami selenggarakan atau ikuti.',
         upcoming: 'Kegiatan Mendatang',
         past: 'Kegiatan Terdahulu',
         noUpcoming: 'Belum ada kegiatan mendatang yang dijadwalkan.',
@@ -303,9 +302,8 @@ const translations = {
         cta: 'Donate Now',
       },
       events: {
-        title: 'Events',
-        description:
-          'Events from across open source and tech communities, including those we host or join.',
+        title: 'Events from Across Open Source and Tech Communities',
+        description: 'Including those we host or join.',
         upcoming: 'Upcoming Events',
         past: 'Past Events',
         noUpcoming: 'No upcoming events are scheduled yet.',
