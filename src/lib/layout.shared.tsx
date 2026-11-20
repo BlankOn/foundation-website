@@ -107,7 +107,7 @@ const translations = {
       events: {
         title: 'Kegiatan',
         description:
-          'Ragam kegiatan open source dari berbagai komunitas, termasuk yang kami selenggarakan atau ikuti.',
+          'Ragam kegiatan dari berbagai komunitas open source dan teknologi, termasuk yang kami selenggarakan atau ikuti.',
         upcoming: 'Kegiatan Mendatang',
         past: 'Kegiatan Terdahulu',
         noUpcoming: 'Belum ada kegiatan mendatang yang dijadwalkan.',
@@ -305,7 +305,7 @@ const translations = {
       events: {
         title: 'Events',
         description:
-          'Events from across open source communities, including those we host or join.',
+          'Events from across open source and tech communities, including those we host or join.',
         upcoming: 'Upcoming Events',
         past: 'Past Events',
         noUpcoming: 'No upcoming events are scheduled yet.',
