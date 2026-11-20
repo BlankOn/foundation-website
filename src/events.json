@@ -2,13 +2,28 @@
   "$comment": "Events shown on the home page. `date` accepts YYYY, YYYY-MM or YYYY-MM-DD; anything on/after today lands in Upcoming, everything else in Past. `endDate`, `link` and `image` are optional. `title` and `place` accept either a plain string or { id, en } for per-language text. `link` may be an absolute URL (opens in a new tab) or a site-relative path without the language prefix, e.g. /news/some-slug (the current language is prepended). `image` may be a /content/assets/... path or a file under public/.",
   "events": [
     {
+      "title": "SEAN-CSO PeaceTech AI Lab Workshop",
+      "date": "2026-11-03",
+      "endDate": "2026-11-06",
+      "place": "Bandung",
+      "link": "/news/blankon-foundation-mentors-at-sean-cso-peacetech-ai-lab",
+      "image": "/content/assets/sean-cso-peacetech-ai-lab-2026-group.webp"
+    },
+    {
+      "title": "GNOME.Asia Summit 2026",
+      "date": "2026-10-31",
+      "endDate": "2026-11-02",
+      "place": "Terengganu, Malaysia",
+      "link": "/news/blankon-foundation-at-gnome-asia-summit-2026",
+      "image": "/content/assets/gnome-asia-2026-siska.webp"
+    },
+    {
       "title": {
         "id": "BlankOn Linux Release Party bersama KLAS Surabaya",
         "en": "BlankOn Linux Release Party by KLAS Surabaya"
       },
       "date": "2026-10-29",
       "place": "Selasar Gedung F (FIK), Universitas Narotama, Surabaya",
-      "link": "https://s.unnar.id/blankon_sinambung",
       "image": "/content/assets/blankon-release-party-klas-oct-2026.jpeg"
     },
     {

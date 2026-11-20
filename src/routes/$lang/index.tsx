@@ -5,6 +5,7 @@ import { Footer } from '@/components/footer'
 import { useEffect, useState } from 'react'
 import { SupportedInitiativesList } from '@/components/supported-initiatives'
 import { EventsList } from '@/components/events'
+import { Newsletter } from '@/components/newsletter'
 import blankOnLinuxPreview from '../../../content/assets/blankon-linux.png'
 import wartaBlankOnPreview from '../../../content/assets/retas.png'
 import lokakaryaPreview from '../../../content/assets/lokakarya.jpeg'
@@ -445,6 +446,7 @@ function Home() {
         <HeroProducts t={t} />
         <HeroSupportedInitiatives t={t} />
         <HeroEvents t={t} lang={lang} />
+        <Newsletter lang={lang} />
       </main>
       <Footer lang={lang} />
     </HomeLayout>
