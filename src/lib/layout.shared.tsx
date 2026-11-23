@@ -138,6 +138,14 @@ const translations = {
             url: 'https://www.youtube.com/@blankonlinux_official',
           },
           {
+            name: 'Pelokalan',
+            description:
+              'Platform yang terintegrasi dengan GNOME Damned Lies dan repositori GitHub untuk mendukung serta mempermudah kerja penerjemahan proyek open source.',
+            cta: 'Kunjungi Pelokalan',
+            url: 'https://pelokalan.blankon.id',
+            badge: 'Inkubasi',
+          },
+          {
             name: 'Warta BlankOn',
             description:
               'Platform berita dan diskusi teknologi ala Hacker News untuk komunitas teknologi Indonesia.',
@@ -333,6 +341,14 @@ const translations = {
               'Open source technology learning and training programs through online and offline classes and hands-on workshops.',
             cta: 'Watch Workshop Recordings',
             url: 'https://www.youtube.com/@blankonlinux_official',
+          },
+          {
+            name: 'Pelokalan',
+            description:
+              'A platform that integrates with GNOME Damned Lies and GitHub repositories to support and ease translation work for open source projects.',
+            cta: 'Visit Pelokalan',
+            url: 'https://pelokalan.blankon.id',
+            badge: 'Incubation',
           },
           {
             name: 'Warta BlankOn',

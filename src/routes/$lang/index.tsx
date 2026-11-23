@@ -8,11 +8,13 @@ import { EventsList } from '@/components/events'
 import { Newsletter } from '@/components/newsletter'
 import blankOnLinuxPreview from '../../../content/assets/blankon-linux.png'
 import wartaBlankOnPreview from '../../../content/assets/retas.png'
+import pelokalanPreview from '../../../content/assets/pelokalan.png'
 import lokakaryaPreview from '../../../content/assets/lokakarya.jpeg'
 import blanKonfPreview from '../../../content/assets/blankonf.jpeg'
 
 const productPreviewImages: Record<string, string> = {
   'BlankOn Linux': blankOnLinuxPreview,
+  Pelokalan: pelokalanPreview,
   'Warta BlankOn': wartaBlankOnPreview,
   Lokakarya: lokakaryaPreview,
   BlanKonf: blanKonfPreview,
