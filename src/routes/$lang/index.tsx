@@ -20,6 +20,9 @@ const productPreviewImages: Record<string, string> = {
   BlanKonf: blanKonfPreview,
 }
 
+// Tall screenshots keep their top edge (the app toolbar) in the 16:9 crop.
+const productPreviewTopAligned = new Set(['Pelokalan'])
+
 export const Route = createFileRoute('/$lang/')({
   component: Home,
 })
@@ -319,7 +322,7 @@ function HeroProducts({
                   <img
                     src={productPreviewImages[item.name]}
                     alt={item.name}
-                    className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    className={`h-full w-full object-cover transition-transform group-hover:scale-105 ${productPreviewTopAligned.has(item.name) ? 'object-top' : ''}`}
                   />
                 </div>
                 <div className="p-8">
