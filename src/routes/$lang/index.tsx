@@ -8,15 +8,20 @@ import { EventsList } from '@/components/events'
 import { Newsletter } from '@/components/newsletter'
 import blankOnLinuxPreview from '../../../content/assets/blankon-linux.png'
 import wartaBlankOnPreview from '../../../content/assets/retas.png'
+import pelokalanPreview from '../../../content/assets/pelokalan.png'
 import lokakaryaPreview from '../../../content/assets/lokakarya.jpeg'
 import blanKonfPreview from '../../../content/assets/blankonf.jpeg'
 
 const productPreviewImages: Record<string, string> = {
   'BlankOn Linux': blankOnLinuxPreview,
+  Pelokalan: pelokalanPreview,
   'Warta BlankOn': wartaBlankOnPreview,
   Lokakarya: lokakaryaPreview,
   BlanKonf: blanKonfPreview,
 }
+
+// Tall screenshots keep their top edge (the app toolbar) in the 16:9 crop.
+const productPreviewTopAligned = new Set(['Pelokalan'])
 
 export const Route = createFileRoute('/$lang/')({
   component: Home,
@@ -317,7 +322,7 @@ function HeroProducts({
                   <img
                     src={productPreviewImages[item.name]}
                     alt={item.name}
-                    className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    className={`h-full w-full object-cover transition-transform group-hover:scale-105 ${productPreviewTopAligned.has(item.name) ? 'object-top' : ''}`}
                   />
                 </div>
                 <div className="p-8">

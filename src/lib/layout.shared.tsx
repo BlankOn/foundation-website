@@ -105,9 +105,8 @@ const translations = {
         cta: 'Donasi Sekarang',
       },
       events: {
-        title: 'Kegiatan',
-        description:
-          'Ragam kegiatan dari berbagai komunitas open source dan teknologi, termasuk yang kami selenggarakan atau ikuti.',
+        title: 'Ragam Kegiatan dari Berbagai Komunitas Open Source dan Teknologi',
+        description: 'Termasuk yang kami selenggarakan atau ikuti.',
         upcoming: 'Kegiatan Mendatang',
         past: 'Kegiatan Terdahulu',
         noUpcoming: 'Belum ada kegiatan mendatang yang dijadwalkan.',
@@ -137,6 +136,14 @@ const translations = {
               'Program pembelajaran dan pelatihan teknologi bebas terbuka melalui kelas daring dan luring serta lokakarya praktis seputar dunia teknologi.',
             cta: 'Lihat Rekaman Lokakarya',
             url: 'https://www.youtube.com/@blankonlinux_official',
+          },
+          {
+            name: 'Pelokalan',
+            description:
+              'Platform yang terintegrasi dengan GNOME Damned Lies dan repositori GitHub untuk mendukung serta mempermudah kerja penerjemahan proyek open source.',
+            cta: 'Kunjungi Pelokalan',
+            url: 'https://pelokalan.blankon.id',
+            badge: 'Inkubasi',
           },
           {
             name: 'Warta BlankOn',
@@ -303,9 +310,8 @@ const translations = {
         cta: 'Donate Now',
       },
       events: {
-        title: 'Events',
-        description:
-          'Events from across open source and tech communities, including those we host or join.',
+        title: 'Events from Across Open Source and Tech Communities',
+        description: 'Including those we host or join.',
         upcoming: 'Upcoming Events',
         past: 'Past Events',
         noUpcoming: 'No upcoming events are scheduled yet.',
@@ -335,6 +341,14 @@ const translations = {
               'Open source technology learning and training programs through online and offline classes and hands-on workshops.',
             cta: 'Watch Workshop Recordings',
             url: 'https://www.youtube.com/@blankonlinux_official',
+          },
+          {
+            name: 'Pelokalan',
+            description:
+              'A platform that integrates with GNOME Damned Lies and GitHub repositories to support and ease translation work for open source projects.',
+            cta: 'Visit Pelokalan',
+            url: 'https://pelokalan.blankon.id',
+            badge: 'Incubation',
           },
           {
             name: 'Warta BlankOn',
